@@ -1,0 +1,10 @@
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.AssemblyReference.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.SuggestedBindingRedirects.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
