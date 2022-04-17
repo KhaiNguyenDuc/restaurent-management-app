@@ -8,3 +8,17 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.exe
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.pdb
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.exe.config
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\Guna.UI.dll
