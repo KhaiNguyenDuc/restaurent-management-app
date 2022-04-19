@@ -21,3 +21,5 @@ C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.exe
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.pdb
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\bin\Debug\Guna.UI.dll
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmRegister.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.btnTable.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmTable.resources

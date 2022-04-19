@@ -15,6 +15,29 @@ namespace GUI
         public frmTable()
         {
             InitializeComponent();
+            createTable();
+        }
+        void createTable()
+        {
+            
+            List<btnTable> btnTables = new List<btnTable>();
+            int k = 1;
+            for (int i=0; i<=4; i++)
+            {
+                for (int j=0; j<=5; j++)
+                {
+                    btnTable btnTablec = new btnTable
+                    {
+                        Location = new Point(j * 90, i*80)
+                    };
+
+                    btnTablec.NumericalOrder(k);
+                    k++;
+                    btnTables.Add(btnTablec);
+                    this.panel1.Controls.Add(btnTablec);
+                }
+                   
+            }
         }
     }
 }
