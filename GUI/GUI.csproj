@@ -36,10 +36,14 @@
     <Reference Include="Guna.UI">
       <HintPath>..\..\TestFramework\[FTUApps.com] - Guna UI Framework Ultimate v2.0.0.1 + Keygen\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 3.5\Guna.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>C:\Users\Admin\Downloads\_Getintopc.com_Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,11 +61,47 @@
     <Compile Include="btnTable.Designer.cs">
       <DependentUpon>btnTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminFood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminFood.Designer.cs">
+      <DependentUpon>frmAdminFood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminStaff.Designer.cs">
+      <DependentUpon>frmAdminStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminTable.Designer.cs">
+      <DependentUpon>frmAdminTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAnalysis.Designer.cs">
+      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheckout.Designer.cs">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfile.Designer.cs">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRegister.cs">
       <SubType>Form</SubType>
@@ -75,19 +115,46 @@
     <Compile Include="frmTable.Designer.cs">
       <DependentUpon>frmTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTableDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTableDetail.Designer.cs">
+      <DependentUpon>frmTableDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="btnTable.resx">
       <DependentUpon>btnTable.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminFood.resx">
+      <DependentUpon>frmAdminFood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminStaff.resx">
+      <DependentUpon>frmAdminStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminTable.resx">
+      <DependentUpon>frmAdminTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAnalysis.resx">
+      <DependentUpon>frmAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheckout.resx">
+      <DependentUpon>frmCheckout.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfile.resx">
+      <DependentUpon>frmProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTable.resx">
       <DependentUpon>frmTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTableDetail.resx">
+      <DependentUpon>frmTableDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
