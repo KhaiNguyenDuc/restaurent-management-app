@@ -18,10 +18,8 @@ C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\Rest
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.Properties.Resources.resources
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.GenerateResource.cache
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CoreCompileInputs.cache
-C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
-C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\bin\Debug\Guna.UI.dll
 D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe.config
 D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.exe
 D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\RestaurantManagement.pdb
@@ -36,3 +34,4 @@ D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagem
 D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
 D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
+C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete

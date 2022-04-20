@@ -41,3 +41,10 @@ D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmTableDetail.resources
 D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmProfile.resources
 D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmCheckout.resources
 D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminFood.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.tbFoodName.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.rbFemale.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminTable.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmAnalysis.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmCheckout.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmProfile.resources
+C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmTableDetail.resources
