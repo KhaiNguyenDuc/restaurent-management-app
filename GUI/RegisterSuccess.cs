@@ -11,13 +11,14 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class frmRegister : Form
+    public partial class RegisterSuccess : Form
     {
-        public frmRegister()
+        public RegisterSuccess()
         {
             InitializeComponent();
         }
 
+        
         private void btnLogin_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -25,20 +26,7 @@ namespace GUI
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
-
-        private void btnRegister_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            Thread thread = new Thread(OpenRegisterSuccess);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
-        private void OpenRegisterSuccess(object obj)
-        {
-            Application.Run(new RegisterSuccess());
-            
-        }
-        private void OpenFrmLogin(object obj)
+        void OpenFrmLogin(object obj)
         {
             Application.Run(new frmLogin());
 

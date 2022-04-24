@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -40,6 +41,35 @@ namespace GUI
         private void label1_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmLogin);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void btnPrintBill_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmCheckout);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+
+        }
+        void OpenFrmLogin(object obj)
+        {
+            Application.Run(new frmLogin());
+        }
+        void OpenFrmCheckout(object obj)
+        {
+            Application.Run(new frmCheckout());
         }
     }
 }

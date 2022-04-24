@@ -32,23 +32,23 @@ namespace GUI
             this.lblImage = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtbStaffBirthDate = new System.Windows.Forms.DateTimePicker();
             this.lblStaffBirthday = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
             this.lblStaffGender = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStaffName = new System.Windows.Forms.Label();
-            this.tbStaffName = new System.Windows.Forms.TextBox();
+            this.txtStaffName = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -83,74 +83,74 @@ namespace GUI
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Controls.Add(this.textBox1);
+            this.panel6.Controls.Add(this.lblPhoneNumber);
+            this.panel6.Controls.Add(this.txtPhoneNumber);
             this.panel6.Location = new System.Drawing.Point(15, 262);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(489, 47);
             this.panel6.TabIndex = 4;
             // 
-            // label1
+            // lblPhoneNumber
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Số điện thoại";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(3, 9);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(154, 29);
+            this.lblPhoneNumber.TabIndex = 0;
+            this.lblPhoneNumber.Text = "Số điện thoại";
             // 
-            // textBox1
+            // txtPhoneNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(193, 6);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 34);
-            this.textBox1.TabIndex = 1;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(193, 6);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(236, 34);
+            this.txtPhoneNumber.TabIndex = 1;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Controls.Add(this.textBox4);
+            this.panel5.Controls.Add(this.lblAddress);
+            this.panel5.Controls.Add(this.txtAddress);
             this.panel5.Location = new System.Drawing.Point(15, 199);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(489, 47);
             this.panel5.TabIndex = 3;
             // 
-            // label3
+            // lblAddress
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 9);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 29);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Địa chỉ";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(3, 9);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(86, 29);
+            this.lblAddress.TabIndex = 0;
+            this.lblAddress.Text = "Địa chỉ";
             // 
-            // textBox4
+            // txtAddress
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(193, 6);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(236, 34);
-            this.textBox4.TabIndex = 1;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(193, 6);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(236, 34);
+            this.txtAddress.TabIndex = 1;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.dateTimePicker1);
+            this.panel4.Controls.Add(this.dtbStaffBirthDate);
             this.panel4.Controls.Add(this.lblStaffBirthday);
             this.panel4.Location = new System.Drawing.Point(15, 137);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(489, 47);
             this.panel4.TabIndex = 3;
             // 
-            // dateTimePicker1
+            // dtbStaffBirthDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(193, 9);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(284, 24);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtbStaffBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtbStaffBirthDate.Location = new System.Drawing.Point(193, 9);
+            this.dtbStaffBirthDate.Name = "dtbStaffBirthDate";
+            this.dtbStaffBirthDate.Size = new System.Drawing.Size(284, 24);
+            this.dtbStaffBirthDate.TabIndex = 1;
             // 
             // lblStaffBirthday
             // 
@@ -164,37 +164,37 @@ namespace GUI
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.radioButton2);
-            this.panel3.Controls.Add(this.radioButton1);
+            this.panel3.Controls.Add(this.rdoFemale);
+            this.panel3.Controls.Add(this.rdoMale);
             this.panel3.Controls.Add(this.lblStaffGender);
             this.panel3.Location = new System.Drawing.Point(15, 75);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(489, 47);
             this.panel3.TabIndex = 3;
             // 
-            // radioButton2
+            // rdoFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(317, 9);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 33);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.Location = new System.Drawing.Point(317, 9);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(65, 33);
+            this.rdoFemale.TabIndex = 2;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdoMale
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(216, 9);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 33);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.Location = new System.Drawing.Point(216, 9);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(85, 33);
+            this.rdoMale.TabIndex = 1;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UseVisualStyleBackColor = true;
             // 
             // lblStaffGender
             // 
@@ -209,7 +209,7 @@ namespace GUI
             // panel2
             // 
             this.panel2.Controls.Add(this.lblStaffName);
-            this.panel2.Controls.Add(this.tbStaffName);
+            this.panel2.Controls.Add(this.txtStaffName);
             this.panel2.Location = new System.Drawing.Point(15, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(489, 47);
@@ -225,13 +225,13 @@ namespace GUI
             this.lblStaffName.TabIndex = 0;
             this.lblStaffName.Text = "Tên nhân viên";
             // 
-            // tbStaffName
+            // txtStaffName
             // 
-            this.tbStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStaffName.Location = new System.Drawing.Point(193, 9);
-            this.tbStaffName.Name = "tbStaffName";
-            this.tbStaffName.Size = new System.Drawing.Size(236, 34);
-            this.tbStaffName.TabIndex = 1;
+            this.txtStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffName.Location = new System.Drawing.Point(193, 9);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.Size = new System.Drawing.Size(236, 34);
+            this.txtStaffName.TabIndex = 1;
             // 
             // btnLogin
             // 
@@ -242,27 +242,30 @@ namespace GUI
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Sửa thông tin";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // button1
+            // btnReturn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(340, 481);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 73);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Đăng xuất";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnReturn.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReturn.Location = new System.Drawing.Point(340, 481);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(162, 73);
+            this.btnReturn.TabIndex = 7;
+            this.btnReturn.Text = "Quay lại";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(546, 566);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblImage);
             this.Name = "frmProfile";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfile";
             this.Load += new System.EventHandler(this.frmProfile_Load);
             this.panel1.ResumeLayout(false);
@@ -285,22 +288,22 @@ namespace GUI
         private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblPhoneNumber;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label lblAddress;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblStaffBirthday;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.Label lblStaffGender;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblStaffName;
-        private System.Windows.Forms.TextBox tbStaffName;
+        private System.Windows.Forms.TextBox txtStaffName;
         private System.Windows.Forms.Button btnLogin;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.DateTimePicker dtbStaffBirthDate;
     }
 }

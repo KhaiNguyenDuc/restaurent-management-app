@@ -31,32 +31,33 @@ namespace GUI
         {
             this.panel3 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblFoodQuantity2 = new System.Windows.Forms.Label();
+            this.lblFoodPrice = new System.Windows.Forms.Label();
+            this.lblFood = new System.Windows.Forms.Label();
+            this.lblFoodPrice2 = new System.Windows.Forms.Label();
+            this.lblFoodQuantity = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblFoodQuantity2 = new System.Windows.Forms.Label();
             this.lblFoodName = new System.Windows.Forms.Label();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.lblFood = new System.Windows.Forms.Label();
-            this.lblFoodQuantity = new System.Windows.Forms.Label();
-            this.lblFoodPrice = new System.Windows.Forms.Label();
-            this.lblFoodPrice2 = new System.Windows.Forms.Label();
             this.lblTableID = new System.Windows.Forms.Label();
             this.lblRestaurentName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.lblTaxValue = new System.Windows.Forms.Label();
             this.lblTax = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.lblFinalPriceValue = new System.Windows.Forms.Label();
             this.lblFinalPrice = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.lblTotalPriceValue = new System.Windows.Forms.Label();
             this.lblTotalPrice = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.lblTableVipValue = new System.Windows.Forms.Label();
             this.lblTableVip = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblTotalPriceValue = new System.Windows.Forms.Label();
-            this.lblTableVipValue = new System.Windows.Forms.Label();
-            this.lblTaxValue = new System.Windows.Forms.Label();
-            this.lblFinalPriceValue = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblThanks = new System.Windows.Forms.Label();
+            this.lblTableNumberData = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -80,7 +81,7 @@ namespace GUI
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.41177F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.58823F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 176F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
             this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblFood, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice2, 2, 1);
@@ -99,19 +100,61 @@ namespace GUI
             this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 182);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // lblFoodQuantity2
+            // lblFoodPrice
             // 
-            this.lblFoodQuantity2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lblFoodPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodQuantity2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodQuantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodQuantity2.Location = new System.Drawing.Point(241, 107);
-            this.lblFoodQuantity2.Name = "lblFoodQuantity2";
-            this.lblFoodQuantity2.Size = new System.Drawing.Size(238, 75);
-            this.lblFoodQuantity2.TabIndex = 9;
-            this.lblFoodQuantity2.Text = "2";
-            this.lblFoodQuantity2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblFoodPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodPrice.Location = new System.Drawing.Point(484, 107);
+            this.lblFoodPrice.Name = "lblFoodPrice";
+            this.lblFoodPrice.Size = new System.Drawing.Size(172, 75);
+            this.lblFoodPrice.TabIndex = 8;
+            this.lblFoodPrice.Text = "50 vnd";
+            this.lblFoodPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFood
+            // 
+            this.lblFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFood.Location = new System.Drawing.Point(3, 37);
+            this.lblFood.Name = "lblFood";
+            this.lblFood.Size = new System.Drawing.Size(232, 70);
+            this.lblFood.TabIndex = 5;
+            this.lblFood.Text = "Cá chiên xào tỏi";
+            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFoodPrice2
+            // 
+            this.lblFoodPrice2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFoodPrice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFoodPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodPrice2.Location = new System.Drawing.Point(484, 37);
+            this.lblFoodPrice2.Name = "lblFoodPrice2";
+            this.lblFoodPrice2.Size = new System.Drawing.Size(172, 70);
+            this.lblFoodPrice2.TabIndex = 10;
+            this.lblFoodPrice2.Text = "50 vnd";
+            this.lblFoodPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFoodQuantity
+            // 
+            this.lblFoodQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFoodQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFoodQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodQuantity.Location = new System.Drawing.Point(241, 37);
+            this.lblFoodQuantity.Name = "lblFoodQuantity";
+            this.lblFoodQuantity.Size = new System.Drawing.Size(237, 70);
+            this.lblFoodQuantity.TabIndex = 7;
+            this.lblFoodQuantity.Text = "2";
+            this.lblFoodQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -126,6 +169,20 @@ namespace GUI
             this.label1.TabIndex = 6;
             this.label1.Text = "Coca cola";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblFoodQuantity2
+            // 
+            this.lblFoodQuantity2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblFoodQuantity2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblFoodQuantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodQuantity2.Location = new System.Drawing.Point(241, 107);
+            this.lblFoodQuantity2.Name = "lblFoodQuantity2";
+            this.lblFoodQuantity2.Size = new System.Drawing.Size(237, 75);
+            this.lblFoodQuantity2.TabIndex = 9;
+            this.lblFoodQuantity2.Text = "2";
+            this.lblFoodQuantity2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblFoodName
             // 
@@ -150,7 +207,7 @@ namespace GUI
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(241, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(238, 37);
+            this.lblQuantity.Size = new System.Drawing.Size(237, 37);
             this.lblQuantity.TabIndex = 3;
             this.lblQuantity.Text = "Số lượng";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -162,68 +219,12 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(485, 0);
+            this.lblPrice.Location = new System.Drawing.Point(484, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(171, 37);
+            this.lblPrice.Size = new System.Drawing.Size(172, 37);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Giá";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFood
-            // 
-            this.lblFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.Location = new System.Drawing.Point(3, 37);
-            this.lblFood.Name = "lblFood";
-            this.lblFood.Size = new System.Drawing.Size(232, 70);
-            this.lblFood.TabIndex = 5;
-            this.lblFood.Text = "Cá chiên xào tỏi";
-            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodQuantity
-            // 
-            this.lblFoodQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodQuantity.Location = new System.Drawing.Point(241, 37);
-            this.lblFoodQuantity.Name = "lblFoodQuantity";
-            this.lblFoodQuantity.Size = new System.Drawing.Size(238, 70);
-            this.lblFoodQuantity.TabIndex = 7;
-            this.lblFoodQuantity.Text = "2";
-            this.lblFoodQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodPrice
-            // 
-            this.lblFoodPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice.Location = new System.Drawing.Point(485, 107);
-            this.lblFoodPrice.Name = "lblFoodPrice";
-            this.lblFoodPrice.Size = new System.Drawing.Size(171, 75);
-            this.lblFoodPrice.TabIndex = 8;
-            this.lblFoodPrice.Text = "50 vnd";
-            this.lblFoodPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodPrice2
-            // 
-            this.lblFoodPrice2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodPrice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice2.Location = new System.Drawing.Point(485, 37);
-            this.lblFoodPrice2.Name = "lblFoodPrice2";
-            this.lblFoodPrice2.Size = new System.Drawing.Size(171, 70);
-            this.lblFoodPrice2.TabIndex = 10;
-            this.lblFoodPrice2.Text = "50 vnd";
-            this.lblFoodPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTableID
             // 
@@ -231,9 +232,9 @@ namespace GUI
             this.lblTableID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableID.Location = new System.Drawing.Point(18, 22);
             this.lblTableID.Name = "lblTableID";
-            this.lblTableID.Size = new System.Drawing.Size(87, 29);
+            this.lblTableID.Size = new System.Drawing.Size(93, 29);
             this.lblTableID.TabIndex = 11;
-            this.lblTableID.Text = "Bàn số";
+            this.lblTableID.Text = "Bàn số:";
             // 
             // lblRestaurentName
             // 
@@ -259,11 +260,21 @@ namespace GUI
             // 
             this.panel5.Controls.Add(this.lblTaxValue);
             this.panel5.Controls.Add(this.lblTax);
-            this.panel5.Font = new System.Drawing.Font("Zilla Slab", 8.25F);
+            this.panel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.panel5.Location = new System.Drawing.Point(3, 111);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(675, 52);
             this.panel5.TabIndex = 2;
+            // 
+            // lblTaxValue
+            // 
+            this.lblTaxValue.AutoSize = true;
+            this.lblTaxValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTaxValue.Location = new System.Drawing.Point(388, 10);
+            this.lblTaxValue.Name = "lblTaxValue";
+            this.lblTaxValue.Size = new System.Drawing.Size(83, 29);
+            this.lblTaxValue.TabIndex = 3;
+            this.lblTaxValue.Text = "10 vnd";
             // 
             // lblTax
             // 
@@ -279,11 +290,21 @@ namespace GUI
             // 
             this.panel6.Controls.Add(this.lblFinalPriceValue);
             this.panel6.Controls.Add(this.lblFinalPrice);
-            this.panel6.Font = new System.Drawing.Font("Zilla Slab", 8.25F);
+            this.panel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.panel6.Location = new System.Drawing.Point(1, 169);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(677, 48);
             this.panel6.TabIndex = 3;
+            // 
+            // lblFinalPriceValue
+            // 
+            this.lblFinalPriceValue.AutoSize = true;
+            this.lblFinalPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFinalPriceValue.Location = new System.Drawing.Point(390, 9);
+            this.lblFinalPriceValue.Name = "lblFinalPriceValue";
+            this.lblFinalPriceValue.Size = new System.Drawing.Size(96, 29);
+            this.lblFinalPriceValue.TabIndex = 4;
+            this.lblFinalPriceValue.Text = "220 vnd";
             // 
             // lblFinalPrice
             // 
@@ -304,6 +325,16 @@ namespace GUI
             this.panel2.Size = new System.Drawing.Size(677, 48);
             this.panel2.TabIndex = 0;
             // 
+            // lblTotalPriceValue
+            // 
+            this.lblTotalPriceValue.AutoSize = true;
+            this.lblTotalPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotalPriceValue.Location = new System.Drawing.Point(390, 10);
+            this.lblTotalPriceValue.Name = "lblTotalPriceValue";
+            this.lblTotalPriceValue.Size = new System.Drawing.Size(96, 29);
+            this.lblTotalPriceValue.TabIndex = 1;
+            this.lblTotalPriceValue.Text = "200 vnd";
+            // 
             // lblTotalPrice
             // 
             this.lblTotalPrice.AutoSize = true;
@@ -322,6 +353,16 @@ namespace GUI
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(675, 48);
             this.panel4.TabIndex = 1;
+            // 
+            // lblTableVipValue
+            // 
+            this.lblTableVipValue.AutoSize = true;
+            this.lblTableVipValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableVipValue.Location = new System.Drawing.Point(388, 9);
+            this.lblTableVipValue.Name = "lblTableVipValue";
+            this.lblTableVipValue.Size = new System.Drawing.Size(83, 29);
+            this.lblTableVipValue.TabIndex = 2;
+            this.lblTableVipValue.Text = "10 vnd";
             // 
             // lblTableVip
             // 
@@ -345,63 +386,34 @@ namespace GUI
             this.panel1.Size = new System.Drawing.Size(681, 223);
             this.panel1.TabIndex = 14;
             // 
-            // lblTotalPriceValue
+            // lblThanks
             // 
-            this.lblTotalPriceValue.AutoSize = true;
-            this.lblTotalPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPriceValue.Location = new System.Drawing.Point(390, 10);
-            this.lblTotalPriceValue.Name = "lblTotalPriceValue";
-            this.lblTotalPriceValue.Size = new System.Drawing.Size(96, 29);
-            this.lblTotalPriceValue.TabIndex = 1;
-            this.lblTotalPriceValue.Text = "200 vnd";
+            this.lblThanks.AutoSize = true;
+            this.lblThanks.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThanks.Location = new System.Drawing.Point(159, 554);
+            this.lblThanks.Name = "lblThanks";
+            this.lblThanks.Size = new System.Drawing.Size(345, 29);
+            this.lblThanks.TabIndex = 15;
+            this.lblThanks.Text = "Cảm ơn quý khách, hẹn gặp lại!";
+            this.lblThanks.Click += new System.EventHandler(this.label2_Click);
             // 
-            // lblTableVipValue
+            // lblTableNumberData
             // 
-            this.lblTableVipValue.AutoSize = true;
-            this.lblTableVipValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableVipValue.Location = new System.Drawing.Point(388, 9);
-            this.lblTableVipValue.Name = "lblTableVipValue";
-            this.lblTableVipValue.Size = new System.Drawing.Size(83, 29);
-            this.lblTableVipValue.TabIndex = 2;
-            this.lblTableVipValue.Text = "10 vnd";
-            // 
-            // lblTaxValue
-            // 
-            this.lblTaxValue.AutoSize = true;
-            this.lblTaxValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTaxValue.Location = new System.Drawing.Point(388, 10);
-            this.lblTaxValue.Name = "lblTaxValue";
-            this.lblTaxValue.Size = new System.Drawing.Size(83, 29);
-            this.lblTaxValue.TabIndex = 3;
-            this.lblTaxValue.Text = "10 vnd";
-            // 
-            // lblFinalPriceValue
-            // 
-            this.lblFinalPriceValue.AutoSize = true;
-            this.lblFinalPriceValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFinalPriceValue.Location = new System.Drawing.Point(390, 9);
-            this.lblFinalPriceValue.Name = "lblFinalPriceValue";
-            this.lblFinalPriceValue.Size = new System.Drawing.Size(96, 29);
-            this.lblFinalPriceValue.TabIndex = 4;
-            this.lblFinalPriceValue.Text = "220 vnd";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(159, 554);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(345, 29);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Cảm ơn quý khách, hẹn gặp lại!";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.lblTableNumberData.AutoSize = true;
+            this.lblTableNumberData.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableNumberData.Location = new System.Drawing.Point(124, 22);
+            this.lblTableNumberData.Name = "lblTableNumberData";
+            this.lblTableNumberData.Size = new System.Drawing.Size(79, 29);
+            this.lblTableNumberData.TabIndex = 16;
+            this.lblTableNumberData.Text = "label3";
             // 
             // frmCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 592);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lblTableNumberData);
+            this.Controls.Add(this.lblThanks);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblRestaurentName);
@@ -454,6 +466,7 @@ namespace GUI
         private System.Windows.Forms.Label lblTableVipValue;
         private System.Windows.Forms.Label lblTableVip;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblThanks;
+        private System.Windows.Forms.Label lblTableNumberData;
     }
 }

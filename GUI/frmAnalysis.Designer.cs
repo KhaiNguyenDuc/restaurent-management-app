@@ -32,48 +32,48 @@ namespace GUI
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartIncome = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.dtgvChart = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.chartIncome)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChart)).BeginInit();
             this.SuspendLayout();
             // 
-            // chart1
+            // chartIncome
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chartIncome.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(276, 31);
-            this.chart1.Name = "chart1";
+            this.chartIncome.Legends.Add(legend1);
+            this.chartIncome.Location = new System.Drawing.Point(276, 31);
+            this.chartIncome.Name = "chartIncome";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(618, 482);
-            this.chart1.TabIndex = 0;
-            this.chart1.Text = "chart1";
+            this.chartIncome.Series.Add(series1);
+            this.chartIncome.Size = new System.Drawing.Size(618, 482);
+            this.chartIncome.TabIndex = 0;
+            this.chartIncome.Text = "chart1";
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dtgvChart);
             this.panel1.Location = new System.Drawing.Point(11, 31);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(240, 482);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // dtgvChart
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(4, 7);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(234, 473);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgvChart.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvChart.Location = new System.Drawing.Point(4, 7);
+            this.dtgvChart.Name = "dtgvChart";
+            this.dtgvChart.RowHeadersWidth = 51;
+            this.dtgvChart.RowTemplate.Height = 24;
+            this.dtgvChart.Size = new System.Drawing.Size(234, 473);
+            this.dtgvChart.TabIndex = 0;
             // 
             // frmAnalysis
             // 
@@ -81,20 +81,20 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(917, 550);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.chartIncome);
             this.Name = "frmAnalysis";
             this.Text = "frmAnalysis";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartIncome)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvChart)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartIncome;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvChart;
     }
 }

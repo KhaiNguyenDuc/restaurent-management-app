@@ -33,20 +33,20 @@ namespace GUI
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -55,93 +55,173 @@ namespace GUI
             // 
             this.lblBrand.AutoSize = true;
             this.lblBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrand.Location = new System.Drawing.Point(287, 9);
+            this.lblBrand.Location = new System.Drawing.Point(255, 7);
             this.lblBrand.Name = "lblBrand";
-            this.lblBrand.Size = new System.Drawing.Size(239, 40);
+            this.lblBrand.Size = new System.Drawing.Size(199, 36);
             this.lblBrand.TabIndex = 16;
             this.lblBrand.Text = "Tên nhà hàng";
             // 
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(590, 459);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnRegister.Location = new System.Drawing.Point(524, 367);
             this.btnRegister.Name = "btnRegister";
-            this.btnRegister.Size = new System.Drawing.Size(182, 91);
+            this.btnRegister.Size = new System.Drawing.Size(162, 73);
             this.btnRegister.TabIndex = 19;
             this.btnRegister.Text = "Đăng ký";
             this.btnRegister.UseMnemonic = false;
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(21, 459);
-            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Location = new System.Drawing.Point(19, 367);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(182, 91);
+            this.btnLogin.Size = new System.Drawing.Size(162, 73);
             this.btnLogin.TabIndex = 18;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.dateTimePicker1);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtPassword);
+            this.panel1.Controls.Add(this.txtUserName);
+            this.panel1.Controls.Add(this.txtAddress);
+            this.panel1.Controls.Add(this.dtpBirthDate);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.lblRegister);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Controls.Add(this.lblAddress);
             this.panel1.Controls.Add(this.lblBirthdate);
             this.panel1.Controls.Add(this.lblName);
-            this.panel1.Location = new System.Drawing.Point(12, 69);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 377);
+            this.panel1.Size = new System.Drawing.Size(674, 302);
             this.panel1.TabIndex = 20;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(205, 238);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(449, 34);
+            this.txtPassword.TabIndex = 35;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(205, 191);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(449, 34);
+            this.txtUserName.TabIndex = 34;
+            // 
+            // txtAddress
+            // 
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(205, 147);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(452, 34);
+            this.txtAddress.TabIndex = 33;
+            // 
+            // dtpBirthDate
+            // 
+            this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthDate.Location = new System.Drawing.Point(205, 116);
+            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(269, 23);
+            this.dtpBirthDate.TabIndex = 32;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(205, 75);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(452, 34);
+            this.txtName.TabIndex = 31;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rdoFemale);
+            this.panel2.Controls.Add(this.rdoMale);
+            this.panel2.Location = new System.Drawing.Point(479, 111);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(178, 31);
+            this.panel2.TabIndex = 30;
+            // 
+            // rdoFemale
+            // 
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.Location = new System.Drawing.Point(110, 0);
+            this.rdoFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(65, 33);
+            this.rdoFemale.TabIndex = 1;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
+            // 
+            // rdoMale
+            // 
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.Location = new System.Drawing.Point(3, 0);
+            this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(85, 33);
+            this.rdoMale.TabIndex = 0;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UseVisualStyleBackColor = true;
             // 
             // lblRegister
             // 
             this.lblRegister.AutoSize = true;
             this.lblRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegister.Location = new System.Drawing.Point(267, 22);
+            this.lblRegister.Location = new System.Drawing.Point(237, 18);
             this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(274, 37);
+            this.lblRegister.Size = new System.Drawing.Size(231, 31);
             this.lblRegister.TabIndex = 29;
             this.lblRegister.Text = "Đăng ký tài khoản";
             // 
-            // label2
+            // lblPassword
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(14, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 32);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Mật khẩu:";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(12, 240);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(115, 29);
+            this.lblPassword.TabIndex = 27;
+            this.lblPassword.Text = "Mật khẩu:";
             // 
-            // label1
+            // lblUserName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(14, 246);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(214, 32);
-            this.label1.TabIndex = 25;
-            this.label1.Text = "Tên đăng nhập:";
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(12, 197);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(181, 29);
+            this.lblUserName.TabIndex = 25;
+            this.lblUserName.Text = "Tên đăng nhập:";
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(14, 191);
+            this.lblAddress.Location = new System.Drawing.Point(12, 153);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(110, 32);
+            this.lblAddress.Size = new System.Drawing.Size(92, 29);
             this.lblAddress.TabIndex = 21;
             this.lblAddress.Text = "Địa chỉ:";
             // 
@@ -149,9 +229,9 @@ namespace GUI
             // 
             this.lblBirthdate.AutoSize = true;
             this.lblBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthdate.Location = new System.Drawing.Point(14, 139);
+            this.lblBirthdate.Location = new System.Drawing.Point(12, 111);
             this.lblBirthdate.Name = "lblBirthdate";
-            this.lblBirthdate.Size = new System.Drawing.Size(149, 32);
+            this.lblBirthdate.Size = new System.Drawing.Size(125, 29);
             this.lblBirthdate.TabIndex = 20;
             this.lblBirthdate.Text = "Ngày sinh:";
             // 
@@ -159,90 +239,17 @@ namespace GUI
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(14, 89);
+            this.lblName.Location = new System.Drawing.Point(12, 71);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(150, 32);
+            this.lblName.Size = new System.Drawing.Size(125, 29);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Họ và tên: ";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radioButton2);
-            this.panel2.Controls.Add(this.radioButton1);
-            this.panel2.Location = new System.Drawing.Point(539, 139);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 39);
-            this.panel2.TabIndex = 30;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(3, 0);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(99, 36);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Nam";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(124, 0);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(76, 36);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(231, 94);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(508, 39);
-            this.textBox1.TabIndex = 31;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(231, 145);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(302, 26);
-            this.dateTimePicker1.TabIndex = 32;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(231, 184);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(508, 39);
-            this.textBox2.TabIndex = 33;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(231, 239);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(505, 39);
-            this.textBox3.TabIndex = 34;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(231, 297);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(505, 39);
-            this.textBox4.TabIndex = 35;
-            // 
             // frmRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 562);
+            this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
@@ -266,18 +273,18 @@ namespace GUI
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblBirthdate;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
+        private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.RadioButton rdoMale;
     }
 }

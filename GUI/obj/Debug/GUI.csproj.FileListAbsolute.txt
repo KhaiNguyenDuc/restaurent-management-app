@@ -48,3 +48,15 @@ C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmAnalysis.resou
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmCheckout.resources
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmProfile.resources
 C:\Users\ASUS\Desktop\a\RestaurantManagement\GUI\obj\Debug\GUI.frmTableDetail.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.btnTable.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminTable.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAnalysis.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmCheckout.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmProfile.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmRegister.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmTable.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmTableDetail.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.csproj.CopyComplete
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.RegisterSuccess.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminFood.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminStaff.resources

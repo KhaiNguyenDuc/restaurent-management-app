@@ -30,16 +30,16 @@ namespace GUI
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbTableType = new System.Windows.Forms.TextBox();
+            this.txtTableType = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbTableLocation = new System.Windows.Forms.TextBox();
+            this.txtTableLocation = new System.Windows.Forms.TextBox();
             this.lblLocation = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.tbTableID = new System.Windows.Forms.TextBox();
+            this.txtTableID = new System.Windows.Forms.TextBox();
             this.lblTableID = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlDateTable = new System.Windows.Forms.Panel();
             this.btnTable = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -47,21 +47,21 @@ namespace GUI
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlCategory = new System.Windows.Forms.Panel();
+            this.pnlSetting = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.ThốAnalyse = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAnalysis = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlDateTable.SuspendLayout();
+            this.pnlCategory.SuspendLayout();
+            this.pnlSetting.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,13 +75,13 @@ namespace GUI
             this.dataGridView1.Size = new System.Drawing.Size(915, 205);
             this.dataGridView1.TabIndex = 4;
             // 
-            // tbTableType
+            // txtTableType
             // 
-            this.tbTableType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTableType.Location = new System.Drawing.Point(215, 10);
-            this.tbTableType.Name = "tbTableType";
-            this.tbTableType.Size = new System.Drawing.Size(193, 34);
-            this.tbTableType.TabIndex = 1;
+            this.txtTableType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTableType.Location = new System.Drawing.Point(215, 10);
+            this.txtTableType.Name = "txtTableType";
+            this.txtTableType.Size = new System.Drawing.Size(193, 34);
+            this.txtTableType.TabIndex = 1;
             // 
             // lblType
             // 
@@ -95,20 +95,20 @@ namespace GUI
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbTableType);
+            this.panel8.Controls.Add(this.txtTableType);
             this.panel8.Controls.Add(this.lblType);
             this.panel8.Location = new System.Drawing.Point(7, 166);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(418, 53);
             this.panel8.TabIndex = 2;
             // 
-            // tbTableLocation
+            // txtTableLocation
             // 
-            this.tbTableLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTableLocation.Location = new System.Drawing.Point(215, 10);
-            this.tbTableLocation.Name = "tbTableLocation";
-            this.tbTableLocation.Size = new System.Drawing.Size(193, 34);
-            this.tbTableLocation.TabIndex = 1;
+            this.txtTableLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTableLocation.Location = new System.Drawing.Point(215, 10);
+            this.txtTableLocation.Name = "txtTableLocation";
+            this.txtTableLocation.Size = new System.Drawing.Size(193, 34);
+            this.txtTableLocation.TabIndex = 1;
             // 
             // lblLocation
             // 
@@ -123,20 +123,20 @@ namespace GUI
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.tbTableLocation);
+            this.panel7.Controls.Add(this.txtTableLocation);
             this.panel7.Controls.Add(this.lblLocation);
             this.panel7.Location = new System.Drawing.Point(7, 85);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(418, 53);
             this.panel7.TabIndex = 1;
             // 
-            // tbTableID
+            // txtTableID
             // 
-            this.tbTableID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbTableID.Location = new System.Drawing.Point(215, 10);
-            this.tbTableID.Name = "tbTableID";
-            this.tbTableID.Size = new System.Drawing.Size(193, 34);
-            this.tbTableID.TabIndex = 1;
+            this.txtTableID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTableID.Location = new System.Drawing.Point(215, 10);
+            this.txtTableID.Name = "txtTableID";
+            this.txtTableID.Size = new System.Drawing.Size(193, 34);
+            this.txtTableID.TabIndex = 1;
             // 
             // lblTableID
             // 
@@ -150,22 +150,22 @@ namespace GUI
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.tbTableID);
+            this.panel6.Controls.Add(this.txtTableID);
             this.panel6.Controls.Add(this.lblTableID);
             this.panel6.Location = new System.Drawing.Point(7, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(418, 53);
             this.panel6.TabIndex = 0;
             // 
-            // panel4
+            // pnlDateTable
             // 
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(3, 216);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(924, 249);
-            this.panel4.TabIndex = 3;
+            this.pnlDateTable.Controls.Add(this.panel8);
+            this.pnlDateTable.Controls.Add(this.panel7);
+            this.pnlDateTable.Controls.Add(this.panel6);
+            this.pnlDateTable.Location = new System.Drawing.Point(3, 216);
+            this.pnlDateTable.Name = "pnlDateTable";
+            this.pnlDateTable.Size = new System.Drawing.Size(924, 249);
+            this.pnlDateTable.TabIndex = 3;
             // 
             // btnTable
             // 
@@ -176,6 +176,7 @@ namespace GUI
             this.btnTable.TabIndex = 11;
             this.btnTable.Text = "Bàn ăn";
             this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnStaff
             // 
@@ -186,6 +187,7 @@ namespace GUI
             this.btnStaff.TabIndex = 10;
             this.btnStaff.Text = "Nhân viên";
             this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnFood
             // 
@@ -196,6 +198,7 @@ namespace GUI
             this.btnFood.TabIndex = 9;
             this.btnFood.Text = "Món ăn";
             this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // lblCatetory
             // 
@@ -237,28 +240,28 @@ namespace GUI
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // pnlCategory
             // 
-            this.panel5.Controls.Add(this.btnTable);
-            this.panel5.Controls.Add(this.btnStaff);
-            this.panel5.Controls.Add(this.btnFood);
-            this.panel5.Controls.Add(this.lblCatetory);
-            this.panel5.Location = new System.Drawing.Point(5, 15);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(190, 241);
-            this.panel5.TabIndex = 0;
+            this.pnlCategory.Controls.Add(this.btnTable);
+            this.pnlCategory.Controls.Add(this.btnStaff);
+            this.pnlCategory.Controls.Add(this.btnFood);
+            this.pnlCategory.Controls.Add(this.lblCatetory);
+            this.pnlCategory.Location = new System.Drawing.Point(5, 15);
+            this.pnlCategory.Name = "pnlCategory";
+            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
+            this.pnlCategory.TabIndex = 0;
             // 
-            // panel2
+            // pnlSetting
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(23, 89);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 470);
-            this.panel2.TabIndex = 6;
+            this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSetting.Controls.Add(this.btnEdit);
+            this.pnlSetting.Controls.Add(this.btnDelete);
+            this.pnlSetting.Controls.Add(this.btnAdd);
+            this.pnlSetting.Controls.Add(this.pnlCategory);
+            this.pnlSetting.Location = new System.Drawing.Point(23, 89);
+            this.pnlSetting.Name = "pnlSetting";
+            this.pnlSetting.Size = new System.Drawing.Size(206, 470);
+            this.pnlSetting.TabIndex = 6;
             // 
             // lblUsername
             // 
@@ -279,46 +282,49 @@ namespace GUI
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // ThốAnalyse
+            // btnAnalysis
             // 
-            this.ThốAnalyse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThốAnalyse.Location = new System.Drawing.Point(0, 3);
-            this.ThốAnalyse.Name = "ThốAnalyse";
-            this.ThốAnalyse.Size = new System.Drawing.Size(162, 50);
-            this.ThốAnalyse.TabIndex = 7;
-            this.ThốAnalyse.Text = "Thống kê";
-            this.ThốAnalyse.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalysis.Location = new System.Drawing.Point(0, 3);
+            this.btnAnalysis.Name = "btnAnalysis";
+            this.btnAnalysis.Size = new System.Drawing.Size(162, 50);
+            this.btnAnalysis.TabIndex = 7;
+            this.btnAnalysis.Text = "Thống kê";
+            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Click += new System.EventHandler(this.Analysis_Click);
             // 
-            // panel1
+            // pnlTop
             // 
-            this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.ThốAnalyse);
-            this.panel1.Location = new System.Drawing.Point(5, 11);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1154, 59);
-            this.panel1.TabIndex = 5;
+            this.pnlTop.Controls.Add(this.lblUsername);
+            this.pnlTop.Controls.Add(this.btnLogout);
+            this.pnlTop.Controls.Add(this.btnAnalysis);
+            this.pnlTop.Location = new System.Drawing.Point(5, 11);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1154, 59);
+            this.pnlTop.TabIndex = 5;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pnlDateTable);
             this.panel3.Location = new System.Drawing.Point(233, 89);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 470);
             this.panel3.TabIndex = 7;
             // 
-            // FrmAdminTable1
+            // frmAdminTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 571);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlSetting);
+            this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.panel3);
-            this.Name = "FrmAdminTable1";
+            this.Name = "frmAdminTable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminTable1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -327,12 +333,12 @@ namespace GUI
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlDateTable.ResumeLayout(false);
+            this.pnlCategory.ResumeLayout(false);
+            this.pnlCategory.PerformLayout();
+            this.pnlSetting.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -341,16 +347,16 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbTableType;
+        private System.Windows.Forms.TextBox txtTableType;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox tbTableLocation;
+        private System.Windows.Forms.TextBox txtTableLocation;
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbTableID;
+        private System.Windows.Forms.TextBox txtTableID;
         private System.Windows.Forms.Label lblTableID;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlDateTable;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnFood;
@@ -358,12 +364,12 @@ namespace GUI
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlCategory;
+        private System.Windows.Forms.Panel pnlSetting;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button ThốAnalyse;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAnalysis;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel panel3;
     }
 }

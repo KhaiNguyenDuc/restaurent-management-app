@@ -1,7 +1,7 @@
 ﻿
 namespace GUI
 {
-    partial class rbFemale
+    partial class frmAdminStaff
     {
         /// <summary>
         /// Required designer variable.
@@ -30,59 +30,55 @@ namespace GUI
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.tbSalary = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.lblSalary = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.tbShift = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.tbStaffName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtStaffName = new System.Windows.Forms.TextBox();
+            this.lblStaffName = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlDataStaff = new System.Windows.Forms.Panel();
             this.cbAdmin = new System.Windows.Forms.CheckBox();
             this.button1 = new System.Windows.Forms.Button();
             this.lblImage = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.rbMale = new System.Windows.Forms.RadioButton();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
             this.lblStaffGender = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.tbAddress = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.lblAddress = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
+            this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
+            this.lblBirthDate = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.tbPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.btnTable = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
+            this.pnlCategory = new System.Windows.Forms.Panel();
             this.lblCatetory = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlSetting = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.ThốAnalyse = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAnalysis = new System.Windows.Forms.Button();
+            this.pnlTop = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel8.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnlDataStaff.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlCategory.SuspendLayout();
+            this.pnlSetting.SuspendLayout();
+            this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -95,83 +91,56 @@ namespace GUI
             this.dataGridView1.Size = new System.Drawing.Size(915, 205);
             this.dataGridView1.TabIndex = 4;
             // 
-            // tbSalary
+            // txtSalary
             // 
-            this.tbSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSalary.Location = new System.Drawing.Point(215, 10);
-            this.tbSalary.Name = "tbSalary";
-            this.tbSalary.Size = new System.Drawing.Size(218, 34);
-            this.tbSalary.TabIndex = 1;
+            this.txtSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSalary.Location = new System.Drawing.Point(215, 10);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(218, 34);
+            this.txtSalary.TabIndex = 1;
             // 
-            // label3
+            // lblSalary
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 29);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Lương:";
+            this.lblSalary.AutoSize = true;
+            this.lblSalary.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalary.Location = new System.Drawing.Point(3, 13);
+            this.lblSalary.Name = "lblSalary";
+            this.lblSalary.Size = new System.Drawing.Size(86, 29);
+            this.lblSalary.TabIndex = 0;
+            this.lblSalary.Text = "Lương:";
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.tbSalary);
-            this.panel8.Controls.Add(this.label3);
-            this.panel8.Location = new System.Drawing.Point(7, 166);
+            this.panel8.Controls.Add(this.txtSalary);
+            this.panel8.Controls.Add(this.lblSalary);
+            this.panel8.Location = new System.Drawing.Point(10, 132);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(436, 53);
             this.panel8.TabIndex = 2;
             // 
-            // tbShift
+            // txtStaffName
             // 
-            this.tbShift.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbShift.Location = new System.Drawing.Point(215, 10);
-            this.tbShift.Name = "tbShift";
-            this.tbShift.Size = new System.Drawing.Size(221, 34);
-            this.tbShift.TabIndex = 1;
+            this.txtStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStaffName.Location = new System.Drawing.Point(215, 10);
+            this.txtStaffName.Name = "txtStaffName";
+            this.txtStaffName.Size = new System.Drawing.Size(221, 34);
+            this.txtStaffName.TabIndex = 1;
             // 
-            // label2
+            // lblStaffName
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(94, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Ca làm:";
-            // 
-            // panel7
-            // 
-            this.panel7.Controls.Add(this.tbShift);
-            this.panel7.Controls.Add(this.label2);
-            this.panel7.Location = new System.Drawing.Point(7, 85);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(439, 53);
-            this.panel7.TabIndex = 1;
-            // 
-            // tbStaffName
-            // 
-            this.tbStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStaffName.Location = new System.Drawing.Point(215, 10);
-            this.tbStaffName.Name = "tbStaffName";
-            this.tbStaffName.Size = new System.Drawing.Size(221, 34);
-            this.tbStaffName.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(170, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Tên nhân viên:";
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffName.Location = new System.Drawing.Point(3, 13);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(170, 29);
+            this.lblStaffName.TabIndex = 0;
+            this.lblStaffName.Text = "Tên nhân viên:";
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.tbStaffName);
-            this.panel6.Controls.Add(this.label1);
-            this.panel6.Location = new System.Drawing.Point(7, 3);
+            this.panel6.Controls.Add(this.txtStaffName);
+            this.panel6.Controls.Add(this.lblStaffName);
+            this.panel6.Location = new System.Drawing.Point(7, 38);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(439, 53);
             this.panel6.TabIndex = 0;
@@ -180,29 +149,28 @@ namespace GUI
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dataGridView1);
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pnlDataStaff);
             this.panel3.Location = new System.Drawing.Point(229, 87);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 618);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // panel4
+            // pnlDataStaff
             // 
-            this.panel4.Controls.Add(this.cbAdmin);
-            this.panel4.Controls.Add(this.button1);
-            this.panel4.Controls.Add(this.lblImage);
-            this.panel4.Controls.Add(this.panel12);
-            this.panel4.Controls.Add(this.panel11);
-            this.panel4.Controls.Add(this.panel10);
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel7);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Location = new System.Drawing.Point(3, 216);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(924, 397);
-            this.panel4.TabIndex = 3;
+            this.pnlDataStaff.Controls.Add(this.cbAdmin);
+            this.pnlDataStaff.Controls.Add(this.button1);
+            this.pnlDataStaff.Controls.Add(this.lblImage);
+            this.pnlDataStaff.Controls.Add(this.panel12);
+            this.pnlDataStaff.Controls.Add(this.panel11);
+            this.pnlDataStaff.Controls.Add(this.panel10);
+            this.pnlDataStaff.Controls.Add(this.panel9);
+            this.pnlDataStaff.Controls.Add(this.panel8);
+            this.pnlDataStaff.Controls.Add(this.panel6);
+            this.pnlDataStaff.Location = new System.Drawing.Point(3, 216);
+            this.pnlDataStaff.Name = "pnlDataStaff";
+            this.pnlDataStaff.Size = new System.Drawing.Size(924, 397);
+            this.pnlDataStaff.TabIndex = 3;
             // 
             // cbAdmin
             // 
@@ -238,37 +206,37 @@ namespace GUI
             // 
             // panel12
             // 
-            this.panel12.Controls.Add(this.radioButton2);
-            this.panel12.Controls.Add(this.rbMale);
+            this.panel12.Controls.Add(this.rdoFemale);
+            this.panel12.Controls.Add(this.rdoMale);
             this.panel12.Controls.Add(this.lblStaffGender);
             this.panel12.Location = new System.Drawing.Point(466, 223);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(439, 47);
             this.panel12.TabIndex = 4;
             // 
-            // radioButton2
+            // rdoFemale
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(317, 9);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(65, 33);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Nữ";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.Location = new System.Drawing.Point(317, 9);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(65, 33);
+            this.rdoFemale.TabIndex = 2;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
             // 
-            // rbMale
+            // rdoMale
             // 
-            this.rbMale.AutoSize = true;
-            this.rbMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbMale.Location = new System.Drawing.Point(216, 9);
-            this.rbMale.Name = "rbMale";
-            this.rbMale.Size = new System.Drawing.Size(85, 33);
-            this.rbMale.TabIndex = 1;
-            this.rbMale.TabStop = true;
-            this.rbMale.Text = "Nam";
-            this.rbMale.UseVisualStyleBackColor = true;
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.Location = new System.Drawing.Point(216, 9);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(85, 33);
+            this.rdoMale.TabIndex = 1;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UseVisualStyleBackColor = true;
             // 
             // lblStaffGender
             // 
@@ -282,84 +250,84 @@ namespace GUI
             // 
             // panel11
             // 
-            this.panel11.Controls.Add(this.tbAddress);
-            this.panel11.Controls.Add(this.label6);
+            this.panel11.Controls.Add(this.txtAddress);
+            this.panel11.Controls.Add(this.lblAddress);
             this.panel11.Location = new System.Drawing.Point(466, 132);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(439, 53);
             this.panel11.TabIndex = 7;
             // 
-            // tbAddress
+            // txtAddress
             // 
-            this.tbAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbAddress.Location = new System.Drawing.Point(143, 8);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.Size = new System.Drawing.Size(277, 34);
-            this.tbAddress.TabIndex = 1;
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(143, 8);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(277, 34);
+            this.txtAddress.TabIndex = 1;
             // 
-            // label6
+            // lblAddress
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(92, 29);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Địa chỉ:";
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.Location = new System.Drawing.Point(3, 13);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(92, 29);
+            this.lblAddress.TabIndex = 0;
+            this.lblAddress.Text = "Địa chỉ:";
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.dateTimePicker1);
-            this.panel10.Controls.Add(this.label5);
+            this.panel10.Controls.Add(this.dtpBirthDate);
+            this.panel10.Controls.Add(this.lblBirthDate);
             this.panel10.Location = new System.Drawing.Point(466, 38);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(434, 56);
             this.panel10.TabIndex = 6;
             // 
-            // dateTimePicker1
+            // dtpBirthDate
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(143, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(277, 27);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpBirthDate.Location = new System.Drawing.Point(143, 15);
+            this.dtpBirthDate.Name = "dtpBirthDate";
+            this.dtpBirthDate.Size = new System.Drawing.Size(277, 27);
+            this.dtpBirthDate.TabIndex = 1;
             // 
-            // label5
+            // lblBirthDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(3, 13);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(125, 29);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ngày sinh:";
+            this.lblBirthDate.AutoSize = true;
+            this.lblBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBirthDate.Location = new System.Drawing.Point(3, 13);
+            this.lblBirthDate.Name = "lblBirthDate";
+            this.lblBirthDate.Size = new System.Drawing.Size(125, 29);
+            this.lblBirthDate.TabIndex = 0;
+            this.lblBirthDate.Text = "Ngày sinh:";
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.tbPhoneNumber);
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(7, 239);
+            this.panel9.Controls.Add(this.txtPhoneNumber);
+            this.panel9.Controls.Add(this.lblPhoneNumber);
+            this.panel9.Location = new System.Drawing.Point(7, 220);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(436, 50);
             this.panel9.TabIndex = 5;
             // 
-            // tbPhoneNumber
+            // txtPhoneNumber
             // 
-            this.tbPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbPhoneNumber.Location = new System.Drawing.Point(215, 10);
-            this.tbPhoneNumber.Name = "tbPhoneNumber";
-            this.tbPhoneNumber.Size = new System.Drawing.Size(218, 34);
-            this.tbPhoneNumber.TabIndex = 1;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(215, 10);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(218, 34);
+            this.txtPhoneNumber.TabIndex = 1;
             // 
-            // label4
+            // lblPhoneNumber
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 29);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Số điện thoại:";
+            this.lblPhoneNumber.AutoSize = true;
+            this.lblPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNumber.Location = new System.Drawing.Point(3, 13);
+            this.lblPhoneNumber.Name = "lblPhoneNumber";
+            this.lblPhoneNumber.Size = new System.Drawing.Size(160, 29);
+            this.lblPhoneNumber.TabIndex = 0;
+            this.lblPhoneNumber.Text = "Số điện thoại:";
             // 
             // btnTable
             // 
@@ -370,6 +338,7 @@ namespace GUI
             this.btnTable.TabIndex = 11;
             this.btnTable.Text = "Bàn ăn";
             this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnStaff
             // 
@@ -380,6 +349,7 @@ namespace GUI
             this.btnStaff.TabIndex = 10;
             this.btnStaff.Text = "Nhân viên";
             this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnFood
             // 
@@ -390,6 +360,7 @@ namespace GUI
             this.btnFood.TabIndex = 9;
             this.btnFood.Text = "Món ăn";
             this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // btnEdit
             // 
@@ -421,16 +392,16 @@ namespace GUI
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // panel5
+            // pnlCategory
             // 
-            this.panel5.Controls.Add(this.btnTable);
-            this.panel5.Controls.Add(this.btnStaff);
-            this.panel5.Controls.Add(this.btnFood);
-            this.panel5.Controls.Add(this.lblCatetory);
-            this.panel5.Location = new System.Drawing.Point(5, 15);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(190, 241);
-            this.panel5.TabIndex = 0;
+            this.pnlCategory.Controls.Add(this.btnTable);
+            this.pnlCategory.Controls.Add(this.btnStaff);
+            this.pnlCategory.Controls.Add(this.btnFood);
+            this.pnlCategory.Controls.Add(this.lblCatetory);
+            this.pnlCategory.Location = new System.Drawing.Point(5, 15);
+            this.pnlCategory.Name = "pnlCategory";
+            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
+            this.pnlCategory.TabIndex = 0;
             // 
             // lblCatetory
             // 
@@ -442,17 +413,17 @@ namespace GUI
             this.lblCatetory.TabIndex = 0;
             this.lblCatetory.Text = "Danh mục";
             // 
-            // panel2
+            // pnlSetting
             // 
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Controls.Add(this.btnDelete);
-            this.panel2.Controls.Add(this.btnAdd);
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Location = new System.Drawing.Point(19, 87);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 618);
-            this.panel2.TabIndex = 6;
+            this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSetting.Controls.Add(this.btnEdit);
+            this.pnlSetting.Controls.Add(this.btnDelete);
+            this.pnlSetting.Controls.Add(this.btnAdd);
+            this.pnlSetting.Controls.Add(this.pnlCategory);
+            this.pnlSetting.Location = new System.Drawing.Point(19, 87);
+            this.pnlSetting.Name = "pnlSetting";
+            this.pnlSetting.Size = new System.Drawing.Size(206, 618);
+            this.pnlSetting.TabIndex = 6;
             // 
             // lblUsername
             // 
@@ -473,47 +444,48 @@ namespace GUI
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
             this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // ThốAnalyse
+            // btnAnalysis
             // 
-            this.ThốAnalyse.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThốAnalyse.Location = new System.Drawing.Point(0, 3);
-            this.ThốAnalyse.Name = "ThốAnalyse";
-            this.ThốAnalyse.Size = new System.Drawing.Size(162, 50);
-            this.ThốAnalyse.TabIndex = 7;
-            this.ThốAnalyse.Text = "Thống kê";
-            this.ThốAnalyse.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAnalysis.Location = new System.Drawing.Point(0, 3);
+            this.btnAnalysis.Name = "btnAnalysis";
+            this.btnAnalysis.Size = new System.Drawing.Size(162, 50);
+            this.btnAnalysis.TabIndex = 7;
+            this.btnAnalysis.Text = "Thống kê";
+            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnAnalysis.Click += new System.EventHandler(this.Analysis_Click);
             // 
-            // panel1
+            // pnlTop
             // 
-            this.panel1.Controls.Add(this.lblUsername);
-            this.panel1.Controls.Add(this.btnLogout);
-            this.panel1.Controls.Add(this.ThốAnalyse);
-            this.panel1.Location = new System.Drawing.Point(1, 9);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1154, 60);
-            this.panel1.TabIndex = 5;
+            this.pnlTop.Controls.Add(this.lblUsername);
+            this.pnlTop.Controls.Add(this.btnLogout);
+            this.pnlTop.Controls.Add(this.btnAnalysis);
+            this.pnlTop.Location = new System.Drawing.Point(1, 9);
+            this.pnlTop.Name = "pnlTop";
+            this.pnlTop.Size = new System.Drawing.Size(1154, 60);
+            this.pnlTop.TabIndex = 5;
             // 
-            // rbFemale
+            // frmAdminStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1159, 717);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
-            this.Name = "rbFemale";
+            this.Controls.Add(this.pnlSetting);
+            this.Controls.Add(this.pnlTop);
+            this.Name = "frmAdminStaff";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminStaff";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnlDataStaff.ResumeLayout(false);
+            this.pnlDataStaff.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -522,11 +494,11 @@ namespace GUI
             this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlCategory.ResumeLayout(false);
+            this.pnlCategory.PerformLayout();
+            this.pnlSetting.ResumeLayout(false);
+            this.pnlTop.ResumeLayout(false);
+            this.pnlTop.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -534,42 +506,39 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox tbSalary;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox tbShift;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.TextBox tbStaffName;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtStaffName;
+        private System.Windows.Forms.Label lblStaffName;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlDataStaff;
         private System.Windows.Forms.Button btnTable;
         private System.Windows.Forms.Button btnStaff;
         private System.Windows.Forms.Button btnFood;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.Label lblCatetory;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel pnlSetting;
         private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button ThốAnalyse;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnAnalysis;
+        private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.TextBox tbAddress;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.DateTimePicker dtpBirthDate;
+        private System.Windows.Forms.Label lblBirthDate;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox tbPhoneNumber;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton rbMale;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.Label lblStaffGender;
         private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Button button1;

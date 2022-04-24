@@ -35,3 +35,7 @@ D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagem
 D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 D:\Winform\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
 C:\Users\ASUS\Desktop\a\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\bin\Debug\GUI.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
