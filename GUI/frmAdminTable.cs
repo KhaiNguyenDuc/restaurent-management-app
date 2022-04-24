@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmAdminTable : Form
     {
+        TableBUS table = new TableBUS();
         public frmAdminTable()
         {
             InitializeComponent();
+            loadTables();
         }
-
+        public void loadTables()
+        {
+            this.dtgvTable.DataSource = table.getStaffs();
+        }
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -76,6 +81,11 @@ namespace GUI
         void OpenFrmAnalysis(object obj)
         {
             Application.Run(new frmAnalysis());
+        }
+
+        private void dtgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

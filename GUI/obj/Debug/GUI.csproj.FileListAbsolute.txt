@@ -60,3 +60,16 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.RegisterSuccess.resources
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminFood.resources
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminStaff.resources
+D:\Winform\RestaurantManagement\GUI\bin\Debug\Model.exe
+D:\Winform\RestaurantManagement\GUI\bin\Debug\Model.pdb
+D:\Winform\RestaurantManagement\GUI\bin\Debug\Model.exe.config
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminStaff.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminTable.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAnalysis.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.RegisterSuccess.resources
+D:\Winform\RestaurantManagement\GUI\bin\Debug\BUS.exe
+D:\Winform\RestaurantManagement\GUI\bin\Debug\DAO.exe
+D:\Winform\RestaurantManagement\GUI\bin\Debug\BUS.pdb
+D:\Winform\RestaurantManagement\GUI\bin\Debug\BUS.exe.config
+D:\Winform\RestaurantManagement\GUI\bin\Debug\DAO.pdb
+D:\Winform\RestaurantManagement\GUI\bin\Debug\DAO.exe.config

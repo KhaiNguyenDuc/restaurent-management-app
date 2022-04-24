@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmAdminStaff : Form
     {
+        public int indexRow;
+        StaffBUS staff = new StaffBUS();
         public frmAdminStaff()
         {
             InitializeComponent();
+            loadStaffs();
         }
-
+        public void loadStaffs()
+        {
+            this.dtgvStaff.DataSource = staff.getStaffs();
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -82,6 +88,21 @@ namespace GUI
         void OpenFrmLogin(object obj)
         {
             Application.Run(new frmLogin());
+        }
+
+        private void dtgvStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
+        }
+
+        private void frmAdminStaff_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

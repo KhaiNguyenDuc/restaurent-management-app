@@ -1,0 +1,9 @@
+D:\Winform\RestaurantManagement\Model\bin\Debug\Model.exe.config
+D:\Winform\RestaurantManagement\Model\bin\Debug\Model.exe
+D:\Winform\RestaurantManagement\Model\bin\Debug\Model.pdb
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.Properties.Resources.resources
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.csproj.GenerateResource.cache
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.exe
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.pdb

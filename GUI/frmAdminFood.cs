@@ -8,16 +8,22 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmAdminFood : Form
     {
+        public int indexRow;
+        FoodBUS food = new FoodBUS();
         public frmAdminFood()
         {
             InitializeComponent();
+            loadFoods();
         }
-
+        public void loadFoods()
+        {
+            this.dtgvFood.DataSource = food.getFoods();
+        }
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
 
@@ -98,5 +104,30 @@ namespace GUI
             Application.Run(new frmAnalysis());
         }
 
+        private void dtgvFood_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indexRow = e.RowIndex;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgvFood.Rows[e.RowIndex];
+                try
+                {
+                    txtFoodName.Text = row.Cells[1].Value.ToString();
+                    txtPrice.Text = row.Cells[2].Value.ToString();
+                    txtType.Text = row.Cells[3].Value.ToString();
+
+                }
+                catch
+                {
+
+                }
+
+            }
+        }
     }
 }

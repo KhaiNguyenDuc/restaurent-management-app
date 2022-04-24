@@ -29,7 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvStaff = new System.Windows.Forms.DataGridView();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -67,7 +67,7 @@ namespace GUI
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -81,15 +81,17 @@ namespace GUI
             this.pnlTop.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dtgvStaff
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 8);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(915, 205);
-            this.dataGridView1.TabIndex = 4;
+            this.dtgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvStaff.Location = new System.Drawing.Point(6, 8);
+            this.dtgvStaff.Name = "dtgvStaff";
+            this.dtgvStaff.RowHeadersWidth = 51;
+            this.dtgvStaff.RowTemplate.Height = 24;
+            this.dtgvStaff.Size = new System.Drawing.Size(915, 205);
+            this.dtgvStaff.TabIndex = 4;
+            this.dtgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellClick);
+            this.dtgvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellContentClick);
             // 
             // txtSalary
             // 
@@ -148,7 +150,7 @@ namespace GUI
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.dataGridView1);
+            this.panel3.Controls.Add(this.dtgvStaff);
             this.panel3.Controls.Add(this.pnlDataStaff);
             this.panel3.Location = new System.Drawing.Point(229, 87);
             this.panel3.Name = "panel3";
@@ -478,7 +480,8 @@ namespace GUI
             this.Name = "frmAdminStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminStaff";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmAdminStaff_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -505,7 +508,7 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvStaff;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.Label lblSalary;
         private System.Windows.Forms.Panel panel8;
