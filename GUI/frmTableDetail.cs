@@ -8,16 +8,21 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmTableDetail : Form
     {
+        OrderFoodBUS order = new OrderFoodBUS();
         public frmTableDetail()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+            loadOrderItems();
         }
-
+        public void loadOrderItems()
+        {
+            this.dtgvOrderItems.DataSource = order.getOrderItems();
+        }
         private void label2_Click(object sender, EventArgs e)
         {
 

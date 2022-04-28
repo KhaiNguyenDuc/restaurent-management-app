@@ -81,7 +81,7 @@ namespace GUI
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.41177F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.58823F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 178F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 179F));
             this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.lblFood, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice2, 2, 1);
@@ -107,9 +107,9 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFoodPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice.Location = new System.Drawing.Point(483, 107);
+            this.lblFoodPrice.Location = new System.Drawing.Point(482, 107);
             this.lblFoodPrice.Name = "lblFoodPrice";
-            this.lblFoodPrice.Size = new System.Drawing.Size(173, 75);
+            this.lblFoodPrice.Size = new System.Drawing.Size(174, 75);
             this.lblFoodPrice.TabIndex = 8;
             this.lblFoodPrice.Text = "50 vnd";
             this.lblFoodPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,9 +135,9 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblFoodPrice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblFoodPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice2.Location = new System.Drawing.Point(483, 37);
+            this.lblFoodPrice2.Location = new System.Drawing.Point(482, 37);
             this.lblFoodPrice2.Name = "lblFoodPrice2";
-            this.lblFoodPrice2.Size = new System.Drawing.Size(173, 70);
+            this.lblFoodPrice2.Size = new System.Drawing.Size(174, 70);
             this.lblFoodPrice2.TabIndex = 10;
             this.lblFoodPrice2.Text = "50 vnd";
             this.lblFoodPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -151,7 +151,7 @@ namespace GUI
             this.lblFoodQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFoodQuantity.Location = new System.Drawing.Point(240, 37);
             this.lblFoodQuantity.Name = "lblFoodQuantity";
-            this.lblFoodQuantity.Size = new System.Drawing.Size(237, 70);
+            this.lblFoodQuantity.Size = new System.Drawing.Size(236, 70);
             this.lblFoodQuantity.TabIndex = 7;
             this.lblFoodQuantity.Text = "2";
             this.lblFoodQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -179,7 +179,7 @@ namespace GUI
             this.lblFoodQuantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFoodQuantity2.Location = new System.Drawing.Point(240, 107);
             this.lblFoodQuantity2.Name = "lblFoodQuantity2";
-            this.lblFoodQuantity2.Size = new System.Drawing.Size(237, 75);
+            this.lblFoodQuantity2.Size = new System.Drawing.Size(236, 75);
             this.lblFoodQuantity2.TabIndex = 9;
             this.lblFoodQuantity2.Text = "2";
             this.lblFoodQuantity2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -207,7 +207,7 @@ namespace GUI
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuantity.Location = new System.Drawing.Point(240, 0);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(237, 37);
+            this.lblQuantity.Size = new System.Drawing.Size(236, 37);
             this.lblQuantity.TabIndex = 3;
             this.lblQuantity.Text = "Số lượng";
             this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -219,9 +219,9 @@ namespace GUI
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(483, 0);
+            this.lblPrice.Location = new System.Drawing.Point(482, 0);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(173, 37);
+            this.lblPrice.Size = new System.Drawing.Size(174, 37);
             this.lblPrice.TabIndex = 4;
             this.lblPrice.Text = "Giá";
             this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

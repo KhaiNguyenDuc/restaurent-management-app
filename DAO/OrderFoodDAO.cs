@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class StaffDAO
+    public class OrderFoodDAO
     {
         SqlConnection conn = Config.getConnection();
 
-        public DataTable getStaffs()
+        public DataTable getOrderItems()
         {
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT id as ID, staff_name as [Tên], gender as [Giới tính], birthdate as [Ngày sinh], staff_address as [Địa chỉ], phone_number as [SDT], salary as [Lương]  FROM staffs", conn);
+                SqlCommand command = new SqlCommand("select Foods.food_name as [Tên], Order_food.quantity as [ Số Lượng ], Order_food.total as [ Tổng giá ]from Foods inner join Order_food on Foods.id = Order_food.food_id", conn);
                 DataTable data = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);

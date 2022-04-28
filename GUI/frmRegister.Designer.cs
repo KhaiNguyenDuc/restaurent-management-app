@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegister));
             this.lblBrand = new System.Windows.Forms.Label();
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -38,7 +39,6 @@ namespace GUI
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
             this.lblRegister = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@ namespace GUI
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,8 +92,8 @@ namespace GUI
             this.panel1.Controls.Add(this.txtUserName);
             this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.dtpBirthDate);
-            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.lblRegister);
             this.panel1.Controls.Add(this.lblPassword);
             this.panel1.Controls.Add(this.lblUserName);
@@ -149,21 +150,11 @@ namespace GUI
             this.txtName.Size = new System.Drawing.Size(452, 34);
             this.txtName.TabIndex = 31;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.rdoFemale);
-            this.panel2.Controls.Add(this.rdoMale);
-            this.panel2.Location = new System.Drawing.Point(479, 111);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(178, 31);
-            this.panel2.TabIndex = 30;
-            // 
             // rdoFemale
             // 
             this.rdoFemale.AutoSize = true;
             this.rdoFemale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoFemale.Location = new System.Drawing.Point(110, 0);
+            this.rdoFemale.Location = new System.Drawing.Point(94, -2);
             this.rdoFemale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(65, 33);
@@ -176,7 +167,7 @@ namespace GUI
             // 
             this.rdoMale.AutoSize = true;
             this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoMale.Location = new System.Drawing.Point(3, 0);
+            this.rdoMale.Location = new System.Drawing.Point(3, -2);
             this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rdoMale.Name = "rdoMale";
             this.rdoMale.Size = new System.Drawing.Size(85, 33);
@@ -245,10 +236,22 @@ namespace GUI
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Họ và tên: ";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.rdoFemale);
+            this.panel2.Controls.Add(this.rdoMale);
+            this.panel2.Location = new System.Drawing.Point(480, 111);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 32);
+            this.panel2.TabIndex = 30;
+            // 
             // frmRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
@@ -283,8 +286,8 @@ namespace GUI
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
+        private System.Windows.Forms.Panel panel2;
     }
 }

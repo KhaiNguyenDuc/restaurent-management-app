@@ -29,6 +29,9 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminFood));
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -69,19 +72,22 @@ namespace GUI
             // 
             // pnlTop
             // 
+            this.pnlTop.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlTop.Controls.Add(this.lblUsername);
             this.pnlTop.Controls.Add(this.btnLogout);
             this.pnlTop.Controls.Add(this.btnAnalysis);
             this.pnlTop.Location = new System.Drawing.Point(0, 12);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1154, 60);
+            this.pnlTop.Size = new System.Drawing.Size(1163, 60);
             this.pnlTop.TabIndex = 0;
             // 
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(798, 18);
+            this.lblUsername.Location = new System.Drawing.Point(207, 14);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(158, 29);
             this.lblUsername.TabIndex = 9;
@@ -89,34 +95,37 @@ namespace GUI
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1010, 7);
+            this.btnLogout.Location = new System.Drawing.Point(1019, 7);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(141, 50);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAnalysis
             // 
+            this.btnAnalysis.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalysis.Location = new System.Drawing.Point(0, 3);
+            this.btnAnalysis.Location = new System.Drawing.Point(12, 3);
             this.btnAnalysis.Name = "btnAnalysis";
             this.btnAnalysis.Size = new System.Drawing.Size(162, 50);
             this.btnAnalysis.TabIndex = 7;
             this.btnAnalysis.Text = "Thống kê";
-            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnAnalysis.UseVisualStyleBackColor = false;
             this.btnAnalysis.Click += new System.EventHandler(this.Analysis_Click);
             // 
             // pnlSetting
             // 
+            this.pnlSetting.BackColor = System.Drawing.Color.PowderBlue;
             this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSetting.Controls.Add(this.btnEdit);
             this.pnlSetting.Controls.Add(this.btnDelete);
             this.pnlSetting.Controls.Add(this.btnAdd);
             this.pnlSetting.Controls.Add(this.pnlCategory);
-            this.pnlSetting.Location = new System.Drawing.Point(18, 90);
+            this.pnlSetting.Location = new System.Drawing.Point(0, 78);
             this.pnlSetting.Name = "pnlSetting";
             this.pnlSetting.Size = new System.Drawing.Size(206, 471);
             this.pnlSetting.TabIndex = 1;
@@ -198,6 +207,7 @@ namespace GUI
             // lblCatetory
             // 
             this.lblCatetory.AutoSize = true;
+            this.lblCatetory.BackColor = System.Drawing.Color.LightSteelBlue;
             this.lblCatetory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCatetory.Location = new System.Drawing.Point(32, 12);
             this.lblCatetory.Name = "lblCatetory";
@@ -259,10 +269,10 @@ namespace GUI
             // lblType
             // 
             this.lblType.AutoSize = true;
-            this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblType.Location = new System.Drawing.Point(3, 13);
             this.lblType.Name = "lblType";
-            this.lblType.Size = new System.Drawing.Size(59, 29);
+            this.lblType.Size = new System.Drawing.Size(63, 29);
             this.lblType.TabIndex = 0;
             this.lblType.Text = "Loại";
             // 
@@ -286,10 +296,10 @@ namespace GUI
             // lblPrice
             // 
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrice.Location = new System.Drawing.Point(3, 13);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(50, 29);
+            this.lblPrice.Size = new System.Drawing.Size(53, 29);
             this.lblPrice.TabIndex = 0;
             this.lblPrice.Text = "Giá";
             // 
@@ -313,31 +323,50 @@ namespace GUI
             // lblFoodName
             // 
             this.lblFoodName.AutoSize = true;
-            this.lblFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFoodName.Location = new System.Drawing.Point(3, 13);
             this.lblFoodName.Name = "lblFoodName";
-            this.lblFoodName.Size = new System.Drawing.Size(109, 29);
+            this.lblFoodName.Size = new System.Drawing.Size(116, 29);
             this.lblFoodName.TabIndex = 0;
             this.lblFoodName.Text = "Tên món";
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dtgvFood);
             this.panel3.Controls.Add(this.pnlDataFood);
-            this.panel3.Location = new System.Drawing.Point(228, 90);
+            this.panel3.Location = new System.Drawing.Point(212, 78);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(923, 466);
+            this.panel3.Size = new System.Drawing.Size(951, 471);
             this.panel3.TabIndex = 4;
             // 
             // dtgvFood
             // 
+            this.dtgvFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvFood.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvFood.EnableHeadersVisualStyles = false;
             this.dtgvFood.Location = new System.Drawing.Point(6, 8);
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 24;
-            this.dtgvFood.Size = new System.Drawing.Size(915, 205);
+            this.dtgvFood.Size = new System.Drawing.Size(921, 205);
             this.dtgvFood.TabIndex = 4;
             this.dtgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellClick);
             this.dtgvFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellContentClick);
@@ -346,7 +375,10 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 576);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1190, 576);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTop);

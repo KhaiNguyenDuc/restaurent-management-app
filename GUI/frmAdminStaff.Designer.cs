@@ -29,6 +29,9 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminStaff));
             this.dtgvStaff = new System.Windows.Forms.DataGridView();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.lblSalary = new System.Windows.Forms.Label();
@@ -83,12 +86,30 @@ namespace GUI
             // 
             // dtgvStaff
             // 
+            this.dtgvStaff.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvStaff.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvStaff.EnableHeadersVisualStyles = false;
             this.dtgvStaff.Location = new System.Drawing.Point(6, 8);
             this.dtgvStaff.Name = "dtgvStaff";
             this.dtgvStaff.RowHeadersWidth = 51;
             this.dtgvStaff.RowTemplate.Height = 24;
-            this.dtgvStaff.Size = new System.Drawing.Size(915, 205);
+            this.dtgvStaff.Size = new System.Drawing.Size(1185, 226);
             this.dtgvStaff.TabIndex = 4;
             this.dtgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellClick);
             this.dtgvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellContentClick);
@@ -149,12 +170,13 @@ namespace GUI
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.LightBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.dtgvStaff);
             this.panel3.Controls.Add(this.pnlDataStaff);
             this.panel3.Location = new System.Drawing.Point(229, 87);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(923, 618);
+            this.panel3.Size = new System.Drawing.Size(1196, 618);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -169,16 +191,16 @@ namespace GUI
             this.pnlDataStaff.Controls.Add(this.panel9);
             this.pnlDataStaff.Controls.Add(this.panel8);
             this.pnlDataStaff.Controls.Add(this.panel6);
-            this.pnlDataStaff.Location = new System.Drawing.Point(3, 216);
+            this.pnlDataStaff.Location = new System.Drawing.Point(3, 240);
             this.pnlDataStaff.Name = "pnlDataStaff";
-            this.pnlDataStaff.Size = new System.Drawing.Size(924, 397);
+            this.pnlDataStaff.Size = new System.Drawing.Size(1188, 373);
             this.pnlDataStaff.TabIndex = 3;
             // 
             // cbAdmin
             // 
             this.cbAdmin.AutoSize = true;
             this.cbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAdmin.Location = new System.Drawing.Point(657, 301);
+            this.cbAdmin.Location = new System.Drawing.Point(753, 321);
             this.cbAdmin.Name = "cbAdmin";
             this.cbAdmin.Size = new System.Drawing.Size(89, 33);
             this.cbAdmin.TabIndex = 10;
@@ -188,7 +210,7 @@ namespace GUI
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(798, 359);
+            this.button1.Location = new System.Drawing.Point(1001, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(68, 36);
             this.button1.TabIndex = 9;
@@ -199,7 +221,7 @@ namespace GUI
             // 
             this.lblImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(778, 277);
+            this.lblImage.Location = new System.Drawing.Point(872, 277);
             this.lblImage.Name = "lblImage";
             this.lblImage.Size = new System.Drawing.Size(110, 79);
             this.lblImage.TabIndex = 8;
@@ -211,7 +233,7 @@ namespace GUI
             this.panel12.Controls.Add(this.rdoFemale);
             this.panel12.Controls.Add(this.rdoMale);
             this.panel12.Controls.Add(this.lblStaffGender);
-            this.panel12.Location = new System.Drawing.Point(466, 223);
+            this.panel12.Location = new System.Drawing.Point(625, 220);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(439, 47);
             this.panel12.TabIndex = 4;
@@ -254,7 +276,7 @@ namespace GUI
             // 
             this.panel11.Controls.Add(this.txtAddress);
             this.panel11.Controls.Add(this.lblAddress);
-            this.panel11.Location = new System.Drawing.Point(466, 132);
+            this.panel11.Location = new System.Drawing.Point(630, 132);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(439, 53);
             this.panel11.TabIndex = 7;
@@ -281,7 +303,7 @@ namespace GUI
             // 
             this.panel10.Controls.Add(this.dtpBirthDate);
             this.panel10.Controls.Add(this.lblBirthDate);
-            this.panel10.Location = new System.Drawing.Point(466, 38);
+            this.panel10.Location = new System.Drawing.Point(630, 35);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(434, 56);
             this.panel10.TabIndex = 6;
@@ -417,6 +439,7 @@ namespace GUI
             // 
             // pnlSetting
             // 
+            this.pnlSetting.BackColor = System.Drawing.Color.PowderBlue;
             this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSetting.Controls.Add(this.btnEdit);
             this.pnlSetting.Controls.Add(this.btnDelete);
@@ -431,7 +454,7 @@ namespace GUI
             // 
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(798, 18);
+            this.lblUsername.Location = new System.Drawing.Point(234, 18);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(158, 29);
             this.lblUsername.TabIndex = 9;
@@ -439,41 +462,48 @@ namespace GUI
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1010, 7);
+            this.btnLogout.Location = new System.Drawing.Point(1276, 7);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(141, 50);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "Đăng xuất";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnAnalysis
             // 
+            this.btnAnalysis.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnAnalysis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnAnalysis.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAnalysis.Location = new System.Drawing.Point(0, 3);
+            this.btnAnalysis.Location = new System.Drawing.Point(18, 0);
             this.btnAnalysis.Name = "btnAnalysis";
             this.btnAnalysis.Size = new System.Drawing.Size(162, 50);
             this.btnAnalysis.TabIndex = 7;
             this.btnAnalysis.Text = "Thống kê";
-            this.btnAnalysis.UseVisualStyleBackColor = true;
+            this.btnAnalysis.UseVisualStyleBackColor = false;
             this.btnAnalysis.Click += new System.EventHandler(this.Analysis_Click);
             // 
             // pnlTop
             // 
+            this.pnlTop.BackColor = System.Drawing.Color.Transparent;
+            this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlTop.Controls.Add(this.lblUsername);
             this.pnlTop.Controls.Add(this.btnLogout);
             this.pnlTop.Controls.Add(this.btnAnalysis);
             this.pnlTop.Location = new System.Drawing.Point(1, 9);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1154, 60);
+            this.pnlTop.Size = new System.Drawing.Size(1420, 60);
             this.pnlTop.TabIndex = 5;
             // 
             // frmAdminStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 717);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1437, 717);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTop);
@@ -543,8 +573,8 @@ namespace GUI
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.Label lblStaffGender;
-        private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Label lblImage;
     }
 }

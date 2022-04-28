@@ -17,7 +17,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT * FROM tables", conn);
+                SqlCommand command = new SqlCommand("SELECT id as ID,table_name as [Mã bàn], table_type as [Loại], table_state as [ Trạng thái] FROM tables", conn);
                 DataTable data = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);

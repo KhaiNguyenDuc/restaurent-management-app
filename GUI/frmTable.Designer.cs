@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTable));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblStaffName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -93,6 +94,8 @@ namespace GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(871, 484);
             this.Controls.Add(this.lblStaffNameData);
             this.Controls.Add(this.btnProfile);
