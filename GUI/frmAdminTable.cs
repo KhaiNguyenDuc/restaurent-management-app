@@ -21,7 +21,7 @@ namespace GUI
         }
         public void loadTables()
         {
-            this.dtgvTable.DataSource = table.getStaffs();
+            this.dtgvTable.DataSource = table.getTables();
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {

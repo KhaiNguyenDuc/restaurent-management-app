@@ -8,11 +8,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
 namespace GUI
 {
     public partial class frmTable : Form
     {
+        TableBUS tableBUS = new TableBUS();
         public frmTable()
         {
             InitializeComponent();
@@ -20,39 +21,82 @@ namespace GUI
         }
         void createTable()
         {
-            
+            string state = "";
             List<btnTable> btnTables = new List<btnTable>();
-            int k = 1;
-            for (int i=0; i<=4; i++)
+            DataTable tables = tableBUS.getTables();
+            int j = 0;
+            int a = 0;
+            for (j = 0; j < tables.Rows.Count / 8 ; j++)
             {
-                for (int j=0; j<=5; j++)
+                if (tables.Rows.Count < 7)
                 {
-                    btnTable btnTablec = new btnTable
-                    { 
-                        Location = new Point(j * 90, i*80)
-                    };
-                    btnTablec.Click += BtnTablec_Click;
-                    btnTablec.NumericalOrder(k);
-                    k++;
-                    btnTables.Add(btnTablec);
-                    this.panel1.Controls.Add(btnTablec);
-                    /* 
-                     * bàn trống = 1 đang dùng = 2 đặt bàn = 3
-                     * có 1 list lưu table từ CSDL
-                     * chạy dòng for hết list bàn
-                     *  if (table.state == 1 (trống) )
-                     *      btnTablec.Color = Color.white
-                     */
+                    for (int i = 0; i < tables.Rows.Count; i++)
+                    {
+                        btnTable btnTablec = new btnTable
+                        {
+                            Location = new Point(i * 90, j * 80),
+                        };
+                        // 0: trống ( xanh), 1: Đặt ( vàng ), 2: đang dùng ( đỏ)
+                        state = tables.Rows[a++]["Trạng Thái"].ToString();
+                        if(state.Equals("1"))
+                        {
+                            btnTablec.BackColor = Color.Yellow;
+                        }
+                        else if(state.Equals("2"))
+                        {
+                            btnTablec.BackColor = Color.Red;
+                        }
+                        this.pnlTable.Controls.Add(btnTablec);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i < 7; i++)
+                    {
+                        btnTable btnTablec = new btnTable
+                        {
+                            Location = new Point(i * 90, j * 80),
+                        };
+                        state = tables.Rows[a++]["Trạng Thái"].ToString();
+                        if (state.Equals("1"))
+                        {
+                            btnTablec.BackColor = Color.Yellow;
+                        }
+                        else if (state.Equals("2"))
+                        {
+                            btnTablec.BackColor = Color.Red;
+                        }
+                        this.pnlTable.Controls.Add(btnTablec);
+                    }
                 }
             }
+
+            for (int z = 0;z< tables.Rows.Count - j*7; z++)
+            {
+                btnTable btnTablec = new btnTable
+                {
+                    Location = new Point(z * 90, j * 80),
+                };
+                state = tables.Rows[a++]["Trạng Thái"].ToString();
+                if (state.Equals("1"))
+                {
+                    btnTablec.BackColor = Color.Yellow;
+                }
+                else if (state.Equals("2"))
+                {
+                    btnTablec.BackColor = Color.Red;
+                }
+                this.pnlTable.Controls.Add(btnTablec);
+            }
+
+
         }
 
         private void BtnTablec_Click(object sender, EventArgs e)
         {
             
             frmTableDetail formTableDetail = new frmTableDetail();
-            formTableDetail.Show();
-            this.Visible = false;
+            formTableDetail.ShowDialog();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

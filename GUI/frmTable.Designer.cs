@@ -30,21 +30,21 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTable));
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlTable = new System.Windows.Forms.Panel();
             this.lblStaffName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.lblStaffNameData = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // panel1
+            // pnlTable
             // 
-            this.panel1.Location = new System.Drawing.Point(12, 90);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(848, 385);
-            this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.pnlTable.Location = new System.Drawing.Point(12, 107);
+            this.pnlTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlTable.Name = "pnlTable";
+            this.pnlTable.Size = new System.Drawing.Size(848, 368);
+            this.pnlTable.TabIndex = 0;
+            this.pnlTable.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // lblStaffName
             // 
@@ -101,7 +101,7 @@ namespace GUI
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblStaffName);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlTable);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -113,7 +113,7 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlTable;
         private System.Windows.Forms.Label lblStaffName;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnProfile;

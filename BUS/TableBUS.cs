@@ -10,7 +10,7 @@ namespace BUS
     public class TableBUS
     {
         TableDAO table = new TableDAO();
-        public DataTable getStaffs()
+        public DataTable getTables()
         {
             return table.getTables();
         }
