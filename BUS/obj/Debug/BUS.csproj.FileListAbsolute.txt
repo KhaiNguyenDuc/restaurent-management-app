@@ -11,3 +11,17 @@ D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.exe
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\BUS.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\BUS.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\BUS.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\DAO.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\DAO.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\DAO.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.SuggestedBindingRedirects.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.Properties.Resources.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.pdb

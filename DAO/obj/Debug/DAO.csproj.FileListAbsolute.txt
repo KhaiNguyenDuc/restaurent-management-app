@@ -9,3 +9,16 @@ D:\Winform\RestaurantManagement\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
 D:\Winform\RestaurantManagement\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
 D:\Winform\RestaurantManagement\DAO\obj\Debug\DAO.exe
 D:\Winform\RestaurantManagement\DAO\obj\Debug\DAO.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\bin\Debug\DAO.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\bin\Debug\DAO.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\bin\Debug\DAO.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\bin\Debug\System.Data.SqlClient.dll
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\bin\Debug\System.Data.SqlClient.xml
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.csproj.AssemblyReference.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.csproj.SuggestedBindingRedirects.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.Properties.Resources.resources
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.csproj.GenerateResource.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.csproj.CoreCompileInputs.cache
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.csproj.CopyComplete
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\DAO\obj\Debug\DAO.pdb

@@ -73,3 +73,12 @@ D:\Winform\RestaurantManagement\GUI\bin\Debug\BUS.pdb
 D:\Winform\RestaurantManagement\GUI\bin\Debug\BUS.exe.config
 D:\Winform\RestaurantManagement\GUI\bin\Debug\DAO.pdb
 D:\Winform\RestaurantManagement\GUI\bin\Debug\DAO.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\BUS.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\Model.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\DAO.exe
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\BUS.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\BUS.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\Model.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\Model.exe.config
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\DAO.pdb
+D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\DAO.exe.config

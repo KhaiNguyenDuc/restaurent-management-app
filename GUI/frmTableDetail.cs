@@ -53,10 +53,8 @@ namespace GUI
 
         private void btnPrintBill_Click(object sender, EventArgs e)
         {
-            this.Close();
-            Thread thread = new Thread(OpenFrmCheckout);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
+            new frmCheckout().ShowDialog();
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -70,6 +68,19 @@ namespace GUI
         void OpenFrmCheckout(object obj)
         {
             Application.Run(new frmCheckout());
+        }
+
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmTable);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+
+        }
+        void OpenFrmTable(object obj)
+        {
+            Application.Run(new frmTable());
         }
     }
 }

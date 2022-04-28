@@ -36,7 +36,13 @@ namespace GUI
                     k++;
                     btnTables.Add(btnTablec);
                     this.panel1.Controls.Add(btnTablec);
-                    
+                    /* 
+                     * bàn trống = 1 đang dùng = 2 đặt bàn = 3
+                     * có 1 list lưu table từ CSDL
+                     * chạy dòng for hết list bàn
+                     *  if (table.state == 1 (trống) )
+                     *      btnTablec.Color = Color.white
+                     */
                 }
             }
         }
