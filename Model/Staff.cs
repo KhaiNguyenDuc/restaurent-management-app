@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    class Staff
+    public class Staff
     {
         private int iD;
         private string name;
@@ -35,6 +35,15 @@ namespace Model
             this.phoneNumber = phoneNumber;
             this.salary = salary;
             this.image = image;
+        }
+
+        public Staff(string name, string gender, DateTime birthday, string address, string phoneNumber)
+        {
+            this.name = name;
+            this.gender = gender;
+            this.birthday = birthday;
+            this.address = address;
+            this.phoneNumber = phoneNumber;
         }
 
         public Staff()

@@ -8,7 +8,6 @@ D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.Properties.Resources.resources
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.GenerateResource.cache
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
-D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.exe
 D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.pdb
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\bin\Debug\BUS.exe.config
@@ -25,3 +24,6 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CopyComplete
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.exe
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\BUS\obj\Debug\BUS.pdb
+D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.exe
+D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.pdb
+D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.exe.config

@@ -34,20 +34,22 @@ namespace GUI
             this.btnRegister = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtPassword = new System.Windows.Forms.TextBox();
-            this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.dtpBirthDate = new System.Windows.Forms.DateTimePicker();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
+            this.txtName = new System.Windows.Forms.TextBox();
             this.lblRegister = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lblUserName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblBirthdate = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserName = new System.Windows.Forms.TextBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lblUserName = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +67,7 @@ namespace GUI
             // btnRegister
             // 
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegister.Location = new System.Drawing.Point(524, 367);
+            this.btnRegister.Location = new System.Drawing.Point(523, 481);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(162, 73);
             this.btnRegister.TabIndex = 19;
@@ -77,7 +79,7 @@ namespace GUI
             // btnLogin
             // 
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(19, 367);
+            this.btnLogin.Location = new System.Drawing.Point(2, 481);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(162, 73);
             this.btnLogin.TabIndex = 18;
@@ -88,45 +90,29 @@ namespace GUI
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtPhoneNumber);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUserName);
+            this.panel1.Controls.Add(this.lblPassword);
+            this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.dtpBirthDate);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.lblRegister);
-            this.panel1.Controls.Add(this.lblPassword);
-            this.panel1.Controls.Add(this.lblUserName);
             this.panel1.Controls.Add(this.lblAddress);
             this.panel1.Controls.Add(this.lblBirthdate);
             this.panel1.Controls.Add(this.lblName);
             this.panel1.Location = new System.Drawing.Point(11, 55);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(674, 302);
+            this.panel1.Size = new System.Drawing.Size(674, 407);
             this.panel1.TabIndex = 20;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(205, 238);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(449, 34);
-            this.txtPassword.TabIndex = 35;
-            // 
-            // txtUserName
-            // 
-            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUserName.Location = new System.Drawing.Point(205, 191);
-            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(449, 34);
-            this.txtUserName.TabIndex = 34;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(205, 147);
+            this.txtAddress.Location = new System.Drawing.Point(207, 238);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(452, 34);
@@ -135,20 +121,21 @@ namespace GUI
             // dtpBirthDate
             // 
             this.dtpBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpBirthDate.Location = new System.Drawing.Point(205, 116);
+            this.dtpBirthDate.Location = new System.Drawing.Point(207, 207);
             this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(269, 23);
             this.dtpBirthDate.TabIndex = 32;
             // 
-            // txtName
+            // panel2
             // 
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(205, 75);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(452, 34);
-            this.txtName.TabIndex = 31;
+            this.panel2.Controls.Add(this.rdoFemale);
+            this.panel2.Controls.Add(this.rdoMale);
+            this.panel2.Location = new System.Drawing.Point(482, 202);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(177, 32);
+            this.panel2.TabIndex = 30;
             // 
             // rdoFemale
             // 
@@ -159,13 +146,13 @@ namespace GUI
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(65, 33);
             this.rdoFemale.TabIndex = 1;
-            this.rdoFemale.TabStop = true;
             this.rdoFemale.Text = "Nữ";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
             // rdoMale
             // 
             this.rdoMale.AutoSize = true;
+            this.rdoMale.Checked = true;
             this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMale.Location = new System.Drawing.Point(3, -2);
             this.rdoMale.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -175,6 +162,15 @@ namespace GUI
             this.rdoMale.TabStop = true;
             this.rdoMale.Text = "Nam";
             this.rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // txtName
+            // 
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(207, 166);
+            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(452, 34);
+            this.txtName.TabIndex = 31;
             // 
             // lblRegister
             // 
@@ -186,31 +182,11 @@ namespace GUI
             this.lblRegister.TabIndex = 29;
             this.lblRegister.Text = "Đăng ký tài khoản";
             // 
-            // lblPassword
-            // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassword.Location = new System.Drawing.Point(12, 240);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(115, 29);
-            this.lblPassword.TabIndex = 27;
-            this.lblPassword.Text = "Mật khẩu:";
-            // 
-            // lblUserName
-            // 
-            this.lblUserName.AutoSize = true;
-            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUserName.Location = new System.Drawing.Point(12, 197);
-            this.lblUserName.Name = "lblUserName";
-            this.lblUserName.Size = new System.Drawing.Size(181, 29);
-            this.lblUserName.TabIndex = 25;
-            this.lblUserName.Text = "Tên đăng nhập:";
-            // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(12, 153);
+            this.lblAddress.Location = new System.Drawing.Point(14, 244);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(92, 29);
             this.lblAddress.TabIndex = 21;
@@ -220,7 +196,7 @@ namespace GUI
             // 
             this.lblBirthdate.AutoSize = true;
             this.lblBirthdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBirthdate.Location = new System.Drawing.Point(12, 111);
+            this.lblBirthdate.Location = new System.Drawing.Point(14, 202);
             this.lblBirthdate.Name = "lblBirthdate";
             this.lblBirthdate.Size = new System.Drawing.Size(125, 29);
             this.lblBirthdate.TabIndex = 20;
@@ -230,21 +206,68 @@ namespace GUI
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(12, 71);
+            this.lblName.Location = new System.Drawing.Point(14, 162);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(125, 29);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Họ và tên: ";
             // 
-            // panel2
+            // txtPassword
             // 
-            this.panel2.Controls.Add(this.rdoFemale);
-            this.panel2.Controls.Add(this.rdoMale);
-            this.panel2.Location = new System.Drawing.Point(480, 111);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(177, 32);
-            this.panel2.TabIndex = 30;
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(207, 119);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(449, 34);
+            this.txtPassword.TabIndex = 39;
+            // 
+            // txtUserName
+            // 
+            this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUserName.Location = new System.Drawing.Point(207, 72);
+            this.txtUserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(449, 34);
+            this.txtUserName.TabIndex = 38;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Location = new System.Drawing.Point(14, 121);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(115, 29);
+            this.lblPassword.TabIndex = 37;
+            this.lblPassword.Text = "Mật khẩu:";
+            // 
+            // lblUserName
+            // 
+            this.lblUserName.AutoSize = true;
+            this.lblUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUserName.Location = new System.Drawing.Point(14, 78);
+            this.lblUserName.Name = "lblUserName";
+            this.lblUserName.Size = new System.Drawing.Size(181, 29);
+            this.lblUserName.TabIndex = 36;
+            this.lblUserName.Text = "Tên đăng nhập:";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(204, 287);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(452, 34);
+            this.txtPhoneNumber.TabIndex = 41;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(14, 292);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(166, 29);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Số điện thoại: ";
             // 
             // frmRegister
             // 
@@ -252,7 +275,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(697, 450);
+            this.ClientSize = new System.Drawing.Size(697, 566);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.btnLogin);
@@ -261,6 +284,7 @@ namespace GUI
             this.Name = "frmRegister";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmRegister";
+            this.Load += new System.EventHandler(this.frmRegister_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -276,18 +300,20 @@ namespace GUI
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblRegister;
-        private System.Windows.Forms.Label lblPassword;
-        private System.Windows.Forms.Label lblUserName;
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblBirthdate;
         private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.TextBox txtPassword;
-        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.DateTimePicker dtpBirthDate;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserName;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label lblUserName;
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    class Account
+    public class Account
     {
         private int id;
         private string username;
@@ -26,6 +26,19 @@ namespace Model
             this.username = username;
             this.password = password;
             this.type = type;
+        }
+
+        public Account(string username, string password, int type)
+        {
+            this.username = username;
+            this.password = password;
+            this.type = type;
+        }
+
+        public Account(string username, string password)
+        {
+            this.username = username;
+            this.password = password;
         }
     }
 }

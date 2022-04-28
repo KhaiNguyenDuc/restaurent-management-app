@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using BUS;
+using Model;
 namespace GUI
 {
     public partial class frmLogin : Form
     {
+        AccountBUS accountBUS = new AccountBUS();
         public frmLogin()
         {
             InitializeComponent();
-        }
 
+        }
+       
         private void btnRegister_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -28,13 +31,23 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if ( txtUserName.Text == "a" && txtPassword.Text == "a")
+            Account account = new Account(txtUserName.Text, txtPassword.Text);
+            int result = accountBUS.Authenticate(account);
+            if (result == 2)
+            {
+                MessageBox.Show("Không tồn tại tài khoảng");
+            }
+            else if(result == 0)
             {
                 this.Close();
-                Thread thread = new Thread( OpenFrmAdminFood );
+                Thread thread = new Thread(OpenFrmAdminFood);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
-            }    
+            }
+            else if (result == 3)
+            {
+                MessageBox.Show("Mật khẩu sai");
+            }
             else
             {
                 this.Close();
@@ -60,6 +73,11 @@ namespace GUI
         }
 
         private void frmLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_TextChanged(object sender, EventArgs e)
         {
 
         }
