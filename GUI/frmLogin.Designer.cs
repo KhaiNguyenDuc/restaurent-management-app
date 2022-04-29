@@ -157,8 +157,8 @@
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Label lblRegister;
         private System.Windows.Forms.Label lblBrand;
-        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
+        public System.Windows.Forms.TextBox txtUserName;
     }
 }
 

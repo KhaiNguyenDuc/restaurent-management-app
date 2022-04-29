@@ -14,7 +14,7 @@ namespace DAO
 
         public void insertStaffs(Staff staff)
         {
-            string query = "INSERT INTO staffs (staff_name,gender,birthdate,staff_address,phone_number) VALUES (@Name,@Gender,@Birthdate,@Address,@PhoneNumber)";
+            string query = "INSERT INTO staffs (staff_name,gender,birthdate,staff_address,phone_number,account_id) VALUES (@Name,@Gender,@Birthdate,@Address,@PhoneNumber,@AccountID)";
             try
             {
                 using (SqlCommand command = new SqlCommand(query, conn))
@@ -30,6 +30,8 @@ namespace DAO
                     command.Parameters["@Address"].Value = staff.Address;
                     command.Parameters.Add(new SqlParameter("@PhoneNumber", SqlDbType.NVarChar));
                     command.Parameters["@PhoneNumber"].Value = staff.PhoneNumber;
+                    command.Parameters.Add(new SqlParameter("@AccountID", SqlDbType.Int));
+                    command.Parameters["@AccountID"].Value = staff.AccountID;
                     command.ExecuteNonQuery();
                     conn.Close();
                 }

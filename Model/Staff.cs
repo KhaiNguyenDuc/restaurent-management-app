@@ -14,6 +14,7 @@ namespace Model
         private string phoneNumber;
         private double salary;
         private string image;
+        private int accountID;
 
         public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
@@ -24,8 +25,9 @@ namespace Model
         public string Image { get => image; set => image = value; }
         public double Salary { get => salary; set => salary = value; }
         public string Gender { get => gender; set => gender = value; }
+        public int AccountID { get => accountID; set => accountID = value; }
 
-        public Staff(int iD, string name, string gender, DateTime birthday, string address, string phoneNumber, double salary, string image)
+        public Staff(int iD, string name, string gender, DateTime birthday, string address, string phoneNumber, double salary, string image, int accountID)
         {
             this.iD = iD;
             this.name = name;
@@ -35,6 +37,12 @@ namespace Model
             this.phoneNumber = phoneNumber;
             this.salary = salary;
             this.image = image;
+            this.accountID = accountID;
+        }
+
+        public Staff(string name, string gender, DateTime birthday, string address, string phoneNumber, int accountID) : this(name, gender, birthday, address, phoneNumber)
+        {
+            this.accountID = accountID;
         }
 
         public Staff(string name, string gender, DateTime birthday, string address, string phoneNumber)

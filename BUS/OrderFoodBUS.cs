@@ -10,10 +10,10 @@ namespace BUS
     public class OrderFoodBUS
     {
         OrderFoodDAO order = new DAO.OrderFoodDAO();
-        public DataTable getOrderItems()
+        public DataTable getOrderItems(int tableID)
         {
 
-            return order.getOrderItems();
+            return order.getOrderItems(tableID);
         }
     }
 }

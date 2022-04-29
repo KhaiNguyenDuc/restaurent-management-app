@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAO
 {
@@ -28,6 +29,24 @@ namespace DAO
             {
                 Console.WriteLine(e.Message);
                 return null;
+            }
+        }
+        public int getStatus(string tableID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT table_state FROM tables WHERE ID = "+ tableID+";", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["table_state"]);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return -1;
             }
         }
     }

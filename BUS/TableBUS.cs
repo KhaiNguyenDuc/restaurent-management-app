@@ -14,5 +14,9 @@ namespace BUS
         {
             return table.getTables();
         }
+        public int getStatus(string tableID)
+        {
+            return table.getStatus(tableID);
+        }
     }
 }

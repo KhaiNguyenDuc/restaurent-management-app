@@ -12,12 +12,12 @@ namespace DAO
     {
         SqlConnection conn = Config.getConnection();
 
-        public DataTable getOrderItems()
+        public DataTable getOrderItems(int tableID)
         {
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("select Foods.food_name as [Tên], Order_food.quantity as [ Số Lượng ], Order_food.total as [ Tổng giá ]from Foods inner join Order_food on Foods.id = Order_food.food_id", conn);
+                SqlCommand command = new SqlCommand("SELECT Foods.food_name AS [Tên], Order_food.quantity AS [Số Lượng], Order_food.total AS [Tổng giá]FROM Foods inner join Order_food ON Foods.id = Order_food.food_id inner join Orders ON Orders.id = Order_food.order_id inner join tables ON tables.id = Orders.table_id WHERE tables.id = "+ tableID+";", conn);
                 DataTable data = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);

@@ -56,5 +56,13 @@ namespace BUS
         {
             accountDAO.insertAccounts(account);
         }
+        public string getStaffName(string username)
+        {
+           return accountDAO.getStaffName(username);
+        }
+        public int getLatestID()
+        {
+            return accountDAO.getLatestID();
+        }
     }
 }

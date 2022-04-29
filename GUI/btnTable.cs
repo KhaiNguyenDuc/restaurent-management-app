@@ -12,6 +12,7 @@ namespace GUI
 {
     public partial class btnTable : UserControl
     {
+        public static string tableName;
         public btnTable()
         {
             InitializeComponent();
@@ -19,6 +20,11 @@ namespace GUI
         public void NumericalOrder(int num)
         {
             lblNum.Text = num.ToString();
+        }
+
+        private void btnTable_Click(object sender, EventArgs e)
+        {
+            tableName = lblNum.Text;
         }
     }
 }

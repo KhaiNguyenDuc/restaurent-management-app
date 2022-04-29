@@ -14,7 +14,7 @@ namespace GUI
     public partial class frmAdminStaff : Form
     {
         public int indexRow;
-        StaffBUS staff = new StaffBUS();
+        StaffBUS staffBUS = new StaffBUS();
         public frmAdminStaff()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace GUI
         }
         public void loadStaffs()
         {
-            this.dtgvStaff.DataSource = staff.getStaffs();
+            this.dtgvStaff.DataSource = staffBUS.getStaffs();
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {

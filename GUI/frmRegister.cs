@@ -42,9 +42,11 @@ namespace GUI
                 gender = rdoMale.Text;
             }
             DateTime birthdate = dtpBirthDate.Value;
-            Staff staff = new Staff(txtName.Text, gender, birthdate,txtAddress.Text,txtPhoneNumber.Text);
+           
             // end get data
             Account account = new Account(txtUserName.Text, txtPassword.Text, 1);
+            Staff staff = new Staff(txtName.Text, gender, birthdate, txtAddress.Text, txtPhoneNumber.Text);
+            
             // validate
             bool result1 = staffBUS.ValidateStaffs(staff);
             bool result2 = accountBUS.ValidateAccounts(account);
@@ -52,6 +54,7 @@ namespace GUI
             if (result1 && result2)
             {
                 accountBUS.addAccounts(account);
+                staff.AccountID = accountBUS.getLatestID();
                 staffBUS.addStaffs(staff);
                 this.Close();
                 Thread thread = new Thread(OpenRegisterSuccess);

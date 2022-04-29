@@ -35,38 +35,36 @@ namespace GUI
             this.lblTableID = new System.Windows.Forms.Label();
             this.pnlStatus = new System.Windows.Forms.Panel();
             this.lblNameCustomer = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
             this.lblPhoneNumberCustomer = new System.Windows.Forms.Label();
             this.txtNameCustomer = new System.Windows.Forms.TextBox();
             this.lblStatus = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
-            this.lblIdTable = new System.Windows.Forms.Label();
+            this.lblTableIDdata = new System.Windows.Forms.Label();
             this.cbcStatus = new System.Windows.Forms.ComboBox();
-            this.lblTotalPrice = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnPrintBill = new System.Windows.Forms.Button();
             this.dtgvOrderItems = new System.Windows.Forms.DataGridView();
-            this.pnlSetting = new System.Windows.Forms.Panel();
-            this.pnlCategory = new System.Windows.Forms.Panel();
             this.btnEdit = new System.Windows.Forms.Button();
-            this.lblCatetory = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlDateTable = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
-            this.tbFoodName = new System.Windows.Forms.TextBox();
             this.lblFoodname = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.pnlSetting = new System.Windows.Forms.Panel();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPrintBill = new System.Windows.Forms.Button();
             this.pnlStatus.SuspendLayout();
             this.pnlTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvOrderItems)).BeginInit();
-            this.pnlSetting.SuspendLayout();
-            this.pnlCategory.SuspendLayout();
             this.pnlDateTable.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).BeginInit();
+            this.pnlSetting.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTableID
@@ -74,7 +72,7 @@ namespace GUI
             this.lblTableID.AutoSize = true;
             this.lblTableID.BackColor = System.Drawing.Color.LawnGreen;
             this.lblTableID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTableID.Location = new System.Drawing.Point(441, 12);
+            this.lblTableID.Location = new System.Drawing.Point(517, 12);
             this.lblTableID.Name = "lblTableID";
             this.lblTableID.Size = new System.Drawing.Size(105, 29);
             this.lblTableID.TabIndex = 0;
@@ -85,12 +83,12 @@ namespace GUI
             this.pnlStatus.BackColor = System.Drawing.Color.Transparent;
             this.pnlStatus.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlStatus.Controls.Add(this.lblNameCustomer);
-            this.pnlStatus.Controls.Add(this.textBox1);
+            this.pnlStatus.Controls.Add(this.txtPhoneNumber);
             this.pnlStatus.Controls.Add(this.lblPhoneNumberCustomer);
             this.pnlStatus.Controls.Add(this.txtNameCustomer);
             this.pnlStatus.Location = new System.Drawing.Point(9, 72);
             this.pnlStatus.Name = "pnlStatus";
-            this.pnlStatus.Size = new System.Drawing.Size(1067, 61);
+            this.pnlStatus.Size = new System.Drawing.Size(1018, 61);
             this.pnlStatus.TabIndex = 1;
             // 
             // lblNameCustomer
@@ -104,20 +102,20 @@ namespace GUI
             this.lblNameCustomer.TabIndex = 8;
             this.lblNameCustomer.Text = "Tên khách hàng:";
             // 
-            // textBox1
+            // txtPhoneNumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(668, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 34);
-            this.textBox1.TabIndex = 11;
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(681, 18);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(233, 34);
+            this.txtPhoneNumber.TabIndex = 11;
             // 
             // lblPhoneNumberCustomer
             // 
             this.lblPhoneNumberCustomer.AutoSize = true;
             this.lblPhoneNumberCustomer.BackColor = System.Drawing.Color.LawnGreen;
             this.lblPhoneNumberCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberCustomer.Location = new System.Drawing.Point(488, 13);
+            this.lblPhoneNumberCustomer.Location = new System.Drawing.Point(488, 18);
             this.lblPhoneNumberCustomer.Name = "lblPhoneNumberCustomer";
             this.lblPhoneNumberCustomer.Size = new System.Drawing.Size(174, 29);
             this.lblPhoneNumberCustomer.TabIndex = 9;
@@ -147,7 +145,7 @@ namespace GUI
             // 
             this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(888, -4);
+            this.btnLogout.Location = new System.Drawing.Point(1061, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(172, 57);
             this.btnLogout.TabIndex = 7;
@@ -160,25 +158,24 @@ namespace GUI
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Transparent;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTop.Controls.Add(this.lblIdTable);
+            this.pnlTop.Controls.Add(this.lblTableIDdata);
             this.pnlTop.Controls.Add(this.cbcStatus);
             this.pnlTop.Controls.Add(this.lblTableID);
             this.pnlTop.Controls.Add(this.lblStatus);
-            this.pnlTop.Controls.Add(this.btnLogout);
             this.pnlTop.Location = new System.Drawing.Point(9, 6);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1067, 60);
+            this.pnlTop.Size = new System.Drawing.Size(1018, 60);
             this.pnlTop.TabIndex = 8;
             // 
-            // lblIdTable
+            // lblTableIDdata
             // 
-            this.lblIdTable.AutoSize = true;
-            this.lblIdTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIdTable.Location = new System.Drawing.Point(549, 12);
-            this.lblIdTable.Name = "lblIdTable";
-            this.lblIdTable.Size = new System.Drawing.Size(55, 29);
-            this.lblIdTable.TabIndex = 9;
-            this.lblIdTable.Text = "123";
+            this.lblTableIDdata.AutoSize = true;
+            this.lblTableIDdata.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTableIDdata.Location = new System.Drawing.Point(649, 12);
+            this.lblTableIDdata.Name = "lblTableIDdata";
+            this.lblTableIDdata.Size = new System.Drawing.Size(55, 29);
+            this.lblTableIDdata.TabIndex = 9;
+            this.lblTableIDdata.Text = "123";
             // 
             // cbcStatus
             // 
@@ -192,41 +189,6 @@ namespace GUI
             this.cbcStatus.Name = "cbcStatus";
             this.cbcStatus.Size = new System.Drawing.Size(153, 37);
             this.cbcStatus.TabIndex = 8;
-            // 
-            // lblTotalPrice
-            // 
-            this.lblTotalPrice.AutoSize = true;
-            this.lblTotalPrice.BackColor = System.Drawing.Color.LawnGreen;
-            this.lblTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPrice.Location = new System.Drawing.Point(869, 525);
-            this.lblTotalPrice.Name = "lblTotalPrice";
-            this.lblTotalPrice.Size = new System.Drawing.Size(221, 29);
-            this.lblTotalPrice.TabIndex = 10;
-            this.lblTotalPrice.Text = "Tổng giá: 200 vnd";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(42, 357);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(115, 57);
-            this.btnSave.TabIndex = 9;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseMnemonic = false;
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // btnPrintBill
-            // 
-            this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintBill.Location = new System.Drawing.Point(19, 287);
-            this.btnPrintBill.Name = "btnPrintBill";
-            this.btnPrintBill.Size = new System.Drawing.Size(162, 57);
-            this.btnPrintBill.TabIndex = 8;
-            this.btnPrintBill.Text = "In hóa đơn";
-            this.btnPrintBill.UseMnemonic = false;
-            this.btnPrintBill.UseVisualStyleBackColor = true;
-            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click);
             // 
             // dtgvOrderItems
             // 
@@ -249,60 +211,27 @@ namespace GUI
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgvOrderItems.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvOrderItems.EnableHeadersVisualStyles = false;
-            this.dtgvOrderItems.Location = new System.Drawing.Point(233, 139);
+            this.dtgvOrderItems.Location = new System.Drawing.Point(12, 139);
             this.dtgvOrderItems.Name = "dtgvOrderItems";
             this.dtgvOrderItems.RowHeadersWidth = 51;
             this.dtgvOrderItems.RowTemplate.Height = 24;
-            this.dtgvOrderItems.Size = new System.Drawing.Size(843, 295);
+            this.dtgvOrderItems.Size = new System.Drawing.Size(1221, 295);
             this.dtgvOrderItems.TabIndex = 11;
-            // 
-            // pnlSetting
-            // 
-            this.pnlSetting.BackColor = System.Drawing.Color.PowderBlue;
-            this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlSetting.Controls.Add(this.pnlCategory);
-            this.pnlSetting.Controls.Add(this.btnPrintBill);
-            this.pnlSetting.Controls.Add(this.btnSave);
-            this.pnlSetting.Location = new System.Drawing.Point(12, 139);
-            this.pnlSetting.Name = "pnlSetting";
-            this.pnlSetting.Size = new System.Drawing.Size(206, 447);
-            this.pnlSetting.TabIndex = 12;
-            // 
-            // pnlCategory
-            // 
-            this.pnlCategory.Controls.Add(this.btnEdit);
-            this.pnlCategory.Controls.Add(this.lblCatetory);
-            this.pnlCategory.Controls.Add(this.btnDelete);
-            this.pnlCategory.Controls.Add(this.btnAdd);
-            this.pnlCategory.Location = new System.Drawing.Point(5, 15);
-            this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
-            this.pnlCategory.TabIndex = 0;
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(14, 169);
+            this.btnEdit.Location = new System.Drawing.Point(579, 93);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 50);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
             // 
-            // lblCatetory
-            // 
-            this.lblCatetory.AutoSize = true;
-            this.lblCatetory.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCatetory.Location = new System.Drawing.Point(32, 12);
-            this.lblCatetory.Name = "lblCatetory";
-            this.lblCatetory.Size = new System.Drawing.Size(119, 29);
-            this.lblCatetory.TabIndex = 0;
-            this.lblCatetory.Text = "Chỉnh sửa";
-            // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(14, 100);
+            this.btnDelete.Location = new System.Drawing.Point(401, 93);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(162, 50);
             this.btnDelete.TabIndex = 10;
@@ -312,7 +241,7 @@ namespace GUI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(14, 44);
+            this.btnAdd.Location = new System.Drawing.Point(220, 93);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(162, 50);
             this.btnAdd.TabIndex = 9;
@@ -321,28 +250,52 @@ namespace GUI
             // 
             // pnlDateTable
             // 
+            this.pnlDateTable.Controls.Add(this.btnEdit);
             this.pnlDateTable.Controls.Add(this.panel6);
-            this.pnlDateTable.Location = new System.Drawing.Point(233, 440);
+            this.pnlDateTable.Controls.Add(this.btnAdd);
+            this.pnlDateTable.Controls.Add(this.btnDelete);
+            this.pnlDateTable.Location = new System.Drawing.Point(12, 440);
             this.pnlDateTable.Name = "pnlDateTable";
-            this.pnlDateTable.Size = new System.Drawing.Size(843, 72);
+            this.pnlDateTable.Size = new System.Drawing.Size(1015, 171);
             this.pnlDateTable.TabIndex = 13;
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.checkBox1);
+            this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.lblQuantity);
             this.panel6.Controls.Add(this.nudQuantity);
-            this.panel6.Controls.Add(this.tbFoodName);
             this.panel6.Controls.Add(this.lblFoodname);
-            this.panel6.Location = new System.Drawing.Point(7, 3);
+            this.panel6.Location = new System.Drawing.Point(92, 15);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(833, 56);
             this.panel6.TabIndex = 0;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkBox1.Location = new System.Drawing.Point(615, 15);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(135, 33);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "Điểm VIP";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(151, 9);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 37);
+            this.comboBox1.TabIndex = 5;
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(415, 17);
+            this.lblQuantity.Location = new System.Drawing.Point(308, 15);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(109, 29);
             this.lblQuantity.TabIndex = 4;
@@ -351,18 +304,10 @@ namespace GUI
             // nudQuantity
             // 
             this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(547, 13);
+            this.nudQuantity.Location = new System.Drawing.Point(439, 13);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(120, 34);
             this.nudQuantity.TabIndex = 3;
-            // 
-            // tbFoodName
-            // 
-            this.tbFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbFoodName.Location = new System.Drawing.Point(160, 12);
-            this.tbFoodName.Name = "tbFoodName";
-            this.tbFoodName.Size = new System.Drawing.Size(186, 34);
-            this.tbFoodName.TabIndex = 2;
             // 
             // lblFoodname
             // 
@@ -374,17 +319,66 @@ namespace GUI
             this.lblFoodname.TabIndex = 1;
             this.lblFoodname.Text = "Tên món";
             // 
+            // btnBack
+            // 
+            this.btnBack.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(1061, 69);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(172, 64);
+            this.btnBack.TabIndex = 10;
+            this.btnBack.Text = "Trở về";
+            this.btnBack.UseMnemonic = false;
+            this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // pnlSetting
+            // 
+            this.pnlSetting.BackColor = System.Drawing.Color.PowderBlue;
+            this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSetting.Controls.Add(this.btnSave);
+            this.pnlSetting.Controls.Add(this.btnPrintBill);
+            this.pnlSetting.Location = new System.Drawing.Point(1033, 440);
+            this.pnlSetting.Name = "pnlSetting";
+            this.pnlSetting.Size = new System.Drawing.Size(200, 171);
+            this.pnlSetting.TabIndex = 14;
+            this.pnlSetting.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlSetting_Paint);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(37, 85);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(115, 57);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseMnemonic = false;
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click_1);
+            // 
+            // btnPrintBill
+            // 
+            this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintBill.Location = new System.Drawing.Point(12, 15);
+            this.btnPrintBill.Name = "btnPrintBill";
+            this.btnPrintBill.Size = new System.Drawing.Size(168, 57);
+            this.btnPrintBill.TabIndex = 8;
+            this.btnPrintBill.Text = "In hóa đơn";
+            this.btnPrintBill.UseMnemonic = false;
+            this.btnPrintBill.UseVisualStyleBackColor = true;
+            // 
             // frmTableDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1105, 591);
-            this.Controls.Add(this.lblTotalPrice);
-            this.Controls.Add(this.pnlDateTable);
+            this.ClientSize = new System.Drawing.Size(1260, 616);
             this.Controls.Add(this.pnlSetting);
+            this.Controls.Add(this.pnlDateTable);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dtgvOrderItems);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.pnlStatus);
             this.Name = "frmTableDetail";
@@ -395,15 +389,12 @@ namespace GUI
             this.pnlTop.ResumeLayout(false);
             this.pnlTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvOrderItems)).EndInit();
-            this.pnlSetting.ResumeLayout(false);
-            this.pnlCategory.ResumeLayout(false);
-            this.pnlCategory.PerformLayout();
             this.pnlDateTable.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudQuantity)).EndInit();
+            this.pnlSetting.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -414,27 +405,26 @@ namespace GUI
         private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Panel pnlTop;
-        private System.Windows.Forms.Label lblTotalPrice;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnPrintBill;
         private System.Windows.Forms.Label lblNameCustomer;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
         private System.Windows.Forms.Label lblPhoneNumberCustomer;
         private System.Windows.Forms.TextBox txtNameCustomer;
         private System.Windows.Forms.ComboBox cbcStatus;
-        private System.Windows.Forms.Label lblIdTable;
+        private System.Windows.Forms.Label lblTableIDdata;
         private System.Windows.Forms.DataGridView dtgvOrderItems;
-        private System.Windows.Forms.Panel pnlSetting;
-        private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.Button btnEdit;
-        private System.Windows.Forms.Label lblCatetory;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlDateTable;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown nudQuantity;
-        private System.Windows.Forms.TextBox tbFoodName;
         private System.Windows.Forms.Label lblFoodname;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Panel pnlSetting;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPrintBill;
     }
 }

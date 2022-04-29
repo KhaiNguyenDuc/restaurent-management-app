@@ -17,7 +17,10 @@ namespace GUI
         AccountBUS accountBUS = new AccountBUS();
         public frmLogin()
         {
+           
+            
             InitializeComponent();
+           
 
         }
        
@@ -31,6 +34,10 @@ namespace GUI
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            Properties.Settings.Default.Username = txtUserName.Text;
+            Properties.Settings.Default.Password = txtPassword.Text;
+            Properties.Settings.Default.Save();
+
             Account account = new Account(txtUserName.Text, txtPassword.Text);
             int result = accountBUS.Authenticate(account);
             if (result == 2)
@@ -55,6 +62,7 @@ namespace GUI
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
             }
+            
         }
 
         private void OpenFrmAdminFood(object obj)
