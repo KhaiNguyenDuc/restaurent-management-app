@@ -49,5 +49,24 @@ namespace DAO
                 return -1;
             }
         }
+        public void updateStatus(int state, string tableID)
+        {
+            string query = "UPDATE tables SET table_state = @State WHERE id = " + tableID+";";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    command.Parameters.Add(new SqlParameter("@State", SqlDbType.Int));
+                    command.Parameters["@State"].Value = state;
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+            }
+        }
     }
 }

@@ -30,14 +30,8 @@ namespace GUI
             customer.Name = txtNameCustomer.Text;
             customer.PhoneNumber = txtPhoneNumber.Text ;
             customer.Point = calPoint();
-            if(customer.Name == "")
+            if(customer.Name == "" || customer.PhoneNumber == "")
             {
-                MessageBox.Show("Tên không được trống");
-                return false;
-            }
-            if (customer.PhoneNumber == "")
-            {
-                MessageBox.Show("Số điện thoại không được trống");
                 return false;
             }
             return true;
@@ -157,9 +151,10 @@ namespace GUI
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
-            bool result = SaveCustomers();
-            if (result == false)
+            if (!SaveCustomers())
             {
+                tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
+                MessageBox.Show("Lưu thành công");
                 return;
             }
             if (this.dtgvOrderItems.Rows.Count <= 1)
@@ -167,14 +162,21 @@ namespace GUI
                 MessageBox.Show("Bàn chưa có thức ăn");
                 return;
             }
-            if (customerBUS.isOldCustomer(customer))
+            if (customerBUS.isOldCustomer(customer) == 1)
             {
                 customerBUS.updateCustomerPoint(customer);
+                tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
+            }
+            else if(customerBUS.isOldCustomer(customer) == 2)
+            {
+                MessageBox.Show("Số điện thoại đã tồn tại");
+                return;
             }
             else
             {
                 customerBUS.insertCustomers(customer);
+                tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
             }
 

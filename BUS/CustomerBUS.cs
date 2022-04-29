@@ -15,17 +15,21 @@ namespace BUS
         {
             customerDAO.insertCustomers(customer);
         }
-        public bool isOldCustomer(Customer customer)
+        public int isOldCustomer(Customer customer)
         {
+            // 0: false, 1: true, 2: Phone already have
             DataTable data =  customerDAO.getCustomers();
             for(int i=0;i< data.Rows.Count; i++)
             {
                 if (customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString())&& customer.Name.Equals(data.Rows[i]["customer_name"].ToString()))
                 {
-                    return true;
+                    return 1;
+                }
+                else if(customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString()) && !customer.Name.Equals(data.Rows[i]["customer_name"].ToString())){
+                    return 2;
                 }
             }
-            return false;
+            return 0;
         }
         public void updateCustomerPoint(Customer customer)
         {

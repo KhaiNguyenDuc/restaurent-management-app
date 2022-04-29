@@ -18,5 +18,27 @@ namespace BUS
         {
             return table.getStatus(tableID);
         }
+        public void updateStatus(string stateString, string tableID)
+        {
+            int stateINT = checkState(stateString);
+            table.updateStatus(stateINT, tableID);// int - string
+        }
+        public int checkState(string stateString)
+        {
+            int stateINT = 0;
+            if (stateString.Equals("Trống"))
+            {
+                stateINT = 0;
+            }
+            else if (stateString.Equals("Đặt bàn"))
+            {
+                stateINT = 1;
+            }
+            else
+            {
+                stateINT = 2;
+            }
+            return stateINT;
+        }
     }
 }
