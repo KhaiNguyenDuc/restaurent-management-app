@@ -12,13 +12,30 @@ namespace DAO
     public class TableDAO
     {
         SqlConnection conn = Config.getConnection();
-
         public DataTable getTables()
         {
             try
             {
                 conn.Open();
                 SqlCommand command = new SqlCommand("SELECT id as ID,table_name as [Mã bàn], table_type as [Loại], table_state as [Trạng thái] FROM tables", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return data;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+        public DataTable getTables(string location)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT id as ID,table_name as [Mã bàn], table_type as [Loại], table_state as [Trạng thái] FROM tables WHERE table_location =  '"+location+"';", conn);
                 DataTable data = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
@@ -45,7 +62,6 @@ namespace DAO
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
                 return -1;
             }
         }

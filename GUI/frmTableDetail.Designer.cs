@@ -105,7 +105,7 @@ namespace GUI
             // txtPhoneNumber
             // 
             this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(681, 18);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(727, 18);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(233, 34);
             this.txtPhoneNumber.TabIndex = 11;
@@ -115,7 +115,7 @@ namespace GUI
             this.lblPhoneNumberCustomer.AutoSize = true;
             this.lblPhoneNumberCustomer.BackColor = System.Drawing.Color.LawnGreen;
             this.lblPhoneNumberCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNumberCustomer.Location = new System.Drawing.Point(488, 18);
+            this.lblPhoneNumberCustomer.Location = new System.Drawing.Point(527, 21);
             this.lblPhoneNumberCustomer.Name = "lblPhoneNumberCustomer";
             this.lblPhoneNumberCustomer.Size = new System.Drawing.Size(174, 29);
             this.lblPhoneNumberCustomer.TabIndex = 9;
@@ -124,7 +124,7 @@ namespace GUI
             // txtNameCustomer
             // 
             this.txtNameCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNameCustomer.Location = new System.Drawing.Point(226, 15);
+            this.txtNameCustomer.Location = new System.Drawing.Point(261, 16);
             this.txtNameCustomer.Name = "txtNameCustomer";
             this.txtNameCustomer.Size = new System.Drawing.Size(227, 34);
             this.txtNameCustomer.TabIndex = 10;
@@ -166,6 +166,7 @@ namespace GUI
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1018, 60);
             this.pnlTop.TabIndex = 8;
+            this.pnlTop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlTop_Paint);
             // 
             // lblTableIDdata
             // 
@@ -185,7 +186,7 @@ namespace GUI
             "Đặt bàn",
             "Trống",
             "Đang dùng"});
-            this.cbcStatus.Location = new System.Drawing.Point(226, 12);
+            this.cbcStatus.Location = new System.Drawing.Point(261, 16);
             this.cbcStatus.Name = "cbcStatus";
             this.cbcStatus.Size = new System.Drawing.Size(153, 37);
             this.cbcStatus.TabIndex = 8;

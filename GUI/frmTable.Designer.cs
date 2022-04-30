@@ -35,14 +35,15 @@ namespace GUI
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.lblStaffNameData = new System.Windows.Forms.Label();
+            this.cbcLocation = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // pnlTable
             // 
-            this.pnlTable.Location = new System.Drawing.Point(12, 107);
+            this.pnlTable.Location = new System.Drawing.Point(11, 124);
             this.pnlTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlTable.Name = "pnlTable";
-            this.pnlTable.Size = new System.Drawing.Size(848, 368);
+            this.pnlTable.Size = new System.Drawing.Size(848, 396);
             this.pnlTable.TabIndex = 0;
             this.pnlTable.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -75,7 +76,7 @@ namespace GUI
             // 
             this.btnProfile.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Location = new System.Drawing.Point(1, 16);
+            this.btnProfile.Location = new System.Drawing.Point(16, 19);
             this.btnProfile.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnProfile.Name = "btnProfile";
             this.btnProfile.Size = new System.Drawing.Size(117, 47);
@@ -91,9 +92,24 @@ namespace GUI
             this.lblStaffNameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStaffNameData.Location = new System.Drawing.Point(345, 34);
             this.lblStaffNameData.Name = "lblStaffNameData";
-            this.lblStaffNameData.Size = new System.Drawing.Size(85, 29);
+            this.lblStaffNameData.Size = new System.Drawing.Size(21, 29);
             this.lblStaffNameData.TabIndex = 10;
-            this.lblStaffNameData.Text = "label1";
+            this.lblStaffNameData.Text = "\\";
+            // 
+            // cbcLocation
+            // 
+            this.cbcLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcLocation.FormattingEnabled = true;
+            this.cbcLocation.Items.AddRange(new object[] {
+            "Khu A (VIP)",
+            "Khu B",
+            "Khu C",
+            "Khu D"});
+            this.cbcLocation.Location = new System.Drawing.Point(376, 82);
+            this.cbcLocation.Name = "cbcLocation";
+            this.cbcLocation.Size = new System.Drawing.Size(152, 37);
+            this.cbcLocation.TabIndex = 11;
+            this.cbcLocation.SelectedIndexChanged += new System.EventHandler(this.cbcLocation_SelectedIndexChanged);
             // 
             // frmTable
             // 
@@ -101,7 +117,8 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(871, 484);
+            this.ClientSize = new System.Drawing.Size(871, 534);
+            this.Controls.Add(this.cbcLocation);
             this.Controls.Add(this.lblStaffNameData);
             this.Controls.Add(this.btnProfile);
             this.Controls.Add(this.btnLogout);
@@ -124,5 +141,6 @@ namespace GUI
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Label lblStaffNameData;
+        public System.Windows.Forms.ComboBox cbcLocation;
     }
 }

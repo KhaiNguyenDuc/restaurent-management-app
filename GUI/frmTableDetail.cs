@@ -18,6 +18,7 @@ namespace GUI
         TableBUS tableBUS = new TableBUS();
         Customer customer = new Customer();
         CustomerBUS customerBUS = new CustomerBUS();
+        frmTable form = new frmTable();
         public frmTableDetail()
         {
             InitializeComponent(); 
@@ -124,6 +125,7 @@ namespace GUI
 
         private void btnReturn_Click(object sender, EventArgs e)
         {
+
             this.Close();
             Thread thread = new Thread(OpenFrmTable);
             thread.SetApartmentState(ApartmentState.STA);
@@ -132,7 +134,9 @@ namespace GUI
         }
         void OpenFrmTable(object obj)
         {
-            Application.Run(new frmTable());
+            frmTable form = new frmTable();
+            Application.Run(form);
+           
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -181,6 +185,11 @@ namespace GUI
             }
 
             
+        }
+
+        private void pnlTop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

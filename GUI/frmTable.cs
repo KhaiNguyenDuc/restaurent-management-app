@@ -16,20 +16,30 @@ namespace GUI
         TableBUS tableBUS = new TableBUS();
         AccountBUS accountBUS = new AccountBUS();
         public static int status;
+        public static string defaultLocation = "Khu A (VIP)" ;
+
+
         public frmTable()
         {
-
             InitializeComponent();
             lblStaffNameData.Text = accountBUS.getStaffName(Properties.Settings.Default.Username);
-            createTable();
+
+            createTable(defaultLocation);
+            cbcLocation.SelectedItem = defaultLocation;
+
+         
         }
-        void createTable()
+        void createTable(string location)
         {
+           
+            
+
             string state = "";
             List<btnTable> btnTables = new List<btnTable>();
-            DataTable tables = tableBUS.getTables();
+            DataTable tables = tableBUS.getTables(location);
             int j = 0;
-            int a = 0;
+            int a =Convert.ToInt32(tables.Rows[0]["id"]);
+            int b = 0;
             for (j = 0; j < tables.Rows.Count / 8 ; j++)
             {
                 if (tables.Rows.Count < 7)
@@ -44,7 +54,7 @@ namespace GUI
                         btnTablec.Click += BtnTablec_Click;
 
                         // 0: trống ( xanh), 1: Đặt ( vàng ), 2: đang dùng ( đỏ)
-                        state = tables.Rows[a++]["Trạng Thái"].ToString();
+                        state = tables.Rows[b++]["Trạng Thái"].ToString();
 
                         if(state.Equals("1"))
                         {
@@ -54,7 +64,7 @@ namespace GUI
                         {
                             btnTablec.BackColor = Color.Red;
                         }
-                        btnTablec.NumericalOrder(a);
+                        btnTablec.NumericalOrder(a++);
                         this.pnlTable.Controls.Add(btnTablec);
                     }
                 }
@@ -67,7 +77,7 @@ namespace GUI
                             Location = new Point(i * 90, j * 80),
                         };
                         btnTablec.Click += BtnTablec_Click;
-                        state = tables.Rows[a++]["Trạng Thái"].ToString();
+                        state = tables.Rows[b++]["Trạng Thái"].ToString();
                         if (state.Equals("1"))
                         {
                             btnTablec.BackColor = Color.Yellow;
@@ -76,7 +86,7 @@ namespace GUI
                         {
                             btnTablec.BackColor = Color.Red;
                         }
-                        btnTablec.NumericalOrder(a);
+                        btnTablec.NumericalOrder(a++);
                         this.pnlTable.Controls.Add(btnTablec);
                     }
                 }
@@ -89,7 +99,7 @@ namespace GUI
                     Location = new Point(z * 90, j * 80),
                 };
                 btnTablec.Click += BtnTablec_Click;
-                state = tables.Rows[a++]["Trạng Thái"].ToString();
+                state = tables.Rows[b++]["Trạng Thái"].ToString();
                 if (state.Equals("1"))
                 {
                     btnTablec.BackColor = Color.Yellow;
@@ -98,17 +108,15 @@ namespace GUI
                 {
                     btnTablec.BackColor = Color.Red;
                 }
-                btnTablec.NumericalOrder(a);
+                btnTablec.NumericalOrder(a++);
                 this.pnlTable.Controls.Add(btnTablec);
             }
 
 
         }
-
-
-
         private void BtnTablec_Click(object sender, EventArgs e)
         {
+
             this.Close();
             Thread thread = new Thread(OpenfrmTableDetail);
             thread.SetApartmentState(ApartmentState.STA);
@@ -159,6 +167,16 @@ namespace GUI
         private void lblStaffName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbcLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.pnlTable.Controls.Clear();
+            createTable(cbcLocation.Text);
+            if (!this.cbcLocation.Text.Equals("Khu A (VIP)"))
+            {
+                defaultLocation = cbcLocation.Text;
+            }
         }
     }
 }

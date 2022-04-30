@@ -24,6 +24,7 @@ namespace GUI
 
         private void btnTable_Click(object sender, EventArgs e)
         {
+
             tableName = lblNum.Text;
         }
     }
