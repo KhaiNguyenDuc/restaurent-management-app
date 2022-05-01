@@ -14,17 +14,22 @@ namespace GUI
 {
     public partial class frmTableDetail : Form
     {
-        OrderFoodBUS orderBUS = new OrderFoodBUS();
+        OrderFoodBUS orderFoodBUS = new OrderFoodBUS();
         TableBUS tableBUS = new TableBUS();
         Customer customer = new Customer();
+        FoodBUS foodBUS = new FoodBUS();
         CustomerBUS customerBUS = new CustomerBUS();
         frmTable form = new frmTable();
+        OrderBUS orderBUS = new OrderBUS();
+        public int indexRow;
         public frmTableDetail()
         {
             InitializeComponent(); 
             loadOrderItems();
             lblTableIDdata.Text = btnTable.tableName;
+            orderBUS.insertOrders(Convert.ToInt32(btnTable.tableName));
             loadStatus();
+            loadFoodName();
         }
         public bool SaveCustomers()
         {
@@ -69,7 +74,7 @@ namespace GUI
         }
         public void loadOrderItems()
         {
-            this.dtgvOrderItems.DataSource = orderBUS.getOrderItems(Convert.ToInt32(btnTable.tableName));
+            this.dtgvOrderItems.DataSource = orderFoodBUS.getOrderItems(Convert.ToInt32(btnTable.tableName));
         }
         private void label2_Click(object sender, EventArgs e)
         {
@@ -188,6 +193,49 @@ namespace GUI
         }
 
         private void pnlTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dtgvOrderItems_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indexRow = e.RowIndex;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgvOrderItems.Rows[e.RowIndex];
+                try
+                {
+                    cbcFoodName.Text = row.Cells[0].Value.ToString();
+                    nudQuantity.Value = Convert.ToInt32(row.Cells[1].Value);
+                }
+                catch
+                {
+                    return;
+                }
+
+            }
+
+        }
+        public void loadFoodName()
+        {
+            DataTable data = foodBUS.getFoods();
+            for(int i = 0; i < data.Rows.Count; i++)
+            {
+                cbcFoodName.Items.Add(data.Rows[i]["Tên món"].ToString());
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
         {
 
         }

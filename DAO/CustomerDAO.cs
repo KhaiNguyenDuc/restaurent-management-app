@@ -60,7 +60,6 @@ namespace DAO
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
                     conn.Open();
-                  
                     command.Parameters.Add(new SqlParameter("@Point", SqlDbType.NVarChar));
                     command.Parameters["@Point"].Value = customer.Point;
                     command.ExecuteNonQuery();

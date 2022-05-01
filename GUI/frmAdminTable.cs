@@ -14,6 +14,7 @@ namespace GUI
     public partial class frmAdminTable : Form
     {
         TableBUS table = new TableBUS();
+        public int indexRow;
         public frmAdminTable()
         {
             InitializeComponent();
@@ -85,6 +86,28 @@ namespace GUI
 
         private void dtgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void dtgvTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            indexRow = e.RowIndex;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgvTable.Rows[e.RowIndex];
+                try
+                {
+                    txtTableID.Text = row.Cells[1].Value.ToString();
+                    txtTableLocation.Text = row.Cells[3].Value.ToString();
+                    txtTableType.Text = row.Cells[2].Value.ToString();
+                   
+                }
+                catch
+                {
+
+                }
+
+            }
 
         }
     }

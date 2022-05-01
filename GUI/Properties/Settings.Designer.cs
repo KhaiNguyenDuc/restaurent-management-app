@@ -48,5 +48,16 @@ namespace GUI.Properties {
                 this["Password"] = value;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-E7IOHGF\\KHAI;Initial Catalog=RestaurantManagement;Integrated " +
+            "Security=True")]
+        public string RestaurantManagementConnectionString {
+            get {
+                return ((string)(this["RestaurantManagementConnectionString"]));
+            }
+        }
     }
 }

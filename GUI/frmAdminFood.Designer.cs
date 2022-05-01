@@ -29,6 +29,7 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminFood));
@@ -46,8 +47,7 @@ namespace GUI
             this.btnFood = new System.Windows.Forms.Button();
             this.lblCatetory = new System.Windows.Forms.Label();
             this.pnlDataFood = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblImage = new System.Windows.Forms.Label();
+            this.pBFoodImage = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtType = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
@@ -59,15 +59,22 @@ namespace GUI
             this.lblFoodName = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dtgvFood = new System.Windows.Forms.DataGridView();
+            this.restaurantManagementDataSet = new GUI.RestaurantManagementDataSet();
+            this.foodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foodsTableAdapter = new GUI.RestaurantManagementDataSetTableAdapters.FoodsTableAdapter();
+            this.btnAddImage = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             this.pnlCategory.SuspendLayout();
             this.pnlDataFood.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pBFoodImage)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantManagementDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlTop
@@ -139,6 +146,7 @@ namespace GUI
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -149,6 +157,7 @@ namespace GUI
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -159,6 +168,7 @@ namespace GUI
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlCategory
             // 
@@ -217,8 +227,8 @@ namespace GUI
             // 
             // pnlDataFood
             // 
-            this.pnlDataFood.Controls.Add(this.button1);
-            this.pnlDataFood.Controls.Add(this.lblImage);
+            this.pnlDataFood.Controls.Add(this.btnAddImage);
+            this.pnlDataFood.Controls.Add(this.pBFoodImage);
             this.pnlDataFood.Controls.Add(this.panel8);
             this.pnlDataFood.Controls.Add(this.panel7);
             this.pnlDataFood.Controls.Add(this.panel6);
@@ -228,26 +238,15 @@ namespace GUI
             this.pnlDataFood.TabIndex = 3;
             this.pnlDataFood.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-            // button1
+            // pBFoodImage
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(587, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(108, 35);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Chọn hình";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblImage
-            // 
-            this.lblImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(573, 20);
-            this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(136, 107);
-            this.lblImage.TabIndex = 3;
-            this.lblImage.Text = "Hình";
-            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pBFoodImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pBFoodImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pBFoodImage.Location = new System.Drawing.Point(594, 13);
+            this.pBFoodImage.Name = "pBFoodImage";
+            this.pBFoodImage.Size = new System.Drawing.Size(181, 158);
+            this.pBFoodImage.TabIndex = 3;
+            this.pBFoodImage.TabStop = false;
             // 
             // panel8
             // 
@@ -371,6 +370,31 @@ namespace GUI
             this.dtgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellClick);
             this.dtgvFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellContentClick);
             // 
+            // restaurantManagementDataSet
+            // 
+            this.restaurantManagementDataSet.DataSetName = "RestaurantManagementDataSet";
+            this.restaurantManagementDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // foodsBindingSource
+            // 
+            this.foodsBindingSource.DataMember = "Foods";
+            this.foodsBindingSource.DataSource = this.restaurantManagementDataSet;
+            // 
+            // foodsTableAdapter
+            // 
+            this.foodsTableAdapter.ClearBeforeFill = true;
+            // 
+            // btnAddImage
+            // 
+            this.btnAddImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddImage.Location = new System.Drawing.Point(613, 185);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(145, 38);
+            this.btnAddImage.TabIndex = 4;
+            this.btnAddImage.Text = "Chọn ảnh";
+            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
             // frmAdminFood
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -392,6 +416,7 @@ namespace GUI
             this.pnlCategory.ResumeLayout(false);
             this.pnlCategory.PerformLayout();
             this.pnlDataFood.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pBFoodImage)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -400,6 +425,8 @@ namespace GUI
             this.panel6.PerformLayout();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvFood)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.restaurantManagementDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -429,9 +456,12 @@ namespace GUI
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dtgvFood;
+        private RestaurantManagementDataSet restaurantManagementDataSet;
+        private System.Windows.Forms.BindingSource foodsBindingSource;
+        private RestaurantManagementDataSetTableAdapters.FoodsTableAdapter foodsTableAdapter;
+        private System.Windows.Forms.PictureBox pBFoodImage;
+        private System.Windows.Forms.Button btnAddImage;
     }
 }

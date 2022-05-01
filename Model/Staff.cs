@@ -8,7 +8,7 @@ namespace Model
     {
         private int iD;
         private string name;
-        private string gender;
+        private string gender; // 0: Nam, 1: Nữ
         private DateTime birthday;
         private string address;
         private string phoneNumber;

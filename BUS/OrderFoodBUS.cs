@@ -5,15 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using Model;
 namespace BUS
 {
     public class OrderFoodBUS
     {
-        OrderFoodDAO order = new DAO.OrderFoodDAO();
+        OrderFoodDAO orderDAO = new DAO.OrderFoodDAO();
         public DataTable getOrderItems(int tableID)
         {
-
-            return order.getOrderItems(tableID);
+            return orderDAO.getOrderItems(tableID);
+        }
+        public void insertOrderFoods(OrderFood orderFood)
+        {
+            
         }
     }
 }

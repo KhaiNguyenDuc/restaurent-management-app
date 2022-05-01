@@ -22,7 +22,7 @@ namespace GUI
         }
         public void loadStaffs()
         {
-            this.dtgvStaff.DataSource = staffBUS.getStaffs();
+            this.dtgvStaff.DataSource = staffBUS.getStaffs(); 
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -97,7 +97,37 @@ namespace GUI
 
         private void dtgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+            indexRow = e.RowIndex;
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = this.dtgvStaff.Rows[e.RowIndex];
+                try
+                {
+                    txtStaffName.Text = row.Cells[1].Value.ToString();
+                    if (row.Cells[2].Value.ToString().Equals("0"))
+                    {
+                        rdoMale.Checked = true;
+                    }
+                    else
+                        rdoFemale.Checked = true;
+
+                    dtpBirthDate.Value = Convert.ToDateTime(row.Cells[3].Value.ToString());
+                   
+                    txtAddress.Text = row.Cells[4].Value.ToString();
+                    txtPhoneNumber.Text = row.Cells[5].Value.ToString();
+                    txtSalary.Text = row.Cells[6].Value.ToString();
+
+                    if(row.Cells[7].Value.ToString().Equals("1"))
+                    {
+                        cbAdmin.Checked = true;
+                    }
+                }
+                catch
+                {
+
+                }
+
+            }
         }
 
         private void frmAdminStaff_Load(object sender, EventArgs e)

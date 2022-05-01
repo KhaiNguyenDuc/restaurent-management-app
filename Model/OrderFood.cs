@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Model
 {
-    class OrderFood
+    public class OrderFood
     {
         private int quantity;
         private double totalPrice;

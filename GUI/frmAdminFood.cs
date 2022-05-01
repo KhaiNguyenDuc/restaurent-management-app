@@ -9,12 +9,15 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Model;
 namespace GUI
 {
     public partial class frmAdminFood : Form
     {
+        public int foodID;
         public int indexRow;
-        FoodBUS food = new FoodBUS();
+        FoodBUS foodBUS = new FoodBUS();
+        Food food = new Food();
         public frmAdminFood()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace GUI
         }
         public void loadFoods()
         {
-            this.dtgvFood.DataSource = food.getFoods();
+            this.dtgvFood.DataSource = foodBUS.getFoods();
         }
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
@@ -41,7 +44,9 @@ namespace GUI
 
         private void frmAdminFood_Load(object sender, EventArgs e)
         {
-            
+            // TODO: This line of code loads data into the 'restaurantManagementDataSet.Foods' table. You can move, or remove it, as needed.
+            this.foodsTableAdapter.Fill(this.restaurantManagementDataSet.Foods);
+
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -117,10 +122,13 @@ namespace GUI
                 DataGridViewRow row = this.dtgvFood.Rows[e.RowIndex];
                 try
                 {
+                    foodID = Convert.ToInt32(row.Cells[0].Value);
+                    food.Id = foodID;
                     txtFoodName.Text = row.Cells[1].Value.ToString();
                     txtPrice.Text = row.Cells[2].Value.ToString();
                     txtType.Text = row.Cells[3].Value.ToString();
-
+                    string path = foodBUS.getImage(Convert.ToInt32(row.Cells[0].Value));
+                    pBFoodImage.Image = Image.FromFile(path);
                 }
                 catch
                 {
@@ -128,6 +136,66 @@ namespace GUI
                 }
 
             }
+           
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtFoodName.Text == "" || txtPrice.Text == "" || txtType.Text == "")
+                {
+                    MessageBox.Show("Thiếu thông tin thức ăn");
+                    return;
+                }
+                food.Name = txtFoodName.Text;
+                food.Price = Convert.ToDouble(txtPrice.Text);
+                food.Type = Convert.ToInt32(txtType.Text);
+                food.Path = pBFoodImage.Text;
+                foodBUS.insertFoods(food);
+                MessageBox.Show("Thêm thành công");
+                loadFoods();
+            }
+            catch
+            {
+                MessageBox.Show("Thông tin sai");
+            }
+           
+        }
+
+        private void btnAddImage_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pBFoodImage.Image = new Bitmap(open.FileName);
+                // image file path  
+                pBFoodImage.Text = open.FileName;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            foodBUS.deleteFoods(foodID);
+            txtFoodName.Text = "";
+            txtPrice.Text = "";
+            txtType.Text = "";
+            loadFoods();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            food.Name = txtFoodName.Text;
+            food.Price = Convert.ToDouble(txtPrice.Text);
+            food.Type = Convert.ToInt32(txtType.Text);
+            food.Path = pBFoodImage.Text;
+            foodBUS.updateFoods(food);
+            MessageBox.Show("Sửa thành công");
+            loadFoods();
         }
     }
 }

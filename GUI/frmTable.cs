@@ -31,9 +31,6 @@ namespace GUI
         }
         void createTable(string location)
         {
-           
-            
-
             string state = "";
             List<btnTable> btnTables = new List<btnTable>();
             DataTable tables = tableBUS.getTables(location);
@@ -176,6 +173,10 @@ namespace GUI
             if (!this.cbcLocation.Text.Equals("Khu A (VIP)"))
             {
                 defaultLocation = cbcLocation.Text;
+            }
+            else
+            {
+                defaultLocation = "Khu A (VIP)";
             }
         }
     }

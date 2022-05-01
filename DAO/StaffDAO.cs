@@ -45,7 +45,7 @@ namespace DAO
             try
             {
                 conn.Open();
-                SqlCommand command = new SqlCommand("SELECT id as ID, staff_name as [Tên], gender as [Giới tính], birthdate as [Ngày sinh], staff_address as [Địa chỉ], phone_number as [SDT], salary as [Lương]  FROM staffs", conn);
+                SqlCommand command = new SqlCommand("SELECT staffs.id as ID, staff_name as [Tên], gender as [Giới tính], birthdate as [Ngày sinh], staff_address as [Địa chỉ], phone_number as [SDT], salary as [Lương], accounts.account_type as [Quyền] FROM staffs INNER JOIN accounts on staffs.account_id = accounts.id", conn);
                 DataTable data = new DataTable();
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);

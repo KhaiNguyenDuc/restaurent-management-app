@@ -50,7 +50,7 @@ namespace GUI
             this.pnlDateTable = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbcFoodName = new System.Windows.Forms.ComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
             this.lblFoodname = new System.Windows.Forms.Label();
@@ -218,6 +218,7 @@ namespace GUI
             this.dtgvOrderItems.RowTemplate.Height = 24;
             this.dtgvOrderItems.Size = new System.Drawing.Size(1221, 295);
             this.dtgvOrderItems.TabIndex = 11;
+            this.dtgvOrderItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvOrderItems_CellClick);
             // 
             // btnEdit
             // 
@@ -228,6 +229,7 @@ namespace GUI
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -238,6 +240,7 @@ namespace GUI
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -248,6 +251,7 @@ namespace GUI
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlDateTable
             // 
@@ -263,40 +267,42 @@ namespace GUI
             // panel6
             // 
             this.panel6.Controls.Add(this.checkBox1);
-            this.panel6.Controls.Add(this.comboBox1);
+            this.panel6.Controls.Add(this.cbcFoodName);
             this.panel6.Controls.Add(this.lblQuantity);
             this.panel6.Controls.Add(this.nudQuantity);
             this.panel6.Controls.Add(this.lblFoodname);
-            this.panel6.Location = new System.Drawing.Point(92, 15);
+            this.panel6.Location = new System.Drawing.Point(19, 17);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(833, 56);
+            this.panel6.Size = new System.Drawing.Size(982, 56);
             this.panel6.TabIndex = 0;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(615, 15);
+            this.checkBox1.Location = new System.Drawing.Point(805, 15);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(135, 33);
             this.checkBox1.TabIndex = 7;
             this.checkBox1.Text = "Điểm VIP";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // cbcFoodName
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(151, 9);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 37);
-            this.comboBox1.TabIndex = 5;
+            this.cbcFoodName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbcFoodName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbcFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcFoodName.FormattingEnabled = true;
+            this.cbcFoodName.Location = new System.Drawing.Point(151, 9);
+            this.cbcFoodName.Name = "cbcFoodName";
+            this.cbcFoodName.Size = new System.Drawing.Size(225, 37);
+            this.cbcFoodName.TabIndex = 5;
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(308, 15);
+            this.lblQuantity.Location = new System.Drawing.Point(463, 13);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(109, 29);
             this.lblQuantity.TabIndex = 4;
@@ -305,7 +311,7 @@ namespace GUI
             // nudQuantity
             // 
             this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(439, 13);
+            this.nudQuantity.Location = new System.Drawing.Point(593, 11);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(120, 34);
             this.nudQuantity.TabIndex = 3;
@@ -421,7 +427,7 @@ namespace GUI
         private System.Windows.Forms.Label lblQuantity;
         private System.Windows.Forms.NumericUpDown nudQuantity;
         private System.Windows.Forms.Label lblFoodname;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbcFoodName;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlSetting;
