@@ -40,7 +40,25 @@ namespace BUS
         {
             staffDAO.insertStaffs(staff);
         }
-
-
+        public void addProfileStaffs(Staff staff)
+        {
+            staffDAO.insertProfileStaffs(staff);
+        }
+        public void deleteStaffs(int staffID)
+        {
+            staffDAO.deleteStaffs(staffID);
+        }
+        public string getImage(int id)
+        {
+            return staffDAO.getImage(id);
+        }
+        public int getAccountIDByStaffID(int staffID)
+        {
+            return staffDAO.getAccountIDByStaffID(staffID);
+        }
+        public void updateStaffs(Staff staff)
+        {
+            staffDAO.updateStaffs(staff);
+        }
     }
 }

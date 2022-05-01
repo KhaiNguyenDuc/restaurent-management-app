@@ -9,12 +9,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Model;
 namespace GUI
 {
     public partial class frmAdminStaff : Form
     {
         public int indexRow;
         StaffBUS staffBUS = new StaffBUS();
+        Staff staff = new Staff();
+        frmAddAccount addAccount = new frmAddAccount();
+        AccountBUS accountBUS = new AccountBUS();
+        AdminBUS adminBUS = new AdminBUS();
         public frmAdminStaff()
         {
             InitializeComponent();
@@ -103,6 +108,7 @@ namespace GUI
                 DataGridViewRow row = this.dtgvStaff.Rows[e.RowIndex];
                 try
                 {
+                    
                     txtStaffName.Text = row.Cells[1].Value.ToString();
                     if (row.Cells[2].Value.ToString().Equals("0"))
                     {
@@ -116,11 +122,24 @@ namespace GUI
                     txtAddress.Text = row.Cells[4].Value.ToString();
                     txtPhoneNumber.Text = row.Cells[5].Value.ToString();
                     txtSalary.Text = row.Cells[6].Value.ToString();
+                    staff.ID = Convert.ToInt32(row.Cells[0].Value);
 
-                    if(row.Cells[7].Value.ToString().Equals("1"))
+                    string path = staffBUS.getImage(Convert.ToInt32(row.Cells[0].Value));
+                    if (path != "")
                     {
+                        pbStaffImage.Image = Image.FromFile(path);
+                    }
+                    
+                    if (row.Cells[7].Value.ToString().Equals("0"))
+                    {
+
                         cbAdmin.Checked = true;
                     }
+                    else
+                    {
+                        cbAdmin.Checked = false;
+                    }
+
                 }
                 catch
                 {
@@ -132,6 +151,144 @@ namespace GUI
 
         private void frmAdminStaff_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnAddImage_Click(object sender, EventArgs e)
+        {
+            // open file dialog   
+            OpenFileDialog open = new OpenFileDialog();
+            // image filters  
+            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            if (open.ShowDialog() == DialogResult.OK)
+            {
+                // display image in picture box  
+                pbStaffImage.Image = new Bitmap(open.FileName);
+                // image file path  
+                pbStaffImage.Text = open.FileName;
+            }
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+            
+
+            try
+            {
+                if (txtStaffName.Text == "" || txtSalary.Text == "" || txtPhoneNumber.Text == ""||txtAddress.Text=="")
+                {
+                    MessageBox.Show("Thiếu thông tin nhân viên");
+                    return;
+                }
+                if (cbAdmin.Checked)
+                {
+                    Properties.Settings.Default.Staff_Type = 0;
+                }
+                else
+                {
+                    Properties.Settings.Default.Staff_Type = 1;
+                }
+                Properties.Settings.Default.AdminName = txtStaffName.Text;
+                addAccount.ShowDialog();
+                staff.Name = txtStaffName.Text;
+                staff.PhoneNumber = txtPhoneNumber.Text;
+                staff.Salary = Convert.ToDouble(txtSalary.Text);
+                staff.Path = pbStaffImage.Text;
+                staff.Address = txtAddress.Text;
+                if(rdoMale.Checked)
+                {
+                    staff.Gender = 0;
+                }
+                else
+                {
+                    staff.Gender = 1;
+                }
+                staff.Birthday = dtpBirthDate.Value;
+                staff.AccountID = accountBUS.getLatestID();
+                staffBUS.addProfileStaffs(staff);
+                MessageBox.Show("Thêm thành công");
+                loadStaffs();
+            }
+            catch
+            {
+                MessageBox.Show("Thông tin sai");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            int accountID = staffBUS.getAccountIDByStaffID(staff.ID);
+            int adminID = accountBUS.getAdminID(accountID);
+            staffBUS.deleteStaffs(staff.ID);
+            accountBUS.deleteAccounts(accountID);
+            adminBUS.deleteAdmins(adminID);
+            staff.Name = "";
+            staff.PhoneNumber = "";
+            staff.Salary = 0;
+            staff.Path = "";
+            staff.Address = "";
+            rdoMale.Checked = true;
+            staff.Birthday = DateTime.Now;
+            cbAdmin.Checked = false;
+            MessageBox.Show("Xóa thành công");
+            loadStaffs();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            staff.Name = txtStaffName.Text;
+            staff.PhoneNumber = txtPhoneNumber.Text;
+            staff.Salary = Convert.ToDouble(txtSalary.Text);
+            staff.Path = pbStaffImage.Text;
+            staff.Address = txtAddress.Text;
+            
+            if(rdoFemale.Checked == true)
+            {
+                staff.Gender = 1;
+            }
+            else
+            {
+                staff.Gender = 0;
+            }
+          
+            staff.Birthday = dtpBirthDate.Value;
+            if (cbAdmin.Checked)
+            {
+                if (adminBUS.isOldAdmins(staff.ID))
+                { 
+                    // update admin cũ 
+                    staffBUS.updateStaffs(staff);
+                    accountBUS.updatePermission(0, adminBUS.getLatestID(), staffBUS.getAccountIDByStaffID(staff.ID));
+                    MessageBox.Show("Sửa thành công");
+                    loadStaffs();
+                    return;
+                }
+                // người thường thành admin
+                adminBUS.insertAdmins(staff.Name);
+                accountBUS.updatePermission(0, adminBUS.getLatestID(),staffBUS.getAccountIDByStaffID(staff.ID));
+                staffBUS.updateStaffs(staff);
+            }
+            else
+            {
+                // update người thường
+                if (!adminBUS.isOldAdmins(staff.ID))
+                {
+                    staffBUS.updateStaffs(staff);
+                }
+                else
+                {
+                    // admin thành người thường
+                    
+                    int accountID = staffBUS.getAccountIDByStaffID(staff.ID);
+                    accountBUS.updatePermission(1, accountBUS.getAdminID(accountID), accountID);
+                    staffBUS.updateStaffs(staff);
+               
+                }
+            }
+            MessageBox.Show("Sửa thành công");
+            loadStaffs();
+            
 
         }
     }

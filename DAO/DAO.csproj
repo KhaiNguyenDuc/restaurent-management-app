@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountDAO.cs" />
+    <Compile Include="AdminDAO.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="CustomerDAO.cs" />
     <Compile Include="FoodDAO.cs" />

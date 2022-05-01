@@ -9,11 +9,13 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using Model;
 namespace GUI
 {
     public partial class frmAdminTable : Form
     {
-        TableBUS table = new TableBUS();
+        TableBUS tableBUS = new TableBUS();
+        Table table = new Table();
         public int indexRow;
         public frmAdminTable()
         {
@@ -22,7 +24,7 @@ namespace GUI
         }
         public void loadTables()
         {
-            this.dtgvTable.DataSource = table.getTables();
+            this.dtgvTable.DataSource = tableBUS.getTables();
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -97,10 +99,41 @@ namespace GUI
                 DataGridViewRow row = this.dtgvTable.Rows[e.RowIndex];
                 try
                 {
+                    table.TableNumber = txtTableID.Text;
+                  
+                    
+                    table.Type = cbcType.Text;
+                    table.Id = Convert.ToInt32(row.Cells[0].Value);
                     txtTableID.Text = row.Cells[1].Value.ToString();
-                    txtTableLocation.Text = row.Cells[3].Value.ToString();
-                    txtTableType.Text = row.Cells[2].Value.ToString();
-                   
+                    string location = row.Cells[4].Value.ToString();
+                    table.Location = location;
+                    if (location.Equals("A"))
+                    {
+                        cbcLocation.SelectedIndex = cbcLocation.FindStringExact("Khu A (VIP)");
+                       
+                    }
+                    else if (location.Equals("B"))
+                    {
+                        cbcLocation.SelectedIndex = cbcLocation.FindStringExact("Khu B");
+                    }
+                    else if (location.Equals("C"))
+                    {
+                        cbcLocation.SelectedIndex = cbcLocation.FindStringExact("Khu C");
+                    }
+                    else if (location.Equals("D"))
+                    {
+                        cbcLocation.SelectedIndex = cbcLocation.FindStringExact("Khu D");
+                    }
+                    string type = row.Cells[2].Value.ToString();
+                    if (type.Equals("VIP"))
+                    {
+                        cbcType.SelectedIndex = cbcType.FindStringExact("VIP");
+                    }
+                    else if (type.Equals("Thường"))
+                    {
+                        cbcType.SelectedIndex = cbcType.FindStringExact("Thường");
+                    }
+
                 }
                 catch
                 {
@@ -109,6 +142,44 @@ namespace GUI
 
             }
 
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            
+            tableBUS.addTables(table);
+            MessageBox.Show("Thêm thành công");
+            loadTables();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            tableBUS.deleteTables(table.Id);
+            MessageBox.Show("Xóa thành công");
+            loadTables();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            table.Type = cbcType.Text;
+            table.TableNumber = txtTableID.Text;
+            string location = cbcLocation.Text;
+            if(location.Equals("Khu A (VIP)"))
+            {
+                table.Location = "A";
+            }
+            else if (location.Equals("Khu B"))
+            {
+                table.Location = "B";
+            }
+            else if (location.Equals("Khu C"))
+            {
+                table.Location = "C";
+            }
+
+            tableBUS.updateTables(table);
+            MessageBox.Show("Sửa thành công");
+            loadTables();
         }
     }
 }

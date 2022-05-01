@@ -32,15 +32,12 @@ namespace GUI
         private void btnRegister_Click(object sender, EventArgs e)
         {
             // get data
-            string gender = "";
+            int gender = 0;
             if (rdoFemale.Checked)
             {
-                gender = rdoFemale.Text;
+                gender = 1;
             }
-            else
-            {
-                gender = rdoMale.Text;
-            }
+
             DateTime birthdate = dtpBirthDate.Value;
            
             // end get data

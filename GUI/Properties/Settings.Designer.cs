@@ -59,5 +59,31 @@ namespace GUI.Properties {
                 return ((string)(this["RestaurantManagementConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int Staff_Type {
+            get {
+                return ((int)(this["Staff_Type"]));
+            }
+            set
+            {
+               this["Staff_Type"] = value;
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string AdminName {
+            get {
+                return ((string)(this["AdminName"]));
+            }
+            set
+            {
+                this["AdminName"] = value;
+            }
+        }
     }
 }

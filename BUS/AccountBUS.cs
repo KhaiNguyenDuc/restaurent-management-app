@@ -64,5 +64,21 @@ namespace BUS
         {
             return accountDAO.getLatestID();
         }
+        public void insertAdminAccounts(Account account)
+        {
+            accountDAO.insertAdminAccounts(account);
+        }
+        public int getAdminID(int accountID)
+        {
+            return accountDAO.getAdminID(accountID);
+        }
+        public void deleteAccounts(int accountID)
+        {
+            accountDAO.deleteAccounts(accountID);
+        }
+        public void updatePermission(int type, int adminID, int accountID)
+        {
+            accountDAO.updatePermission(type, adminID, accountID);
+        }
     }
 }

@@ -41,9 +41,9 @@ namespace GUI
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pnlDataStaff = new System.Windows.Forms.Panel();
+            this.pbStaffImage = new System.Windows.Forms.PictureBox();
             this.cbAdmin = new System.Windows.Forms.CheckBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblImage = new System.Windows.Forms.Label();
+            this.btnAddImage = new System.Windows.Forms.Button();
             this.panel12 = new System.Windows.Forms.Panel();
             this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.rdoMale = new System.Windows.Forms.RadioButton();
@@ -75,6 +75,7 @@ namespace GUI
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.pnlDataStaff.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStaffImage)).BeginInit();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel10.SuspendLayout();
@@ -182,9 +183,9 @@ namespace GUI
             // 
             // pnlDataStaff
             // 
+            this.pnlDataStaff.Controls.Add(this.pbStaffImage);
             this.pnlDataStaff.Controls.Add(this.cbAdmin);
-            this.pnlDataStaff.Controls.Add(this.button1);
-            this.pnlDataStaff.Controls.Add(this.lblImage);
+            this.pnlDataStaff.Controls.Add(this.btnAddImage);
             this.pnlDataStaff.Controls.Add(this.panel12);
             this.pnlDataStaff.Controls.Add(this.panel11);
             this.pnlDataStaff.Controls.Add(this.panel10);
@@ -196,44 +197,44 @@ namespace GUI
             this.pnlDataStaff.Size = new System.Drawing.Size(1188, 373);
             this.pnlDataStaff.TabIndex = 3;
             // 
+            // pbStaffImage
+            // 
+            this.pbStaffImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbStaffImage.Location = new System.Drawing.Point(1015, 62);
+            this.pbStaffImage.Name = "pbStaffImage";
+            this.pbStaffImage.Size = new System.Drawing.Size(151, 137);
+            this.pbStaffImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbStaffImage.TabIndex = 11;
+            this.pbStaffImage.TabStop = false;
+            // 
             // cbAdmin
             // 
             this.cbAdmin.AutoSize = true;
             this.cbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAdmin.Location = new System.Drawing.Point(753, 321);
+            this.cbAdmin.Location = new System.Drawing.Point(547, 305);
             this.cbAdmin.Name = "cbAdmin";
-            this.cbAdmin.Size = new System.Drawing.Size(89, 33);
+            this.cbAdmin.Size = new System.Drawing.Size(103, 33);
             this.cbAdmin.TabIndex = 10;
-            this.cbAdmin.Text = "Amin";
+            this.cbAdmin.Text = "Admin";
             this.cbAdmin.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnAddImage
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(1001, 320);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(68, 36);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Chọn";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // lblImage
-            // 
-            this.lblImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(872, 277);
-            this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(110, 79);
-            this.lblImage.TabIndex = 8;
-            this.lblImage.Text = "Hình";
-            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnAddImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddImage.Location = new System.Drawing.Point(1015, 220);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(151, 36);
+            this.btnAddImage.TabIndex = 9;
+            this.btnAddImage.Text = "Chọn hình";
+            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
             // 
             // panel12
             // 
             this.panel12.Controls.Add(this.rdoFemale);
             this.panel12.Controls.Add(this.rdoMale);
             this.panel12.Controls.Add(this.lblStaffGender);
-            this.panel12.Location = new System.Drawing.Point(625, 220);
+            this.panel12.Location = new System.Drawing.Point(547, 223);
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(439, 47);
             this.panel12.TabIndex = 4;
@@ -246,13 +247,13 @@ namespace GUI
             this.rdoFemale.Name = "rdoFemale";
             this.rdoFemale.Size = new System.Drawing.Size(65, 33);
             this.rdoFemale.TabIndex = 2;
-            this.rdoFemale.TabStop = true;
             this.rdoFemale.Text = "Nữ";
             this.rdoFemale.UseVisualStyleBackColor = true;
             // 
             // rdoMale
             // 
             this.rdoMale.AutoSize = true;
+            this.rdoMale.Checked = true;
             this.rdoMale.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoMale.Location = new System.Drawing.Point(216, 9);
             this.rdoMale.Name = "rdoMale";
@@ -276,7 +277,7 @@ namespace GUI
             // 
             this.panel11.Controls.Add(this.txtAddress);
             this.panel11.Controls.Add(this.lblAddress);
-            this.panel11.Location = new System.Drawing.Point(630, 132);
+            this.panel11.Location = new System.Drawing.Point(547, 132);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(439, 53);
             this.panel11.TabIndex = 7;
@@ -303,7 +304,7 @@ namespace GUI
             // 
             this.panel10.Controls.Add(this.dtpBirthDate);
             this.panel10.Controls.Add(this.lblBirthDate);
-            this.panel10.Location = new System.Drawing.Point(630, 35);
+            this.panel10.Location = new System.Drawing.Point(547, 35);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(434, 56);
             this.panel10.TabIndex = 6;
@@ -395,6 +396,7 @@ namespace GUI
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -405,6 +407,7 @@ namespace GUI
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -415,6 +418,7 @@ namespace GUI
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlCategory
             // 
@@ -519,6 +523,7 @@ namespace GUI
             this.panel3.ResumeLayout(false);
             this.pnlDataStaff.ResumeLayout(false);
             this.pnlDataStaff.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStaffImage)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -573,8 +578,8 @@ namespace GUI
         private System.Windows.Forms.RadioButton rdoFemale;
         private System.Windows.Forms.RadioButton rdoMale;
         private System.Windows.Forms.Label lblStaffGender;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox cbAdmin;
-        private System.Windows.Forms.Label lblImage;
+        private System.Windows.Forms.Button btnAddImage;
+        private System.Windows.Forms.PictureBox pbStaffImage;
+        public System.Windows.Forms.CheckBox cbAdmin;
     }
 }

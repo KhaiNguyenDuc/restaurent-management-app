@@ -47,6 +47,7 @@ namespace GUI
             this.btnFood = new System.Windows.Forms.Button();
             this.lblCatetory = new System.Windows.Forms.Label();
             this.pnlDataFood = new System.Windows.Forms.Panel();
+            this.btnAddImage = new System.Windows.Forms.Button();
             this.pBFoodImage = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtType = new System.Windows.Forms.TextBox();
@@ -62,7 +63,6 @@ namespace GUI
             this.restaurantManagementDataSet = new GUI.RestaurantManagementDataSet();
             this.foodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodsTableAdapter = new GUI.RestaurantManagementDataSetTableAdapters.FoodsTableAdapter();
-            this.btnAddImage = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             this.pnlCategory.SuspendLayout();
@@ -238,6 +238,17 @@ namespace GUI
             this.pnlDataFood.TabIndex = 3;
             this.pnlDataFood.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // btnAddImage
+            // 
+            this.btnAddImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddImage.Location = new System.Drawing.Point(613, 185);
+            this.btnAddImage.Name = "btnAddImage";
+            this.btnAddImage.Size = new System.Drawing.Size(145, 38);
+            this.btnAddImage.TabIndex = 4;
+            this.btnAddImage.Text = "Chọn ảnh";
+            this.btnAddImage.UseVisualStyleBackColor = true;
+            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
+            // 
             // pBFoodImage
             // 
             this.pBFoodImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -245,6 +256,7 @@ namespace GUI
             this.pBFoodImage.Location = new System.Drawing.Point(594, 13);
             this.pBFoodImage.Name = "pBFoodImage";
             this.pBFoodImage.Size = new System.Drawing.Size(181, 158);
+            this.pBFoodImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBFoodImage.TabIndex = 3;
             this.pBFoodImage.TabStop = false;
             // 
@@ -383,17 +395,6 @@ namespace GUI
             // foodsTableAdapter
             // 
             this.foodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnAddImage
-            // 
-            this.btnAddImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddImage.Location = new System.Drawing.Point(613, 185);
-            this.btnAddImage.Name = "btnAddImage";
-            this.btnAddImage.Size = new System.Drawing.Size(145, 38);
-            this.btnAddImage.TabIndex = 4;
-            this.btnAddImage.Text = "Chọn ảnh";
-            this.btnAddImage.UseVisualStyleBackColor = true;
-            this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
             // 
             // frmAdminFood
             // 

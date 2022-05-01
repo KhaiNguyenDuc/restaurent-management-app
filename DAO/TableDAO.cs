@@ -6,12 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Model;
 namespace DAO
 {
     public class TableDAO
     {
         SqlConnection conn = Config.getConnection();
+        Table table = new Table();
         public DataTable getTables()
         {
             try
@@ -82,6 +83,71 @@ namespace DAO
             }
             catch
             {
+            }
+        }
+        public void insertTables(Table table)
+        {
+
+            string query = "INSERT INTO tables (table_name,table_type,table_state,table_location) VALUES (@Name,@Type,@State,@Location)";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.Parameters.Add(new SqlParameter("@Name", SqlDbType.NVarChar));
+                    command.Parameters["@Name"].Value = table.TableNumber;
+                    command.Parameters.Add(new SqlParameter("@Type", SqlDbType.NVarChar));
+                    command.Parameters["@Type"].Value = table.Type;
+                    command.Parameters.Add(new SqlParameter("@State", SqlDbType.Int));
+                    command.Parameters["@State"].Value = 0;
+                    command.Parameters.Add(new SqlParameter("@Location", SqlDbType.NVarChar));
+                    command.Parameters["@Location"].Value = table.Location;
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+            }
+        }
+        public void deleteTables(int tableID)
+        {
+            string query = "DELETE FROM tables WHERE id = " + tableID + ";";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+            }
+        }
+        public void updateTables(Table table)
+        {
+            string query = "UPDATE tables SET table_name = @Name, table_type = @Type, table_location = @Location WHERE id = " + table.Id;
+
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.Parameters.Add(new SqlParameter("@Name", SqlDbType.NVarChar));
+                    command.Parameters["@Name"].Value = table.TableNumber;
+                    command.Parameters.Add(new SqlParameter("@Type", SqlDbType.NVarChar));
+                    command.Parameters["@Type"].Value = table.Type;
+                    command.Parameters.Add(new SqlParameter("@Location", SqlDbType.NVarChar));
+                    command.Parameters["@Location"].Value = table.Location;
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                //MessageBox.Show("hahaa");
             }
         }
     }

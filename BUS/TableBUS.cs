@@ -5,14 +5,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAO;
+using Model;
 namespace BUS
 {
     public class TableBUS
     {
-        TableDAO table = new TableDAO();
+        TableDAO tableDAO = new TableDAO();
+        Table table = new Table();
         public DataTable getTables()
         {
-            return table.getTables();
+            return tableDAO.getTables();
         }
         public DataTable getTables(string location)
         {
@@ -32,16 +34,16 @@ namespace BUS
             {
                 location = "D";
             }
-            return table.getTables(location);
+            return tableDAO.getTables(location);
         }
         public int getStatus(string tableID)
         {
-            return table.getStatus(tableID);
+            return tableDAO.getStatus(tableID);
         }
         public void updateStatus(string stateString, string tableID)
         {
             int stateINT = checkState(stateString);
-            table.updateStatus(stateINT, tableID);// int - string
+            tableDAO.updateStatus(stateINT, tableID);// int - string
         }
         public int checkState(string stateString)
         {
@@ -67,6 +69,18 @@ namespace BUS
                 return true;
             }
             return false;
+        }
+        public void addTables(Table table)
+        {
+            tableDAO.insertTables(table);
+        }
+        public void deleteTables(int tableID)
+        {
+            tableDAO.deleteTables(tableID);
+        }
+        public void updateTables(Table table)
+        {
+            tableDAO.updateTables(table);
         }
     }
 }

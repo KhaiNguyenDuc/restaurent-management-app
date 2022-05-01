@@ -16,5 +16,11 @@
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
       <Value Profile="(Default)">Data Source=DESKTOP-E7IOHGF\KHAI;Initial Catalog=RestaurantManagement;Integrated Security=True</Value>
     </Setting>
+    <Setting Name="Staff_Type" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="AdminName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

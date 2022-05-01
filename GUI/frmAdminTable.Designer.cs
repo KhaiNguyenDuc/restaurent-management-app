@@ -33,10 +33,8 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminTable));
             this.dtgvTable = new System.Windows.Forms.DataGridView();
-            this.txtTableType = new System.Windows.Forms.TextBox();
             this.lblType = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.txtTableLocation = new System.Windows.Forms.TextBox();
             this.lblLocation = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtTableID = new System.Windows.Forms.TextBox();
@@ -57,6 +55,8 @@ namespace GUI
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cbcLocation = new System.Windows.Forms.ComboBox();
+            this.cbcType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -98,14 +98,6 @@ namespace GUI
             this.dtgvTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTable_CellClick);
             this.dtgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTable_CellContentClick);
             // 
-            // txtTableType
-            // 
-            this.txtTableType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTableType.Location = new System.Drawing.Point(215, 10);
-            this.txtTableType.Name = "txtTableType";
-            this.txtTableType.Size = new System.Drawing.Size(193, 34);
-            this.txtTableType.TabIndex = 1;
-            // 
             // lblType
             // 
             this.lblType.AutoSize = true;
@@ -118,20 +110,12 @@ namespace GUI
             // 
             // panel8
             // 
-            this.panel8.Controls.Add(this.txtTableType);
+            this.panel8.Controls.Add(this.cbcType);
             this.panel8.Controls.Add(this.lblType);
             this.panel8.Location = new System.Drawing.Point(7, 166);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(418, 53);
             this.panel8.TabIndex = 2;
-            // 
-            // txtTableLocation
-            // 
-            this.txtTableLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTableLocation.Location = new System.Drawing.Point(215, 10);
-            this.txtTableLocation.Name = "txtTableLocation";
-            this.txtTableLocation.Size = new System.Drawing.Size(193, 34);
-            this.txtTableLocation.TabIndex = 1;
             // 
             // lblLocation
             // 
@@ -146,7 +130,7 @@ namespace GUI
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.txtTableLocation);
+            this.panel7.Controls.Add(this.cbcLocation);
             this.panel7.Controls.Add(this.lblLocation);
             this.panel7.Location = new System.Drawing.Point(7, 85);
             this.panel7.Name = "panel7";
@@ -167,9 +151,9 @@ namespace GUI
             this.lblTableID.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableID.Location = new System.Drawing.Point(3, 13);
             this.lblTableID.Name = "lblTableID";
-            this.lblTableID.Size = new System.Drawing.Size(95, 29);
+            this.lblTableID.Size = new System.Drawing.Size(98, 29);
             this.lblTableID.TabIndex = 0;
-            this.lblTableID.Text = "Số bàn:";
+            this.lblTableID.Text = "Mã bàn:";
             // 
             // panel6
             // 
@@ -242,6 +226,7 @@ namespace GUI
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -252,6 +237,7 @@ namespace GUI
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAdd
             // 
@@ -262,6 +248,7 @@ namespace GUI
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // pnlCategory
             // 
@@ -344,6 +331,34 @@ namespace GUI
             this.panel3.Size = new System.Drawing.Size(923, 470);
             this.panel3.TabIndex = 7;
             // 
+            // cbcLocation
+            // 
+            this.cbcLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbcLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbcLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcLocation.FormattingEnabled = true;
+            this.cbcLocation.Items.AddRange(new object[] {
+            "Khu A (VIP)",
+            "Khu B",
+            "Khu C",
+            "Khu D"});
+            this.cbcLocation.Location = new System.Drawing.Point(215, 10);
+            this.cbcLocation.Name = "cbcLocation";
+            this.cbcLocation.Size = new System.Drawing.Size(193, 37);
+            this.cbcLocation.TabIndex = 1;
+            // 
+            // cbcType
+            // 
+            this.cbcType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcType.FormattingEnabled = true;
+            this.cbcType.Items.AddRange(new object[] {
+            "Thường",
+            "VIP"});
+            this.cbcType.Location = new System.Drawing.Point(215, 13);
+            this.cbcType.Name = "cbcType";
+            this.cbcType.Size = new System.Drawing.Size(193, 37);
+            this.cbcType.TabIndex = 1;
+            // 
             // frmAdminTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -378,10 +393,8 @@ namespace GUI
         #endregion
 
         private System.Windows.Forms.DataGridView dtgvTable;
-        private System.Windows.Forms.TextBox txtTableType;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.TextBox txtTableLocation;
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtTableID;
@@ -402,5 +415,7 @@ namespace GUI
         private System.Windows.Forms.Button btnAnalysis;
         private System.Windows.Forms.Panel pnlTop;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox cbcLocation;
+        private System.Windows.Forms.ComboBox cbcType;
     }
 }
