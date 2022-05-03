@@ -21,15 +21,25 @@ namespace GUI
         CustomerBUS customerBUS = new CustomerBUS();
         frmTable form = new frmTable();
         OrderBUS orderBUS = new OrderBUS();
+        Order order = new Order();
+        OrderFood orderFood = new OrderFood();
+        IngredientBUS ingredientBUS = new IngredientBUS();
+        public string foodName;
         public int indexRow;
         public frmTableDetail()
         {
-            InitializeComponent(); 
+           
+            InitializeComponent();
+            // new and don't have order
+            if (!tableBUS.isNewOrder(Convert.ToInt32(btnTable.tableName)))
+            {
+                orderBUS.insertOrders(Convert.ToInt32(btnTable.tableName));
+            }
             loadOrderItems();
             lblTableIDdata.Text = btnTable.tableName;
-            orderBUS.insertOrders(Convert.ToInt32(btnTable.tableName));
             loadStatus();
             loadFoodName();
+
         }
         public bool SaveCustomers()
         {
@@ -54,6 +64,15 @@ namespace GUI
             point =Convert.ToInt32( Math.Round((1.0 * total) / 10000));
             
             return point;
+        }
+        public int calTotal()
+        {
+            int total = 0;
+            for (int i = 0; i < dtgvOrderItems.Rows.Count - 1; i++)
+            {
+                total = total + Convert.ToInt32(dtgvOrderItems.Rows[i].Cells[2].Value.ToString());
+            }
+            return total;
         }
         public void loadStatus()
         {
@@ -173,17 +192,19 @@ namespace GUI
             }
             if (customerBUS.isOldCustomer(customer) == 1)
             {
-                customerBUS.updateCustomerPoint(customer);
+                // có rồi
                 tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
             }
             else if(customerBUS.isOldCustomer(customer) == 2)
             {
+                //  đã có số điện thoại
                 MessageBox.Show("Số điện thoại đã tồn tại");
                 return;
             }
             else
             {
+                // chưa có tài khoản
                 customerBUS.insertCustomers(customer);
                 tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
@@ -199,17 +220,38 @@ namespace GUI
 
         private void dtgvOrderItems_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+         
             indexRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dtgvOrderItems.Rows[e.RowIndex];
                 try
                 {
+                
+                   
+                    foodName = row.Cells[0].Value.ToString();
                     cbcFoodName.Text = row.Cells[0].Value.ToString();
+                    
                     nudQuantity.Value = Convert.ToInt32(row.Cells[1].Value);
+                    if(row.Cells[3].Value.ToString().Equals("Đã nấu"))
+                    {
+                        cbCooked.Checked = true;
+                        cbCooked.Enabled = false;
+                        nudQuantity.Enabled = false;
+                    }
+                    else if(row.Cells[3].Value.ToString().Equals("Chưa nấu"))
+                    {
+                        cbCooked.Checked = false;
+                        cbCooked.Enabled = true;
+                        nudQuantity.Enabled = true;
+                    }
+          
                 }
                 catch
                 {
+                    cbCooked.Checked = false;
+                    nudQuantity.Value = 0;
+                    nudQuantity.Enabled = true;
                     return;
                 }
 
@@ -224,20 +266,131 @@ namespace GUI
                 cbcFoodName.Items.Add(data.Rows[i]["Tên món"].ToString());
             }
         }
-
+        
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            
+            if(nudQuantity.Value <= 0)
+            {
+                MessageBox.Show("Số lượng không thể bằng không");
+                return;
+            }
+            if(cbCooked.Checked == true)
+            {
+                MessageBox.Show("Không thể thêm món ăn đã nấu");
+                return;
+            }
+            if (orderFoodBUS.isOldOrderFoods(this.dtgvOrderItems, cbcFoodName.Text))
+            {
+                MessageBox.Show("Không thể thêm món đã có");
+                return;
+            }
+            int tableID = Convert.ToInt32(lblTableIDdata.Text);
+            order.TableID = tableID;
+            order.Id = orderBUS.getLatestOrderIDByTableID(tableID);
+            orderFood.OrderID = order.Id;
+            orderFood.FoodID = foodBUS.getIDByName(cbcFoodName.Text);
+            orderFood.Quantity = Convert.ToInt32(nudQuantity.Value);
+            orderFood.TotalPrice = foodBUS.getPriceByID(orderFood.FoodID) * orderFood.Quantity;
 
+            if (!ingredientBUS.isAvailable(orderFood.Quantity, orderFood.FoodID))
+            {
+                MessageBox.Show("Không đủ nguyên liệu");
+                return;
+            }
+
+            orderFoodBUS.insertOrderFoods(orderFood);
+
+            cbcFoodName.Text = "";
+            nudQuantity.Value = 0;
+            MessageBox.Show("Thêm thành công");
+            loadOrderItems();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            orderFood.FoodID = foodBUS.getIDByName(cbcFoodName.Text);
+            orderFoodBUS.deleteOrderFoods(orderFood.FoodID);
+            cbcFoodName.Text = "";
+            nudQuantity.Value = 0;
+            cbCooked.Checked = false;
+            MessageBox.Show("Xóa thành công");
+            loadOrderItems();
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            int oldFoodID = foodBUS.getIDByName(foodName);
+            orderFood.Quantity = Convert.ToInt32(nudQuantity.Value);
+            orderFood.FoodID = foodBUS.getIDByName(cbcFoodName.Text);
+            orderFood.TotalPrice = foodBUS.getPriceByID(orderFood.FoodID) * orderFood.Quantity;
+            if(cbCooked.Checked == true)
+            {
+                orderFood.State = "Đã nấu";
+            }
+            else
+            {
+                orderFood.State = "Chưa nấu";
+            }
+
+            if (!ingredientBUS.isAvailable(orderFood.Quantity, orderFood.FoodID))
+            {
+                MessageBox.Show("Không đủ nguyên liệu");
+                return;
+            }
+            orderFoodBUS.update(orderFood,oldFoodID);
+            
+            if(orderFood.State.Equals("Đã nấu"))
+            {
+                ingredientBUS.minusIngredients(orderFood.FoodID,orderFood.Quantity);
+            }
+
+            cbcFoodName.Text = "";
+            nudQuantity.Value = 0;
+            cbCooked.Checked = false;
+            cbCooked.Enabled = false;
+            MessageBox.Show("Sửa thành công");
+            loadOrderItems();
+        }
+
+        private void btnPrintBill_Click_1(object sender, EventArgs e)
+        {
+            // save customer
+            btnSave.PerformClick();
+            customerBUS.updateCustomerPoint(customer);
+            if(cbVIP.Checked == true)
+            {
+                int point = customerBUS.getPoint(customer);
+                int money = point*500;
+                int total = this.calTotal() - money;
+                if (total < 0)
+                {
+                    total = 0;
+                }
+                customer.Point = 0;
+                customerBUS.updateToZeroPoint(customer);
+                orderBUS.updateSumTotalAndState(orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName)), total);
+            }
+            else
+            {
+                int total = this.calTotal();
+                orderBUS.updateSumTotalAndState(orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName)), total);
+            }
+
+
+            this.Close();
+            Thread thread = new Thread(OpenFrmCheckout);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+
+            //this.loadOrderItems();
+
 
         }
+       /* public void OpenFrmTableDetail()
+        {
+            frmTableDetail form = new frmTableDetail();
+            Application.Run(form);
+        }*/
     }
 }

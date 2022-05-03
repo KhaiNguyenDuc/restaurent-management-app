@@ -35,8 +35,10 @@ namespace GUI
             this.dtgvTable = new System.Windows.Forms.DataGridView();
             this.lblType = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.cbcType = new System.Windows.Forms.ComboBox();
             this.lblLocation = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.cbcLocation = new System.Windows.Forms.ComboBox();
             this.txtTableID = new System.Windows.Forms.TextBox();
             this.lblTableID = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -49,14 +51,13 @@ namespace GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlCategory = new System.Windows.Forms.Panel();
+            this.btnIngredient = new System.Windows.Forms.Button();
             this.pnlSetting = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.cbcLocation = new System.Windows.Forms.ComboBox();
-            this.cbcType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -93,7 +94,7 @@ namespace GUI
             this.dtgvTable.Name = "dtgvTable";
             this.dtgvTable.RowHeadersWidth = 51;
             this.dtgvTable.RowTemplate.Height = 24;
-            this.dtgvTable.Size = new System.Drawing.Size(915, 205);
+            this.dtgvTable.Size = new System.Drawing.Size(901, 283);
             this.dtgvTable.TabIndex = 4;
             this.dtgvTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTable_CellClick);
             this.dtgvTable.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTable_CellContentClick);
@@ -117,6 +118,18 @@ namespace GUI
             this.panel8.Size = new System.Drawing.Size(418, 53);
             this.panel8.TabIndex = 2;
             // 
+            // cbcType
+            // 
+            this.cbcType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcType.FormattingEnabled = true;
+            this.cbcType.Items.AddRange(new object[] {
+            "Thường",
+            "VIP"});
+            this.cbcType.Location = new System.Drawing.Point(215, 13);
+            this.cbcType.Name = "cbcType";
+            this.cbcType.Size = new System.Drawing.Size(193, 37);
+            this.cbcType.TabIndex = 1;
+            // 
             // lblLocation
             // 
             this.lblLocation.AutoSize = true;
@@ -136,6 +149,22 @@ namespace GUI
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(418, 53);
             this.panel7.TabIndex = 1;
+            // 
+            // cbcLocation
+            // 
+            this.cbcLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.cbcLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbcLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbcLocation.FormattingEnabled = true;
+            this.cbcLocation.Items.AddRange(new object[] {
+            "Khu A (VIP)",
+            "Khu B",
+            "Khu C",
+            "Khu D"});
+            this.cbcLocation.Location = new System.Drawing.Point(215, 10);
+            this.cbcLocation.Name = "cbcLocation";
+            this.cbcLocation.Size = new System.Drawing.Size(193, 37);
+            this.cbcLocation.TabIndex = 1;
             // 
             // txtTableID
             // 
@@ -169,26 +198,27 @@ namespace GUI
             this.pnlDateTable.Controls.Add(this.panel8);
             this.pnlDateTable.Controls.Add(this.panel7);
             this.pnlDateTable.Controls.Add(this.panel6);
-            this.pnlDateTable.Location = new System.Drawing.Point(3, 216);
+            this.pnlDateTable.Location = new System.Drawing.Point(6, 297);
             this.pnlDateTable.Name = "pnlDateTable";
-            this.pnlDateTable.Size = new System.Drawing.Size(924, 249);
+            this.pnlDateTable.Size = new System.Drawing.Size(901, 234);
             this.pnlDateTable.TabIndex = 3;
             // 
             // btnTable
             // 
+            this.btnTable.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(3, 169);
+            this.btnTable.Location = new System.Drawing.Point(3, 226);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(184, 50);
             this.btnTable.TabIndex = 11;
             this.btnTable.Text = "Bàn ăn";
-            this.btnTable.UseVisualStyleBackColor = true;
+            this.btnTable.UseVisualStyleBackColor = false;
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // btnStaff
             // 
             this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Location = new System.Drawing.Point(3, 113);
+            this.btnStaff.Location = new System.Drawing.Point(3, 169);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(184, 50);
             this.btnStaff.TabIndex = 10;
@@ -220,7 +250,7 @@ namespace GUI
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(19, 389);
+            this.btnEdit.Location = new System.Drawing.Point(20, 475);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 50);
             this.btnEdit.TabIndex = 11;
@@ -231,7 +261,7 @@ namespace GUI
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(19, 333);
+            this.btnDelete.Location = new System.Drawing.Point(20, 419);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(162, 50);
             this.btnDelete.TabIndex = 10;
@@ -242,7 +272,7 @@ namespace GUI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(19, 277);
+            this.btnAdd.Location = new System.Drawing.Point(20, 363);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(162, 50);
             this.btnAdd.TabIndex = 9;
@@ -252,14 +282,26 @@ namespace GUI
             // 
             // pnlCategory
             // 
+            this.pnlCategory.Controls.Add(this.btnIngredient);
             this.pnlCategory.Controls.Add(this.btnTable);
             this.pnlCategory.Controls.Add(this.btnStaff);
             this.pnlCategory.Controls.Add(this.btnFood);
             this.pnlCategory.Controls.Add(this.lblCatetory);
             this.pnlCategory.Location = new System.Drawing.Point(5, 15);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
+            this.pnlCategory.Size = new System.Drawing.Size(190, 292);
             this.pnlCategory.TabIndex = 0;
+            // 
+            // btnIngredient
+            // 
+            this.btnIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredient.Location = new System.Drawing.Point(3, 113);
+            this.btnIngredient.Name = "btnIngredient";
+            this.btnIngredient.Size = new System.Drawing.Size(184, 50);
+            this.btnIngredient.TabIndex = 12;
+            this.btnIngredient.Text = "Nguyên liệu";
+            this.btnIngredient.UseVisualStyleBackColor = true;
+            this.btnIngredient.Click += new System.EventHandler(this.btnIngredient_Click);
             // 
             // pnlSetting
             // 
@@ -271,7 +313,7 @@ namespace GUI
             this.pnlSetting.Controls.Add(this.pnlCategory);
             this.pnlSetting.Location = new System.Drawing.Point(12, 76);
             this.pnlSetting.Name = "pnlSetting";
-            this.pnlSetting.Size = new System.Drawing.Size(206, 470);
+            this.pnlSetting.Size = new System.Drawing.Size(206, 536);
             this.pnlSetting.TabIndex = 6;
             // 
             // lblUsername
@@ -328,36 +370,8 @@ namespace GUI
             this.panel3.Controls.Add(this.pnlDateTable);
             this.panel3.Location = new System.Drawing.Point(224, 76);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(923, 470);
+            this.panel3.Size = new System.Drawing.Size(923, 536);
             this.panel3.TabIndex = 7;
-            // 
-            // cbcLocation
-            // 
-            this.cbcLocation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbcLocation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.cbcLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbcLocation.FormattingEnabled = true;
-            this.cbcLocation.Items.AddRange(new object[] {
-            "Khu A (VIP)",
-            "Khu B",
-            "Khu C",
-            "Khu D"});
-            this.cbcLocation.Location = new System.Drawing.Point(215, 10);
-            this.cbcLocation.Name = "cbcLocation";
-            this.cbcLocation.Size = new System.Drawing.Size(193, 37);
-            this.cbcLocation.TabIndex = 1;
-            // 
-            // cbcType
-            // 
-            this.cbcType.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbcType.FormattingEnabled = true;
-            this.cbcType.Items.AddRange(new object[] {
-            "Thường",
-            "VIP"});
-            this.cbcType.Location = new System.Drawing.Point(215, 13);
-            this.cbcType.Name = "cbcType";
-            this.cbcType.Size = new System.Drawing.Size(193, 37);
-            this.cbcType.TabIndex = 1;
             // 
             // frmAdminTable
             // 
@@ -365,7 +379,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1165, 571);
+            this.ClientSize = new System.Drawing.Size(1165, 624);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.panel3);
@@ -417,5 +431,6 @@ namespace GUI
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox cbcLocation;
         private System.Windows.Forms.ComboBox cbcType;
+        private System.Windows.Forms.Button btnIngredient;
     }
 }

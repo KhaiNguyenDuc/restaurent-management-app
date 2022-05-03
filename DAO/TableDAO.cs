@@ -147,7 +147,24 @@ namespace DAO
             }
             catch
             {
-                //MessageBox.Show("hahaa");
+                
+            }
+        }
+        public bool isNewOrder(int tableID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM orders WHERE table_id = "+tableID+"ORDER BY id DESC ", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["order_state"])==1;
+            }
+            catch
+            {
+                return false;
             }
         }
     }

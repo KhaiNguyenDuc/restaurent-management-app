@@ -64,6 +64,7 @@ namespace GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlCategory = new System.Windows.Forms.Panel();
+            this.btnIngredient = new System.Windows.Forms.Button();
             this.lblCatetory = new System.Windows.Forms.Label();
             this.pnlSetting = new System.Windows.Forms.Panel();
             this.lblUsername = new System.Windows.Forms.Label();
@@ -200,6 +201,7 @@ namespace GUI
             // pbStaffImage
             // 
             this.pbStaffImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbStaffImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbStaffImage.Location = new System.Drawing.Point(1015, 62);
             this.pbStaffImage.Name = "pbStaffImage";
             this.pbStaffImage.Size = new System.Drawing.Size(151, 137);
@@ -357,7 +359,7 @@ namespace GUI
             // btnTable
             // 
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(3, 169);
+            this.btnTable.Location = new System.Drawing.Point(3, 235);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(184, 50);
             this.btnTable.TabIndex = 11;
@@ -367,19 +369,20 @@ namespace GUI
             // 
             // btnStaff
             // 
+            this.btnStaff.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Location = new System.Drawing.Point(3, 113);
+            this.btnStaff.Location = new System.Drawing.Point(3, 179);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(184, 50);
             this.btnStaff.TabIndex = 10;
             this.btnStaff.Text = "Nhân viên";
-            this.btnStaff.UseVisualStyleBackColor = true;
+            this.btnStaff.UseVisualStyleBackColor = false;
             this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
             // 
             // btnFood
             // 
             this.btnFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFood.Location = new System.Drawing.Point(3, 57);
+            this.btnFood.Location = new System.Drawing.Point(3, 67);
             this.btnFood.Name = "btnFood";
             this.btnFood.Size = new System.Drawing.Size(184, 50);
             this.btnFood.TabIndex = 9;
@@ -390,7 +393,7 @@ namespace GUI
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(19, 389);
+            this.btnEdit.Location = new System.Drawing.Point(19, 545);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 50);
             this.btnEdit.TabIndex = 11;
@@ -401,7 +404,7 @@ namespace GUI
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(19, 333);
+            this.btnDelete.Location = new System.Drawing.Point(19, 473);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(162, 50);
             this.btnDelete.TabIndex = 10;
@@ -412,7 +415,7 @@ namespace GUI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(19, 277);
+            this.btnAdd.Location = new System.Drawing.Point(19, 399);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(162, 50);
             this.btnAdd.TabIndex = 9;
@@ -422,14 +425,26 @@ namespace GUI
             // 
             // pnlCategory
             // 
+            this.pnlCategory.Controls.Add(this.btnIngredient);
             this.pnlCategory.Controls.Add(this.btnTable);
             this.pnlCategory.Controls.Add(this.btnStaff);
             this.pnlCategory.Controls.Add(this.btnFood);
             this.pnlCategory.Controls.Add(this.lblCatetory);
             this.pnlCategory.Location = new System.Drawing.Point(5, 15);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
+            this.pnlCategory.Size = new System.Drawing.Size(190, 324);
             this.pnlCategory.TabIndex = 0;
+            // 
+            // btnIngredient
+            // 
+            this.btnIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredient.Location = new System.Drawing.Point(3, 123);
+            this.btnIngredient.Name = "btnIngredient";
+            this.btnIngredient.Size = new System.Drawing.Size(184, 50);
+            this.btnIngredient.TabIndex = 12;
+            this.btnIngredient.Text = "Nguyên liệu";
+            this.btnIngredient.UseVisualStyleBackColor = true;
+            this.btnIngredient.Click += new System.EventHandler(this.btnIngredient_Click);
             // 
             // lblCatetory
             // 
@@ -581,5 +596,6 @@ namespace GUI
         private System.Windows.Forms.Button btnAddImage;
         private System.Windows.Forms.PictureBox pbStaffImage;
         public System.Windows.Forms.CheckBox cbAdmin;
+        private System.Windows.Forms.Button btnIngredient;
     }
 }

@@ -39,5 +39,13 @@ namespace BUS
         {
             return customerDAO.getCustomers();
         }
+        public int getPoint(Customer customer)
+        {
+            return customerDAO.getPoint(customer);
+        }
+        public void updateToZeroPoint(Customer customer)
+        {
+            customerDAO.updateToZeroPoint(customer);
+        }
     }
 }

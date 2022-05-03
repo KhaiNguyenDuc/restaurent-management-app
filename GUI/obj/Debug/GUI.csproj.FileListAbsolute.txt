@@ -83,3 +83,5 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\DAO.pdb
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\GUI\bin\Debug\DAO.exe.config
 D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAddAccount.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAdminIngredient.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmAddRecipe.resources

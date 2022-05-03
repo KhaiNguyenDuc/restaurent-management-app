@@ -117,5 +117,83 @@ namespace DAO
                 
             }
         }
+        public int getLatestID()
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT TOP 1 * FROM foods ORDER BY id DESC", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["id"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return 0;
+            }
+        }
+        public void updatePrice(int foodID, double price)
+        {
+            string query = "UPDATE foods SET price = @Price WHERE id = " + foodID;
+
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    
+                    command.Parameters.Add(new SqlParameter("@Price", SqlDbType.Real));
+                    command.Parameters["@Price"].Value = price;
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+
+            }
+        }
+        public int getIDByName(string name)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT id FROM foods WHERE food_name = N'" + name +"';", conn); ;
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["id"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return -1;
+            }
+        }
+        public double getPriceByID(int foodID)
+        {
+
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT price FROM foods WHERE id  = '" + foodID + "';", conn); ;
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToDouble(data.Rows[0]["price"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return -1;
+            }
+        }
+
     }
+
 }

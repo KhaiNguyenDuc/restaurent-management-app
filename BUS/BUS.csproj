@@ -56,10 +56,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngredientBUS.cs" />
     <Compile Include="OrderBUS.cs" />
     <Compile Include="OrderFoodBUS.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeBUS.cs" />
     <Compile Include="StaffBUS.cs" />
     <Compile Include="TableBUS.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

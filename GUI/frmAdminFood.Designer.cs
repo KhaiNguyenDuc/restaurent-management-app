@@ -42,6 +42,7 @@ namespace GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlCategory = new System.Windows.Forms.Panel();
+            this.btnIngredient = new System.Windows.Forms.Button();
             this.btnTable = new System.Windows.Forms.Button();
             this.btnStaff = new System.Windows.Forms.Button();
             this.btnFood = new System.Windows.Forms.Button();
@@ -134,15 +135,15 @@ namespace GUI
             this.pnlSetting.Controls.Add(this.pnlCategory);
             this.pnlSetting.Location = new System.Drawing.Point(0, 78);
             this.pnlSetting.Name = "pnlSetting";
-            this.pnlSetting.Size = new System.Drawing.Size(206, 471);
+            this.pnlSetting.Size = new System.Drawing.Size(206, 566);
             this.pnlSetting.TabIndex = 1;
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(19, 389);
+            this.btnEdit.Location = new System.Drawing.Point(13, 501);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(162, 50);
+            this.btnEdit.Size = new System.Drawing.Size(179, 50);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -151,9 +152,9 @@ namespace GUI
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(19, 333);
+            this.btnDelete.Location = new System.Drawing.Point(13, 445);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(162, 50);
+            this.btnDelete.Size = new System.Drawing.Size(179, 50);
             this.btnDelete.TabIndex = 10;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -162,9 +163,9 @@ namespace GUI
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(19, 277);
+            this.btnAdd.Location = new System.Drawing.Point(13, 389);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(162, 50);
+            this.btnAdd.Size = new System.Drawing.Size(179, 50);
             this.btnAdd.TabIndex = 9;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -172,19 +173,31 @@ namespace GUI
             // 
             // pnlCategory
             // 
+            this.pnlCategory.Controls.Add(this.btnIngredient);
             this.pnlCategory.Controls.Add(this.btnTable);
             this.pnlCategory.Controls.Add(this.btnStaff);
             this.pnlCategory.Controls.Add(this.btnFood);
             this.pnlCategory.Controls.Add(this.lblCatetory);
             this.pnlCategory.Location = new System.Drawing.Point(5, 15);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 241);
+            this.pnlCategory.Size = new System.Drawing.Size(190, 321);
             this.pnlCategory.TabIndex = 0;
+            // 
+            // btnIngredient
+            // 
+            this.btnIngredient.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngredient.Location = new System.Drawing.Point(6, 125);
+            this.btnIngredient.Name = "btnIngredient";
+            this.btnIngredient.Size = new System.Drawing.Size(184, 50);
+            this.btnIngredient.TabIndex = 12;
+            this.btnIngredient.Text = "Nguyên liệu";
+            this.btnIngredient.UseVisualStyleBackColor = true;
+            this.btnIngredient.Click += new System.EventHandler(this.btnIngredient_Click);
             // 
             // btnTable
             // 
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(3, 169);
+            this.btnTable.Location = new System.Drawing.Point(3, 268);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(184, 50);
             this.btnTable.TabIndex = 11;
@@ -195,7 +208,7 @@ namespace GUI
             // btnStaff
             // 
             this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaff.Location = new System.Drawing.Point(3, 113);
+            this.btnStaff.Location = new System.Drawing.Point(6, 197);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Size = new System.Drawing.Size(184, 50);
             this.btnStaff.TabIndex = 10;
@@ -205,13 +218,14 @@ namespace GUI
             // 
             // btnFood
             // 
+            this.btnFood.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFood.Location = new System.Drawing.Point(3, 57);
             this.btnFood.Name = "btnFood";
-            this.btnFood.Size = new System.Drawing.Size(184, 50);
+            this.btnFood.Size = new System.Drawing.Size(187, 50);
             this.btnFood.TabIndex = 9;
             this.btnFood.Text = "Món ăn";
-            this.btnFood.UseVisualStyleBackColor = true;
+            this.btnFood.UseVisualStyleBackColor = false;
             this.btnFood.Click += new System.EventHandler(this.btnFood_Click);
             // 
             // lblCatetory
@@ -232,7 +246,7 @@ namespace GUI
             this.pnlDataFood.Controls.Add(this.panel8);
             this.pnlDataFood.Controls.Add(this.panel7);
             this.pnlDataFood.Controls.Add(this.panel6);
-            this.pnlDataFood.Location = new System.Drawing.Point(3, 216);
+            this.pnlDataFood.Location = new System.Drawing.Point(6, 291);
             this.pnlDataFood.Name = "pnlDataFood";
             this.pnlDataFood.Size = new System.Drawing.Size(924, 247);
             this.pnlDataFood.TabIndex = 3;
@@ -298,6 +312,7 @@ namespace GUI
             // 
             // txtPrice
             // 
+            this.txtPrice.Enabled = false;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(215, 10);
             this.txtPrice.Name = "txtPrice";
@@ -349,7 +364,7 @@ namespace GUI
             this.panel3.Controls.Add(this.pnlDataFood);
             this.panel3.Location = new System.Drawing.Point(212, 78);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(951, 471);
+            this.panel3.Size = new System.Drawing.Size(951, 566);
             this.panel3.TabIndex = 4;
             // 
             // dtgvFood
@@ -377,7 +392,7 @@ namespace GUI
             this.dtgvFood.Name = "dtgvFood";
             this.dtgvFood.RowHeadersWidth = 51;
             this.dtgvFood.RowTemplate.Height = 24;
-            this.dtgvFood.Size = new System.Drawing.Size(921, 205);
+            this.dtgvFood.Size = new System.Drawing.Size(921, 277);
             this.dtgvFood.TabIndex = 4;
             this.dtgvFood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellClick);
             this.dtgvFood.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvFood_CellContentClick);
@@ -403,7 +418,7 @@ namespace GUI
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1190, 576);
+            this.ClientSize = new System.Drawing.Size(1190, 656);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTop);
@@ -464,5 +479,6 @@ namespace GUI
         private RestaurantManagementDataSetTableAdapters.FoodsTableAdapter foodsTableAdapter;
         private System.Windows.Forms.PictureBox pBFoodImage;
         private System.Windows.Forms.Button btnAddImage;
+        private System.Windows.Forms.Button btnIngredient;
     }
 }

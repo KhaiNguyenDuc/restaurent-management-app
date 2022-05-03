@@ -39,5 +39,21 @@ namespace BUS
         {
             foodDAO.updateFoods(food);
         }
+        public int getLatestID()
+        {
+            return foodDAO.getLatestID();
+        }
+        public void updatePrice(int foodID,double price)
+        {
+            foodDAO.updatePrice(foodID, price);
+        }
+        public int getIDByName(string name)
+        {
+            return foodDAO.getIDByName(name);
+        }
+        public double getPriceByID(int foodID)
+        {
+            return foodDAO.getPriceByID(foodID);
+        }
     }
 }

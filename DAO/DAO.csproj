@@ -60,10 +60,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="IngredientDAO.cs" />
     <Compile Include="OrderDAO.cs" />
     <Compile Include="OrderFoodDAO.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecipeDAO.cs" />
     <Compile Include="StaffDAO.cs" />
     <Compile Include="TableDAO.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

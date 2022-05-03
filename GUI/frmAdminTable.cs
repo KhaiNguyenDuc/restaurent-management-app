@@ -148,15 +148,19 @@ namespace GUI
         {
             
             tableBUS.addTables(table);
-            MessageBox.Show("Thêm thành công");
+
+            txtTableID.Text = "";
             loadTables();
+            MessageBox.Show("Thêm thành công");
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             tableBUS.deleteTables(table.Id);
-            MessageBox.Show("Xóa thành công");
+
+            txtTableID.Text = "";
             loadTables();
+            MessageBox.Show("Xóa thành công");
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -178,8 +182,22 @@ namespace GUI
             }
 
             tableBUS.updateTables(table);
-            MessageBox.Show("Sửa thành công");
+
+            
             loadTables();
+            MessageBox.Show("Sửa thành công");
+        }
+        public void OpenFrmAdminIngredient()
+        {
+            Application.Run(new frmAdminIngredient());
+        }
+        private void btnIngredient_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminIngredient);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+            
         }
     }
 }

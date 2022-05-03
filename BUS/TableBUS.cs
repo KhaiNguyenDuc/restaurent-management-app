@@ -16,6 +16,10 @@ namespace BUS
         {
             return tableDAO.getTables();
         }
+        public bool isNewOrder(int tableID)
+        {
+            return tableDAO.isNewOrder(tableID);
+        }
         public DataTable getTables(string location)
         {
             if (location.Equals("Khu A (VIP)"))

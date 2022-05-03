@@ -49,7 +49,8 @@ namespace GUI
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlDateTable = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.cbCooked = new System.Windows.Forms.CheckBox();
+            this.cbVIP = new System.Windows.Forms.CheckBox();
             this.cbcFoodName = new System.Windows.Forms.ComboBox();
             this.lblQuantity = new System.Windows.Forms.Label();
             this.nudQuantity = new System.Windows.Forms.NumericUpDown();
@@ -145,7 +146,7 @@ namespace GUI
             // 
             this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1061, 6);
+            this.btnLogout.Location = new System.Drawing.Point(1118, 6);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(172, 57);
             this.btnLogout.TabIndex = 7;
@@ -216,7 +217,7 @@ namespace GUI
             this.dtgvOrderItems.Name = "dtgvOrderItems";
             this.dtgvOrderItems.RowHeadersWidth = 51;
             this.dtgvOrderItems.RowTemplate.Height = 24;
-            this.dtgvOrderItems.Size = new System.Drawing.Size(1221, 295);
+            this.dtgvOrderItems.Size = new System.Drawing.Size(1278, 295);
             this.dtgvOrderItems.TabIndex = 11;
             this.dtgvOrderItems.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvOrderItems_CellClick);
             // 
@@ -261,48 +262,63 @@ namespace GUI
             this.pnlDateTable.Controls.Add(this.btnDelete);
             this.pnlDateTable.Location = new System.Drawing.Point(12, 440);
             this.pnlDateTable.Name = "pnlDateTable";
-            this.pnlDateTable.Size = new System.Drawing.Size(1015, 171);
+            this.pnlDateTable.Size = new System.Drawing.Size(1072, 171);
             this.pnlDateTable.TabIndex = 13;
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.checkBox1);
+            this.panel6.Controls.Add(this.cbCooked);
+            this.panel6.Controls.Add(this.cbVIP);
             this.panel6.Controls.Add(this.cbcFoodName);
             this.panel6.Controls.Add(this.lblQuantity);
             this.panel6.Controls.Add(this.nudQuantity);
             this.panel6.Controls.Add(this.lblFoodname);
             this.panel6.Location = new System.Drawing.Point(19, 17);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(982, 56);
+            this.panel6.Size = new System.Drawing.Size(1050, 56);
             this.panel6.TabIndex = 0;
             // 
-            // checkBox1
+            // cbCooked
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(805, 15);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 33);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "Điểm VIP";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.cbCooked.AutoSize = true;
+            this.cbCooked.Enabled = false;
+            this.cbCooked.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCooked.Location = new System.Drawing.Point(697, 11);
+            this.cbCooked.Name = "cbCooked";
+            this.cbCooked.Size = new System.Drawing.Size(110, 33);
+            this.cbCooked.TabIndex = 12;
+            this.cbCooked.Text = "Đã nấu";
+            this.cbCooked.UseVisualStyleBackColor = true;
+            // 
+            // cbVIP
+            // 
+            this.cbVIP.AutoSize = true;
+            this.cbVIP.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbVIP.Location = new System.Drawing.Point(892, 9);
+            this.cbVIP.Name = "cbVIP";
+            this.cbVIP.Size = new System.Drawing.Size(135, 33);
+            this.cbVIP.TabIndex = 7;
+            this.cbVIP.Text = "Điểm VIP";
+            this.cbVIP.UseVisualStyleBackColor = true;
             // 
             // cbcFoodName
             // 
             this.cbcFoodName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.cbcFoodName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbcFoodName.DropDownHeight = 70;
             this.cbcFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbcFoodName.FormattingEnabled = true;
+            this.cbcFoodName.IntegralHeight = false;
             this.cbcFoodName.Location = new System.Drawing.Point(151, 9);
             this.cbcFoodName.Name = "cbcFoodName";
-            this.cbcFoodName.Size = new System.Drawing.Size(225, 37);
+            this.cbcFoodName.Size = new System.Drawing.Size(187, 37);
             this.cbcFoodName.TabIndex = 5;
             // 
             // lblQuantity
             // 
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(463, 13);
+            this.lblQuantity.Location = new System.Drawing.Point(377, 12);
             this.lblQuantity.Name = "lblQuantity";
             this.lblQuantity.Size = new System.Drawing.Size(109, 29);
             this.lblQuantity.TabIndex = 4;
@@ -311,7 +327,7 @@ namespace GUI
             // nudQuantity
             // 
             this.nudQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nudQuantity.Location = new System.Drawing.Point(593, 11);
+            this.nudQuantity.Location = new System.Drawing.Point(492, 10);
             this.nudQuantity.Name = "nudQuantity";
             this.nudQuantity.Size = new System.Drawing.Size(120, 34);
             this.nudQuantity.TabIndex = 3;
@@ -330,7 +346,7 @@ namespace GUI
             // 
             this.btnBack.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(1061, 69);
+            this.btnBack.Location = new System.Drawing.Point(1118, 69);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(172, 64);
             this.btnBack.TabIndex = 10;
@@ -345,7 +361,7 @@ namespace GUI
             this.pnlSetting.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlSetting.Controls.Add(this.btnSave);
             this.pnlSetting.Controls.Add(this.btnPrintBill);
-            this.pnlSetting.Location = new System.Drawing.Point(1033, 440);
+            this.pnlSetting.Location = new System.Drawing.Point(1090, 440);
             this.pnlSetting.Name = "pnlSetting";
             this.pnlSetting.Size = new System.Drawing.Size(200, 171);
             this.pnlSetting.TabIndex = 14;
@@ -373,6 +389,7 @@ namespace GUI
             this.btnPrintBill.Text = "In hóa đơn";
             this.btnPrintBill.UseMnemonic = false;
             this.btnPrintBill.UseVisualStyleBackColor = true;
+            this.btnPrintBill.Click += new System.EventHandler(this.btnPrintBill_Click_1);
             // 
             // frmTableDetail
             // 
@@ -380,7 +397,7 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1260, 616);
+            this.ClientSize = new System.Drawing.Size(1324, 616);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlDateTable);
             this.Controls.Add(this.btnBack);
@@ -428,10 +445,11 @@ namespace GUI
         private System.Windows.Forms.NumericUpDown nudQuantity;
         private System.Windows.Forms.Label lblFoodname;
         private System.Windows.Forms.ComboBox cbcFoodName;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox cbVIP;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel pnlSetting;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPrintBill;
+        private System.Windows.Forms.CheckBox cbCooked;
     }
 }

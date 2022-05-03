@@ -14,5 +14,13 @@ namespace BUS
         {
             orderDAO.insertOrders(tableID);
         }
+        public int getLatestOrderIDByTableID(int tableID)
+        {
+            return orderDAO.getLatestOrderIDByTableID(tableID);
+        }
+        public void updateSumTotalAndState(int orderID, int total)
+        {
+            orderDAO.updateSumTotalAndState(orderID, total);
+        }
     }
 }

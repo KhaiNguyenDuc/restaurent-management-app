@@ -14,7 +14,7 @@ namespace DAO
         SqlConnection conn = Config.getConnection();
         public void insertCustomers(Customer customer)
         {
-            string query = "INSERT INTO Customers (customer_name,customer_phone,customer_point) VALUES (@Name,@PhoneNumber,@Point)";
+            string query = "INSERT INTO Customers (customer_name,customer_phone) VALUES (@Name,@PhoneNumber)";
             try
             {
                 using (SqlCommand command = new SqlCommand(query, conn))
@@ -24,8 +24,6 @@ namespace DAO
                     command.Parameters["@Name"].Value = customer.Name;
                     command.Parameters.Add(new SqlParameter("@PhoneNumber", SqlDbType.NVarChar));
                     command.Parameters["@PhoneNumber"].Value = customer.PhoneNumber;
-                    command.Parameters.Add(new SqlParameter("@Point", SqlDbType.Int));
-                    command.Parameters["@Point"].Value = customer.Point;
                     command.ExecuteNonQuery();
                     conn.Close();
                 }
@@ -54,13 +52,13 @@ namespace DAO
         }
         public void updateCustomerPoint(Customer customer)
         {
-            string query = "UPDATE Customers SET customer_point = @Point WHERE customer_phone = '" + customer.PhoneNumber+ "' and customer_name = '"+customer.Name+"';";
+            string query = "UPDATE Customers SET customer_point = customer_point +  @Point WHERE customer_phone = '" + customer.PhoneNumber+ "' and customer_name = N'"+customer.Name+"';";
             try
             {
                 using (SqlCommand command = new SqlCommand(query, conn))
                 {
                     conn.Open();
-                    command.Parameters.Add(new SqlParameter("@Point", SqlDbType.NVarChar));
+                    command.Parameters.Add(new SqlParameter("@Point", SqlDbType.Int));
                     command.Parameters["@Point"].Value = customer.Point;
                     command.ExecuteNonQuery();
                     conn.Close();
@@ -68,6 +66,42 @@ namespace DAO
             }
             catch
             {
+                MessageBox.Show("Lỗi");
+            }
+        }
+        public int getPoint(Customer customer)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT customer_point FROM Customers WHERE customer_phone = '" + customer.PhoneNumber + "' and customer_name = N'" + customer.Name + "';", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["customer_point"]);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return 0;
+            }
+        }
+        public void updateToZeroPoint(Customer customer)
+        {
+            string query = "UPDATE Customers SET customer_point = 0 WHERE customer_phone = '" + customer.PhoneNumber + "' and customer_name = N'" + customer.Name + "';";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi");
             }
         }
     }

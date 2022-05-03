@@ -18,6 +18,8 @@ namespace GUI
         public int indexRow;
         FoodBUS foodBUS = new FoodBUS();
         Food food = new Food();
+        public static int LatestID;
+
         public frmAdminFood()
         {
             InitializeComponent();
@@ -116,6 +118,7 @@ namespace GUI
 
         private void dtgvFood_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            txtPrice.Enabled = true;
             indexRow = e.RowIndex;
             if (e.RowIndex >= 0)
             {
@@ -141,20 +144,30 @@ namespace GUI
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            txtPrice.Text = "";
+            txtPrice.Enabled = false;
             try
             {
-                if (txtFoodName.Text == "" || txtPrice.Text == "" || txtType.Text == "")
+                if (txtFoodName.Text == "" || txtType.Text == "")
                 {
                     MessageBox.Show("Thiếu thông tin thức ăn");
                     return;
                 }
                 food.Name = txtFoodName.Text;
-                food.Price = Convert.ToDouble(txtPrice.Text);
+                food.Price = 0;
                 food.Type = Convert.ToInt32(txtType.Text);
                 food.Path = pBFoodImage.Text;
                 foodBUS.insertFoods(food);
-                MessageBox.Show("Thêm thành công");
+
+                LatestID = foodBUS.getLatestID();
+                frmAddRecipe form = new frmAddRecipe();
+                form.ShowDialog();
+
+                txtFoodName.Text = "";
+                txtPrice.Text = "";
+                txtType.Text = "";
                 loadFoods();
+                MessageBox.Show("Thêm thành công");
             }
             catch
             {
@@ -185,6 +198,7 @@ namespace GUI
             txtPrice.Text = "";
             txtType.Text = "";
             loadFoods();
+            MessageBox.Show("Xóa thành công");
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -194,8 +208,21 @@ namespace GUI
             food.Type = Convert.ToInt32(txtType.Text);
             food.Path = pBFoodImage.Text;
             foodBUS.updateFoods(food);
-            MessageBox.Show("Sửa thành công");
+
+            
             loadFoods();
+            MessageBox.Show("Sửa thành công");
+        }
+        public void OpenFrmAdminIngredient()
+        {
+            Application.Run(new frmAdminIngredient());
+        }
+        private void btnIngredient_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminIngredient);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }

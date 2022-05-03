@@ -207,8 +207,18 @@ namespace GUI
                 staff.Birthday = dtpBirthDate.Value;
                 staff.AccountID = accountBUS.getLatestID();
                 staffBUS.addProfileStaffs(staff);
-                MessageBox.Show("Thêm thành công");
+
+
+                dtpBirthDate.Value = DateTime.Now;
+                txtStaffName.Text = "";
+                txtAddress.Text = "";
+                txtPhoneNumber.Text = "";
+                txtSalary.Text = "";
+                rdoMale.Checked = true;
+                pbStaffImage.Image = null;
+                pbStaffImage.Update();
                 loadStaffs();
+                MessageBox.Show("Thêm thành công");
             }
             catch
             {
@@ -223,16 +233,21 @@ namespace GUI
             staffBUS.deleteStaffs(staff.ID);
             accountBUS.deleteAccounts(accountID);
             adminBUS.deleteAdmins(adminID);
-            staff.Name = "";
-            staff.PhoneNumber = "";
-            staff.Salary = 0;
-            staff.Path = "";
-            staff.Address = "";
+
+
+            
+            
+
+            dtpBirthDate.Value =DateTime.Now;
+            txtStaffName.Text = "";
+            txtAddress.Text = "";
+            txtPhoneNumber.Text = "";
+            txtSalary.Text = "";
             rdoMale.Checked = true;
-            staff.Birthday = DateTime.Now;
-            cbAdmin.Checked = false;
-            MessageBox.Show("Xóa thành công");
+            pbStaffImage.Image = null;
+            pbStaffImage.Update();
             loadStaffs();
+            MessageBox.Show("Xóa thành công");
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -260,6 +275,8 @@ namespace GUI
                     // update admin cũ 
                     staffBUS.updateStaffs(staff);
                     accountBUS.updatePermission(0, adminBUS.getLatestID(), staffBUS.getAccountIDByStaffID(staff.ID));
+
+                  
                     MessageBox.Show("Sửa thành công");
                     loadStaffs();
                     return;
@@ -286,10 +303,23 @@ namespace GUI
                
                 }
             }
-            MessageBox.Show("Sửa thành công");
-            loadStaffs();
-            
 
+           
+            loadStaffs();
+            MessageBox.Show("Sửa thành công");
+
+
+        }
+        public void OpenFrmAdminIngredient()
+        {
+            Application.Run(new frmAdminIngredient());
+        }
+        private void btnIngredient_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminIngredient);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
         }
     }
 }
