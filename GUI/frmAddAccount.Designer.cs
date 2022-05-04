@@ -98,6 +98,7 @@ namespace GUI
             this.Controls.Add(this.lblPassword);
             this.Controls.Add(this.lblUserName);
             this.Name = "frmAddAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddAccount";
             this.ResumeLayout(false);
             this.PerformLayout();

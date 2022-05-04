@@ -84,6 +84,7 @@ namespace GUI
             this.Controls.Add(this.chartIncome);
             this.Name = "frmAnalysis";
             this.Text = "frmAnalysis";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAnalysis_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.chartIncome)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvChart)).EndInit();

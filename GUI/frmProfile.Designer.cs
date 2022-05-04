@@ -270,6 +270,8 @@ namespace GUI
             this.Name = "frmProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfile";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmProfile_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmProfile_FormClosed);
             this.Load += new System.EventHandler(this.frmProfile_Load);
             this.panel1.ResumeLayout(false);
             this.panel6.ResumeLayout(false);

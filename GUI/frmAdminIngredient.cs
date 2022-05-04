@@ -14,17 +14,20 @@ namespace GUI
 {
     public partial class frmAdminIngredient : Form
     {
-        IngredientBUS ingredientBUS = new IngredientBUS();
         public int indexRow;
+        IngredientBUS ingredientBUS = new IngredientBUS();
         Ingredient ingredient = new Ingredient();
+        AccountBUS accountBUS = new AccountBUS();
         public frmAdminIngredient()
         {
             InitializeComponent();
+            lblAdminNameData.Text = accountBUS.getStaffName(Properties.Settings.Default.Username);
             loadIngredient();
         }
         public void loadIngredient()
         {
             this.dtgvIngredient.DataSource = ingredientBUS.getIngredients();
+            this.dtgvIngredient.Columns[0].FillWeight = 40;
         }
         void OpenFrmAdminStaff(object obj)
         {
@@ -168,6 +171,23 @@ namespace GUI
             txtPrice.Text = "";
             loadIngredient();
             MessageBox.Show("Sửa thành công");
+        }
+        public void OpenFrmAdminCustomer()
+        {
+            Application.Run(new frmAdminCustomer());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminCustomer);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void frmAdminIngredient_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

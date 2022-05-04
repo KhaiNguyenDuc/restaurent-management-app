@@ -387,10 +387,15 @@ namespace GUI
 
 
         }
-       /* public void OpenFrmTableDetail()
+
+        private void frmTableDetail_FormClosed(object sender, FormClosedEventArgs e)
         {
-            frmTableDetail form = new frmTableDetail();
-            Application.Run(form);
-        }*/
+           
+        }
+
+        private void frmTableDetail_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

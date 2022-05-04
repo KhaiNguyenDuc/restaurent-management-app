@@ -64,13 +64,15 @@ namespace GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlCategory = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnIngredient = new System.Windows.Forms.Button();
             this.lblCatetory = new System.Windows.Forms.Label();
             this.pnlSetting = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblAdminNameData = new System.Windows.Forms.Label();
+            this.lblAdminName = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -111,7 +113,7 @@ namespace GUI
             this.dtgvStaff.Name = "dtgvStaff";
             this.dtgvStaff.RowHeadersWidth = 51;
             this.dtgvStaff.RowTemplate.Height = 24;
-            this.dtgvStaff.Size = new System.Drawing.Size(1185, 226);
+            this.dtgvStaff.Size = new System.Drawing.Size(1244, 226);
             this.dtgvStaff.TabIndex = 4;
             this.dtgvStaff.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellClick);
             this.dtgvStaff.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvStaff_CellContentClick);
@@ -178,7 +180,7 @@ namespace GUI
             this.panel3.Controls.Add(this.pnlDataStaff);
             this.panel3.Location = new System.Drawing.Point(229, 87);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1196, 618);
+            this.panel3.Size = new System.Drawing.Size(1300, 618);
             this.panel3.TabIndex = 7;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -195,7 +197,7 @@ namespace GUI
             this.pnlDataStaff.Controls.Add(this.panel6);
             this.pnlDataStaff.Location = new System.Drawing.Point(3, 240);
             this.pnlDataStaff.Name = "pnlDataStaff";
-            this.pnlDataStaff.Size = new System.Drawing.Size(1188, 373);
+            this.pnlDataStaff.Size = new System.Drawing.Size(1247, 373);
             this.pnlDataStaff.TabIndex = 3;
             // 
             // pbStaffImage
@@ -213,7 +215,7 @@ namespace GUI
             // 
             this.cbAdmin.AutoSize = true;
             this.cbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbAdmin.Location = new System.Drawing.Point(547, 305);
+            this.cbAdmin.Location = new System.Drawing.Point(547, 292);
             this.cbAdmin.Name = "cbAdmin";
             this.cbAdmin.Size = new System.Drawing.Size(103, 33);
             this.cbAdmin.TabIndex = 10;
@@ -359,7 +361,7 @@ namespace GUI
             // btnTable
             // 
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(3, 235);
+            this.btnTable.Location = new System.Drawing.Point(3, 291);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(184, 50);
             this.btnTable.TabIndex = 11;
@@ -425,6 +427,7 @@ namespace GUI
             // 
             // pnlCategory
             // 
+            this.pnlCategory.Controls.Add(this.button1);
             this.pnlCategory.Controls.Add(this.btnIngredient);
             this.pnlCategory.Controls.Add(this.btnTable);
             this.pnlCategory.Controls.Add(this.btnStaff);
@@ -432,8 +435,19 @@ namespace GUI
             this.pnlCategory.Controls.Add(this.lblCatetory);
             this.pnlCategory.Location = new System.Drawing.Point(5, 15);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 324);
+            this.pnlCategory.Size = new System.Drawing.Size(190, 367);
             this.pnlCategory.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(3, 235);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(184, 50);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "Khách hàng";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnIngredient
             // 
@@ -469,21 +483,11 @@ namespace GUI
             this.pnlSetting.Size = new System.Drawing.Size(206, 618);
             this.pnlSetting.TabIndex = 6;
             // 
-            // lblUsername
-            // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(234, 18);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(158, 29);
-            this.lblUsername.TabIndex = 9;
-            this.lblUsername.Text = "Tên tài khoản";
-            // 
             // btnLogout
             // 
             this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1276, 7);
+            this.btnLogout.Location = new System.Drawing.Point(1336, 1);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(141, 50);
             this.btnLogout.TabIndex = 8;
@@ -508,13 +512,34 @@ namespace GUI
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Transparent;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTop.Controls.Add(this.lblUsername);
+            this.pnlTop.Controls.Add(this.lblAdminNameData);
+            this.pnlTop.Controls.Add(this.lblAdminName);
             this.pnlTop.Controls.Add(this.btnLogout);
             this.pnlTop.Controls.Add(this.btnAnalysis);
             this.pnlTop.Location = new System.Drawing.Point(1, 9);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1420, 60);
+            this.pnlTop.Size = new System.Drawing.Size(1528, 60);
             this.pnlTop.TabIndex = 5;
+            // 
+            // lblAdminNameData
+            // 
+            this.lblAdminNameData.AutoSize = true;
+            this.lblAdminNameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminNameData.Location = new System.Drawing.Point(434, 18);
+            this.lblAdminNameData.Name = "lblAdminNameData";
+            this.lblAdminNameData.Size = new System.Drawing.Size(56, 29);
+            this.lblAdminNameData.TabIndex = 12;
+            this.lblAdminNameData.Text = "Tên";
+            // 
+            // lblAdminName
+            // 
+            this.lblAdminName.AutoSize = true;
+            this.lblAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminName.Location = new System.Drawing.Point(234, 18);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(164, 29);
+            this.lblAdminName.TabIndex = 9;
+            this.lblAdminName.Text = "Tên tài khoản:";
             // 
             // frmAdminStaff
             // 
@@ -522,13 +547,14 @@ namespace GUI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1437, 717);
+            this.ClientSize = new System.Drawing.Size(1560, 717);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlTop);
             this.Name = "frmAdminStaff";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAdminStaff";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdminStaff_FormClosing);
             this.Load += new System.EventHandler(this.frmAdminStaff_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvStaff)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -576,7 +602,6 @@ namespace GUI
         private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.Label lblCatetory;
         private System.Windows.Forms.Panel pnlSetting;
-        private System.Windows.Forms.Label lblUsername;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAnalysis;
         private System.Windows.Forms.Panel pnlTop;
@@ -597,5 +622,8 @@ namespace GUI
         private System.Windows.Forms.PictureBox pbStaffImage;
         public System.Windows.Forms.CheckBox cbAdmin;
         private System.Windows.Forms.Button btnIngredient;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblAdminName;
+        private System.Windows.Forms.Label lblAdminNameData;
     }
 }

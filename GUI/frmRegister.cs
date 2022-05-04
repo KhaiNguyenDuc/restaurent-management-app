@@ -78,5 +78,10 @@ namespace GUI
         {
 
         }
+
+        private void frmRegister_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

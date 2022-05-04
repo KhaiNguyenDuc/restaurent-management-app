@@ -17,14 +17,17 @@ namespace GUI
         TableBUS tableBUS = new TableBUS();
         Table table = new Table();
         public int indexRow;
+        AccountBUS accountBUS = new AccountBUS();
         public frmAdminTable()
         {
             InitializeComponent();
+            lblAdminNameData.Text = accountBUS.getStaffName(Properties.Settings.Default.Username);
             loadTables();
         }
         public void loadTables()
         {
             this.dtgvTable.DataSource = tableBUS.getTables();
+            this.dtgvTable.Columns[0].FillWeight = 40;
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -90,7 +93,24 @@ namespace GUI
         {
 
         }
-
+        public void loadContent()
+        {
+            table.Type = cbcType.Text;
+            table.TableNumber = txtTableID.Text;
+            string location = cbcLocation.Text;
+            if (location.Equals("Khu A (VIP)"))
+            {
+                table.Location = "A";
+            }
+            else if (location.Equals("Khu B"))
+            {
+                table.Location = "B";
+            }
+            else if (location.Equals("Khu C"))
+            {
+                table.Location = "C";
+            }
+        }
         private void dtgvTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             indexRow = e.RowIndex;
@@ -143,10 +163,10 @@ namespace GUI
             }
 
         }
-
+       
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+            loadContent();
             tableBUS.addTables(table);
 
             txtTableID.Text = "";
@@ -156,6 +176,7 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            loadContent();
             tableBUS.deleteTables(table.Id);
 
             txtTableID.Text = "";
@@ -165,21 +186,7 @@ namespace GUI
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            table.Type = cbcType.Text;
-            table.TableNumber = txtTableID.Text;
-            string location = cbcLocation.Text;
-            if(location.Equals("Khu A (VIP)"))
-            {
-                table.Location = "A";
-            }
-            else if (location.Equals("Khu B"))
-            {
-                table.Location = "B";
-            }
-            else if (location.Equals("Khu C"))
-            {
-                table.Location = "C";
-            }
+            loadContent();
 
             tableBUS.updateTables(table);
 
@@ -198,6 +205,23 @@ namespace GUI
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
             
+        }
+        public void OpenFrmAdminCustomer()
+        {
+            Application.Run(new frmAdminCustomer());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminCustomer);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void frmAdminTable_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

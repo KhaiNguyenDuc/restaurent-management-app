@@ -78,6 +78,7 @@ namespace GUI
             this.Controls.Add(this.btnAddIngredients);
             this.Controls.Add(this.chlIngredientItems);
             this.Name = "frmAddRecipe";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Recipe";
             this.ResumeLayout(false);
             this.PerformLayout();

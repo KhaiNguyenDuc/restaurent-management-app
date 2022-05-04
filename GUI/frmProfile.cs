@@ -49,5 +49,15 @@ namespace GUI
         {
 
         }
+
+        private void frmProfile_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
+
+        private void frmProfile_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

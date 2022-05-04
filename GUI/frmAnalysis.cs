@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void frmAnalysis_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+        }
     }
 }

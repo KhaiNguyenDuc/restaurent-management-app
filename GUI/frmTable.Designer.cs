@@ -128,6 +128,7 @@ namespace GUI
             this.Name = "frmTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTable";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTable_FormClosing);
             this.Load += new System.EventHandler(this.frmTable_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

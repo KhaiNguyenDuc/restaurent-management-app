@@ -47,5 +47,21 @@ namespace BUS
         {
             customerDAO.updateToZeroPoint(customer);
         }
+        public DataTable getCustomersAsName()
+        {
+            return customerDAO.getCustomersAsName();
+        }
+        public void addCustomers(Customer customer)
+        {
+            customerDAO.insertWithPoint(customer);
+        }
+        public void deleteCustomers(int customerID)
+        {
+            customerDAO.deleteCustomers(customerID);
+        }
+        public void updateCustomers(Customer customer)
+        {
+            customerDAO.updateCustomers(customer);
+        }
     }
 }

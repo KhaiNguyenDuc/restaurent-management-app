@@ -33,6 +33,7 @@ namespace GUI
         {
             string state = "";
             List<btnTable> btnTables = new List<btnTable>();
+
             DataTable tables = tableBUS.getTables(location);
             int j = 0;
             int a =Convert.ToInt32(tables.Rows[0]["id"]);
@@ -178,6 +179,11 @@ namespace GUI
             {
                 defaultLocation = "Khu A (VIP)";
             }
+        }
+
+        private void frmTable_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

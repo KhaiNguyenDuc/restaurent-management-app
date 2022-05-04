@@ -19,15 +19,17 @@ namespace GUI
         FoodBUS foodBUS = new FoodBUS();
         Food food = new Food();
         public static int LatestID;
-
+        AccountBUS accountBUS = new AccountBUS();
         public frmAdminFood()
         {
             InitializeComponent();
+            lblAdminNameData.Text = accountBUS.getStaffName(Properties.Settings.Default.Username);
             loadFoods();
         }
         public void loadFoods()
         {
             this.dtgvFood.DataSource = foodBUS.getFoods();
+            this.dtgvFood.Columns[0].FillWeight = 40;
         }
         private void panel8_Paint(object sender, PaintEventArgs e)
         {
@@ -223,6 +225,23 @@ namespace GUI
             Thread thread = new Thread(OpenFrmAdminIngredient);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
+        }
+        public void OpenFrmAdminCustomer()
+        {
+            Application.Run(new frmAdminCustomer());
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminCustomer);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void frmAdminFood_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }

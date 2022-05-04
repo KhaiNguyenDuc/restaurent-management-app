@@ -51,12 +51,14 @@ namespace GUI
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.pnlCategory = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.btnIngredient = new System.Windows.Forms.Button();
             this.pnlSetting = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.lblAdminName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnAnalysis = new System.Windows.Forms.Button();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.lblAdminNameData = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.panel8.SuspendLayout();
@@ -207,7 +209,7 @@ namespace GUI
             // 
             this.btnTable.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTable.Location = new System.Drawing.Point(3, 226);
+            this.btnTable.Location = new System.Drawing.Point(3, 287);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(184, 50);
             this.btnTable.TabIndex = 11;
@@ -282,6 +284,7 @@ namespace GUI
             // 
             // pnlCategory
             // 
+            this.pnlCategory.Controls.Add(this.btnCustomer);
             this.pnlCategory.Controls.Add(this.btnIngredient);
             this.pnlCategory.Controls.Add(this.btnTable);
             this.pnlCategory.Controls.Add(this.btnStaff);
@@ -289,8 +292,19 @@ namespace GUI
             this.pnlCategory.Controls.Add(this.lblCatetory);
             this.pnlCategory.Location = new System.Drawing.Point(5, 15);
             this.pnlCategory.Name = "pnlCategory";
-            this.pnlCategory.Size = new System.Drawing.Size(190, 292);
+            this.pnlCategory.Size = new System.Drawing.Size(190, 342);
             this.pnlCategory.TabIndex = 0;
+            // 
+            // btnCustomer
+            // 
+            this.btnCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCustomer.Location = new System.Drawing.Point(3, 226);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(184, 50);
+            this.btnCustomer.TabIndex = 13;
+            this.btnCustomer.Text = "Khách hàng";
+            this.btnCustomer.UseVisualStyleBackColor = true;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
             // 
             // btnIngredient
             // 
@@ -316,15 +330,15 @@ namespace GUI
             this.pnlSetting.Size = new System.Drawing.Size(206, 536);
             this.pnlSetting.TabIndex = 6;
             // 
-            // lblUsername
+            // lblAdminName
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.Location = new System.Drawing.Point(221, 18);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(158, 29);
-            this.lblUsername.TabIndex = 9;
-            this.lblUsername.Text = "Tên tài khoản";
+            this.lblAdminName.AutoSize = true;
+            this.lblAdminName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminName.Location = new System.Drawing.Point(221, 18);
+            this.lblAdminName.Name = "lblAdminName";
+            this.lblAdminName.Size = new System.Drawing.Size(164, 29);
+            this.lblAdminName.TabIndex = 9;
+            this.lblAdminName.Text = "Tên tài khoản:";
             // 
             // btnLogout
             // 
@@ -354,13 +368,24 @@ namespace GUI
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Transparent;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pnlTop.Controls.Add(this.lblUsername);
+            this.pnlTop.Controls.Add(this.lblAdminNameData);
+            this.pnlTop.Controls.Add(this.lblAdminName);
             this.pnlTop.Controls.Add(this.btnLogout);
             this.pnlTop.Controls.Add(this.btnAnalysis);
             this.pnlTop.Location = new System.Drawing.Point(5, 11);
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1154, 59);
             this.pnlTop.TabIndex = 5;
+            // 
+            // lblAdminNameData
+            // 
+            this.lblAdminNameData.AutoSize = true;
+            this.lblAdminNameData.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAdminNameData.Location = new System.Drawing.Point(408, 18);
+            this.lblAdminNameData.Name = "lblAdminNameData";
+            this.lblAdminNameData.Size = new System.Drawing.Size(56, 29);
+            this.lblAdminNameData.TabIndex = 13;
+            this.lblAdminNameData.Text = "Tên";
             // 
             // panel3
             // 
@@ -386,6 +411,7 @@ namespace GUI
             this.Name = "frmAdminTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAdminTable1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdminTable_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -424,7 +450,7 @@ namespace GUI
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Panel pnlCategory;
         private System.Windows.Forms.Panel pnlSetting;
-        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label lblAdminName;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnAnalysis;
         private System.Windows.Forms.Panel pnlTop;
@@ -432,5 +458,7 @@ namespace GUI
         private System.Windows.Forms.ComboBox cbcLocation;
         private System.Windows.Forms.ComboBox cbcType;
         private System.Windows.Forms.Button btnIngredient;
+        private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Label lblAdminNameData;
     }
 }

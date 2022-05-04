@@ -23,11 +23,18 @@ namespace GUI
         public frmAdminStaff()
         {
             InitializeComponent();
+            lblAdminNameData.Text = accountBUS.getStaffName(Properties.Settings.Default.Username);
             loadStaffs();
         }
         public void loadStaffs()
         {
-            this.dtgvStaff.DataSource = staffBUS.getStaffs(); 
+            this.dtgvStaff.DataSource = staffBUS.getStaffs();
+            this.dtgvStaff.Columns[0].FillWeight = 35;
+            this.dtgvStaff.Columns[1].FillWeight = 170;
+            this.dtgvStaff.Columns[2].FillWeight = 130;
+            this.dtgvStaff.Columns[3].FillWeight = 130;
+            this.dtgvStaff.Columns[5].FillWeight = 140;
+
         }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -320,6 +327,23 @@ namespace GUI
             Thread thread = new Thread(OpenFrmAdminIngredient);
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
+        }
+        public void OpenFrmAdminCustomer()
+        {
+            Application.Run(new frmAdminCustomer());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Thread thread = new Thread(OpenFrmAdminCustomer);
+            thread.SetApartmentState(ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void frmAdminStaff_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
         }
     }
 }
