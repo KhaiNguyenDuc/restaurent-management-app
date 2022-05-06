@@ -29,17 +29,8 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lblFoodPrice = new System.Windows.Forms.Label();
-            this.lblFood = new System.Windows.Forms.Label();
-            this.lblFoodPrice2 = new System.Windows.Forms.Label();
-            this.lblFoodQuantity = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lblFoodQuantity2 = new System.Windows.Forms.Label();
-            this.lblFoodName = new System.Windows.Forms.Label();
-            this.lblQuantity = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTableID = new System.Windows.Forms.Label();
             this.lblRestaurentName = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
@@ -59,173 +50,14 @@ namespace GUI
             this.lblThanks = new System.Windows.Forms.Label();
             this.lblTableNumberData = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
-            this.panel3.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.dtgvOrderFood = new System.Windows.Forms.DataGridView();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvOrderFood)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel3.Controls.Add(this.tableLayoutPanel1);
-            this.panel3.Location = new System.Drawing.Point(11, 93);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(688, 213);
-            this.panel3.TabIndex = 10;
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.41177F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.58823F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 180F));
-            this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblFood, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblFoodPrice2, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lblFoodQuantity, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label1, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblFoodQuantity2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lblFoodName, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblQuantity, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lblPrice, 2, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 11);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.5862F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.4138F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 74F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 182);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // lblFoodPrice
-            // 
-            this.lblFoodPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice.Location = new System.Drawing.Point(481, 107);
-            this.lblFoodPrice.Name = "lblFoodPrice";
-            this.lblFoodPrice.Size = new System.Drawing.Size(175, 75);
-            this.lblFoodPrice.TabIndex = 8;
-            this.lblFoodPrice.Text = "50 vnd";
-            this.lblFoodPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFood
-            // 
-            this.lblFood.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFood.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFood.Location = new System.Drawing.Point(3, 37);
-            this.lblFood.Name = "lblFood";
-            this.lblFood.Size = new System.Drawing.Size(230, 70);
-            this.lblFood.TabIndex = 5;
-            this.lblFood.Text = "Cá chiên xào tỏi";
-            this.lblFood.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodPrice2
-            // 
-            this.lblFoodPrice2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodPrice2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodPrice2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodPrice2.Location = new System.Drawing.Point(481, 37);
-            this.lblFoodPrice2.Name = "lblFoodPrice2";
-            this.lblFoodPrice2.Size = new System.Drawing.Size(175, 70);
-            this.lblFoodPrice2.TabIndex = 10;
-            this.lblFoodPrice2.Text = "50 vnd";
-            this.lblFoodPrice2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodQuantity
-            // 
-            this.lblFoodQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodQuantity.Location = new System.Drawing.Point(239, 37);
-            this.lblFoodQuantity.Name = "lblFoodQuantity";
-            this.lblFoodQuantity.Size = new System.Drawing.Size(236, 70);
-            this.lblFoodQuantity.TabIndex = 7;
-            this.lblFoodQuantity.Text = "2";
-            this.lblFoodQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 107);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(230, 75);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Coca cola";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodQuantity2
-            // 
-            this.lblFoodQuantity2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodQuantity2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodQuantity2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodQuantity2.Location = new System.Drawing.Point(239, 107);
-            this.lblFoodQuantity2.Name = "lblFoodQuantity2";
-            this.lblFoodQuantity2.Size = new System.Drawing.Size(236, 75);
-            this.lblFoodQuantity2.TabIndex = 9;
-            this.lblFoodQuantity2.Text = "2";
-            this.lblFoodQuantity2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblFoodName
-            // 
-            this.lblFoodName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblFoodName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblFoodName.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFoodName.Location = new System.Drawing.Point(3, 0);
-            this.lblFoodName.Name = "lblFoodName";
-            this.lblFoodName.Size = new System.Drawing.Size(230, 37);
-            this.lblFoodName.TabIndex = 2;
-            this.lblFoodName.Text = "Tên  món ";
-            this.lblFoodName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblQuantity
-            // 
-            this.lblQuantity.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblQuantity.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantity.Location = new System.Drawing.Point(239, 0);
-            this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(236, 37);
-            this.lblQuantity.TabIndex = 3;
-            this.lblQuantity.Text = "Số lượng";
-            this.lblQuantity.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblPrice.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(481, 0);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(175, 37);
-            this.lblPrice.TabIndex = 4;
-            this.lblPrice.Text = "Giá";
-            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblTableID
             // 
@@ -253,9 +85,9 @@ namespace GUI
             this.lblAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.Location = new System.Drawing.Point(277, 49);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(177, 29);
+            this.lblAddress.Size = new System.Drawing.Size(170, 29);
             this.lblAddress.TabIndex = 13;
-            this.lblAddress.Text = "Địa chỉ quán ăn";
+            this.lblAddress.Text = "Số 1 , Thủ Đức";
             // 
             // panel5
             // 
@@ -361,9 +193,9 @@ namespace GUI
             this.lblTableVipValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTableVipValue.Location = new System.Drawing.Point(388, 9);
             this.lblTableVipValue.Name = "lblTableVipValue";
-            this.lblTableVipValue.Size = new System.Drawing.Size(83, 29);
+            this.lblTableVipValue.Size = new System.Drawing.Size(122, 29);
             this.lblTableVipValue.TabIndex = 2;
-            this.lblTableVipValue.Text = "10 vnd";
+            this.lblTableVipValue.Text = "10000 vnd";
             // 
             // lblTableVip
             // 
@@ -420,11 +252,39 @@ namespace GUI
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // dtgvOrderFood
+            // 
+            this.dtgvOrderFood.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvOrderFood.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvOrderFood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvOrderFood.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvOrderFood.Location = new System.Drawing.Point(6, 81);
+            this.dtgvOrderFood.Name = "dtgvOrderFood";
+            this.dtgvOrderFood.RowHeadersWidth = 51;
+            this.dtgvOrderFood.RowTemplate.Height = 24;
+            this.dtgvOrderFood.Size = new System.Drawing.Size(686, 225);
+            this.dtgvOrderFood.TabIndex = 18;
+            // 
             // frmCheckout
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(717, 592);
+            this.Controls.Add(this.dtgvOrderFood);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTableNumberData);
             this.Controls.Add(this.lblThanks);
@@ -432,15 +292,12 @@ namespace GUI
             this.Controls.Add(this.lblAddress);
             this.Controls.Add(this.lblRestaurentName);
             this.Controls.Add(this.lblTableID);
-            this.Controls.Add(this.panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCheckout";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCheckout";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmCheckout_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmCheckout_FormClosed);
-            this.panel3.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -450,24 +307,13 @@ namespace GUI
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvOrderFood)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label lblFoodPrice;
-        private System.Windows.Forms.Label lblFoodQuantity2;
-        private System.Windows.Forms.Label lblFoodQuantity;
-        private System.Windows.Forms.Label lblFoodName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblQuantity;
-        private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lblFoodPrice2;
-        private System.Windows.Forms.Label lblFood;
         private System.Windows.Forms.Label lblTableID;
         private System.Windows.Forms.Label lblRestaurentName;
         private System.Windows.Forms.Label lblAddress;
@@ -487,5 +333,6 @@ namespace GUI
         private System.Windows.Forms.Label lblThanks;
         private System.Windows.Forms.Label lblTableNumberData;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DataGridView dtgvOrderFood;
     }
 }

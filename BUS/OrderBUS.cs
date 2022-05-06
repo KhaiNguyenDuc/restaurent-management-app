@@ -22,5 +22,9 @@ namespace BUS
         {
             orderDAO.updateSumTotalAndState(orderID, total);
         }
+        public void updateCustomersID(Customer customer, int orderID)
+        {
+            orderDAO.updateCustomersID(customer, orderID);
+        }
     }
 }

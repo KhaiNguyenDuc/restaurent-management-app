@@ -124,7 +124,7 @@ namespace GUI
                 }
                 catch
                 {
-                    MessageBox.Show("error");
+                   // MessageBox.Show("error");
                 }
 
             }

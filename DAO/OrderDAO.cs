@@ -71,7 +71,27 @@ namespace DAO
             }
             catch
             {
-                MessageBox.Show("kkkk");
+                MessageBox.Show(orderID.ToString()+"|"+ total.ToString());
+            }
+        }
+        public void updateCustomersID(Customer customer, int orderID)
+        {
+            string query = "UPDATE orders SET customer_id = @CustomerID WHERE id = " +orderID+ ";";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+
+                    command.Parameters.Add(new SqlParameter("@CustomerID", SqlDbType.Int));
+                    command.Parameters["@CustomerID"].Value = customer.Id;
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show(customer.Id.ToString()+ "|"+ orderID.ToString());
             }
         }
 

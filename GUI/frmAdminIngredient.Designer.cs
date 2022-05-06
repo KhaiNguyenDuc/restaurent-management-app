@@ -94,7 +94,7 @@ namespace GUI
             this.pnlTop.Controls.Add(this.btnAnalysis);
             this.pnlTop.Location = new System.Drawing.Point(5, 12);
             this.pnlTop.Name = "pnlTop";
-            this.pnlTop.Size = new System.Drawing.Size(1154, 59);
+            this.pnlTop.Size = new System.Drawing.Size(1142, 59);
             this.pnlTop.TabIndex = 8;
             // 
             // lblAdminNameData
@@ -121,7 +121,7 @@ namespace GUI
             // 
             this.btnLogout.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(1010, 7);
+            this.btnLogout.Location = new System.Drawing.Point(984, -2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(141, 50);
             this.btnLogout.TabIndex = 8;

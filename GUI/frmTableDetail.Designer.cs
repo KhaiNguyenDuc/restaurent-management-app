@@ -398,13 +398,13 @@ namespace GUI
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1324, 616);
+            this.Controls.Add(this.pnlStatus);
             this.Controls.Add(this.pnlSetting);
             this.Controls.Add(this.pnlDateTable);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.dtgvOrderItems);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.pnlTop);
-            this.Controls.Add(this.pnlStatus);
             this.Name = "frmTableDetail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmTableDetail";

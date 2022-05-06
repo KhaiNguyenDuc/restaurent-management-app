@@ -86,5 +86,9 @@ namespace BUS
         {
             tableDAO.updateTables(table);
         }
+        public string getTypeById(int tableID)
+        {
+            return tableDAO.getTypeById(tableID);
+        }
     }
 }

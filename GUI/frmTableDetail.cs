@@ -26,17 +26,57 @@ namespace GUI
         IngredientBUS ingredientBUS = new IngredientBUS();
         public string foodName;
         public int indexRow;
+        public static string tableName ;
+        public static int total;
+        public static int itemTotal;
         public frmTableDetail()
         {
            
             InitializeComponent();
+            tableName = btnTable.tableName;
+
+            // load txtbox
+            /* try
+             {
+                 txtNameCustomer.Text = customerBUS.getNameByTableID(Convert.ToInt32(btnTable.tableName));
+                 txtPhoneNumber.Text = customerBUS.getPhoneNumberByTableID(Convert.ToInt32(btnTable.tableName));
+             }
+             catch
+             {
+
+             }*/
+
+
             // new and don't have order
             if (!tableBUS.isNewOrder(Convert.ToInt32(btnTable.tableName)))
             {
                 orderBUS.insertOrders(Convert.ToInt32(btnTable.tableName));
+                try
+                {
+                    txtNameCustomer.Text = customerBUS.getNameByTableID(Convert.ToInt32(btnTable.tableName));
+                    txtPhoneNumber.Text = customerBUS.getPhoneNumberByTableID(Convert.ToInt32(btnTable.tableName));
+                }
+                catch
+                {
+
+                }
+
+            }
+            else
+            {
+                try
+                {
+                    txtNameCustomer.Text = customerBUS.getNameByTableID(Convert.ToInt32(btnTable.tableName));
+                    txtPhoneNumber.Text = customerBUS.getPhoneNumberByTableID(Convert.ToInt32(btnTable.tableName));
+                }
+                catch
+                {
+
+                }
             }
             loadOrderItems();
             lblTableIDdata.Text = btnTable.tableName;
+
             loadStatus();
             loadFoodName();
 
@@ -65,6 +105,7 @@ namespace GUI
             
             return point;
         }
+        
         public int calTotal()
         {
             int total = 0;
@@ -179,12 +220,17 @@ namespace GUI
 
         private void btnSave_Click_1(object sender, EventArgs e)
         {
+           
             if (!SaveCustomers())
             {
+                // ko có customer
+
                 tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
                 return;
             }
+            
+            //MessageBox.Show(customer.Id.ToString());
             if (this.dtgvOrderItems.Rows.Count <= 1)
             {
                 MessageBox.Show("Bàn chưa có thức ăn");
@@ -194,6 +240,8 @@ namespace GUI
             {
                 // có rồi
                 tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
+                customer.Id = customerBUS.getIdByNameAndPhone(customer);
+                orderBUS.updateCustomersID(customer, orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName)));
                 MessageBox.Show("Lưu thành công");
             }
             else if(customerBUS.isOldCustomer(customer) == 2)
@@ -206,11 +254,13 @@ namespace GUI
             {
                 // chưa có tài khoản
                 customerBUS.insertCustomers(customer);
+                customer.Id = customerBUS.getIdByNameAndPhone(customer);
+                orderBUS.updateCustomersID(customer, orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName))) ;
                 tableBUS.updateStatus(cbcStatus.Text, btnTable.tableName);
                 MessageBox.Show("Lưu thành công");
             }
-
             
+
         }
 
         private void pnlTop_Paint(object sender, PaintEventArgs e)
@@ -355,26 +405,61 @@ namespace GUI
 
         private void btnPrintBill_Click_1(object sender, EventArgs e)
         {
+            
+            try
+            {
+                DataRow dataRow =  orderFoodBUS.getOrderItems(Convert.ToInt32(btnTable.tableName)).Rows[0];
+            }
+            catch
+            {
+                MessageBox.Show("Bàn chưa có thức ăn");
+                return;
+            }
             // save customer
             btnSave.PerformClick();
+          
+
             customerBUS.updateCustomerPoint(customer);
             if(cbVIP.Checked == true)
             {
                 int point = customerBUS.getPoint(customer);
                 int money = point*500;
-                int total = this.calTotal() - money;
+                total = this.calTotal() ;
+                // VAT
+                total = total + Convert.ToInt32(total * 0.1);
+                total = total - money;
                 if (total < 0)
                 {
                     total = 0;
                 }
+                string type = tableBUS.getTypeById(Convert.ToInt32(btnTable.tableName));
+                // table VIP
+                if (type.Equals("VIP"))
+                {
+                    total = total + 10000;
+                }
+         
                 customer.Point = 0;
                 customerBUS.updateToZeroPoint(customer);
                 orderBUS.updateSumTotalAndState(orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName)), total);
+                tableBUS.updateStatus("Trống",btnTable.tableName);
+                itemTotal = this.calTotal();
             }
             else
             {
-                int total = this.calTotal();
+                 total = this.calTotal();
+                // VAT
+                total = total + Convert.ToInt32(total * 0.1);
+                string type = tableBUS.getTypeById(Convert.ToInt32(btnTable.tableName));
+                // table VIP 
+                if (type.Equals("VIP"))
+                {
+                    total = total + 10000;
+                }
+              
                 orderBUS.updateSumTotalAndState(orderBUS.getLatestOrderIDByTableID(Convert.ToInt32(btnTable.tableName)), total);
+                tableBUS.updateStatus("Trống", btnTable.tableName);
+                itemTotal = this.calTotal();
             }
 
 

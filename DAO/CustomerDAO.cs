@@ -68,7 +68,7 @@ namespace DAO
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show("lalal");
                 return null;
             }
         }
@@ -183,6 +183,42 @@ namespace DAO
             catch
             {
 
+            }
+        }
+        public DataTable getCustomerByTableID(int tableID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT customer_name, customer_phone FROM customers WHERE customers.id = (SELECT orders.customer_id FROM orders WHERE orders.id = (SELECT TOP 1 id FROM orders WHERE table_id = "+ tableID+ " ORDER BY id DESC))", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+        public int getIdByNameAndPhone(Customer customer)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT id FROM customers WHERE customer_phone = '" + customer.PhoneNumber + "' and customer_name = N'" + customer.Name + "';", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["id"]);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("oooo");
+                return -1;
             }
         }
     }

@@ -97,5 +97,23 @@ namespace DAO
             {
             }
         }
+        public DataTable getCheckoutItems(int tableID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT Foods.food_name AS [Tên], Order_food.quantity AS [Số Lượng], Order_food.total AS [Tổng giá]  FROM Foods inner join Order_food ON Foods.id = Order_food.food_id  inner join Orders ON Orders.id = Order_food.order_id inner join tables ON tables.id = Orders.table_id WHERE tables.id = " + tableID + " and Orders.id = (SELECT TOP 1 id FROM orders WHERE table_id = " + tableID + " ORDER BY id DESC)", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return data;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
     }
 }

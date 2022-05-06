@@ -18,14 +18,15 @@ namespace BUS
         public int isOldCustomer(Customer customer)
         {
             // 0: false, 1: true, 2: Phone already have
-            DataTable data =  customerDAO.getCustomers();
-            for(int i=0;i< data.Rows.Count; i++)
+            DataTable data = customerDAO.getCustomers();
+            for (int i = 0; i < data.Rows.Count; i++)
             {
-                if (customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString())&& customer.Name.Equals(data.Rows[i]["customer_name"].ToString()))
+                if (customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString()) && customer.Name.Equals(data.Rows[i]["customer_name"].ToString()))
                 {
                     return 1;
                 }
-                else if(customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString()) && !customer.Name.Equals(data.Rows[i]["customer_name"].ToString())){
+                else if (customer.PhoneNumber.Equals(data.Rows[i]["customer_phone"].ToString()) && !customer.Name.Equals(data.Rows[i]["customer_name"].ToString()))
+                {
                     return 2;
                 }
             }
@@ -62,6 +63,20 @@ namespace BUS
         public void updateCustomers(Customer customer)
         {
             customerDAO.updateCustomers(customer);
+        }
+        public string getNameByTableID(int tableID)
+        {
+            DataTable data = customerDAO.getCustomerByTableID(tableID);
+            return data.Rows[0]["customer_name"].ToString();
+        }
+        public string getPhoneNumberByTableID(int tableID)
+        {
+            DataTable data = customerDAO.getCustomerByTableID(tableID);
+            return data.Rows[0]["customer_phone"].ToString();
+        }
+        public int getIdByNameAndPhone(Customer customer)
+        {
+            return customerDAO.getIdByNameAndPhone(customer);
         }
     }
 }

@@ -29,7 +29,7 @@ namespace GUI
         public void loadFoods()
         {
             this.dtgvFood.DataSource = foodBUS.getFoods();
-            this.dtgvFood.Columns[0].FillWeight = 40;
+           // this.dtgvFood.Columns[0].FillWeight = 40;
         }
         private void panel8_Paint(object sender, PaintEventArgs e)
         {

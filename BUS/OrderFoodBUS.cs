@@ -39,6 +39,9 @@ namespace BUS
         {
             orderDAO.update(orderFood, oldFoodID);
         }
-
+        public DataTable getCheckoutItems(int tableID)
+        {
+            return orderDAO.getCheckoutItems(tableID);
+        }
     }
 }

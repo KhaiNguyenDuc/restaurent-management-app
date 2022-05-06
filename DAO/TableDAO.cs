@@ -167,5 +167,22 @@ namespace DAO
                 return false;
             }
         }
+        public string getTypeById(int tableID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT table_type FROM tables WHERE ID = " + tableID + ";", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return data.Rows[0]["table_type"].ToString();
+            }
+            catch
+            {
+                return "";
+            }
+        }
     }
 }

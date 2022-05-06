@@ -57,6 +57,8 @@ namespace GUI
             {
                 recipeBUS.insertRecipes(re);
             }
+            MessageBox.Show("Thêm công thức thành công");
+           // this.Close();
         }
     }
 }
