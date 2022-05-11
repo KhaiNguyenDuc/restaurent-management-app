@@ -95,6 +95,24 @@ namespace DAO
                 return null;
             }
         }
+        public int getAccountID(string username)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT id FROM accounts WHERE account_user_name = '" + username + "';", conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["id"]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return -1;
+            }
+        }
         public int getLatestID()
         {
             try

@@ -80,5 +80,9 @@ namespace BUS
         {
             accountDAO.updatePermission(type, adminID, accountID);
         }
+        public int getAccountID(string username)
+        {
+            return accountDAO.getAccountID(username);
+        }
     }
 }

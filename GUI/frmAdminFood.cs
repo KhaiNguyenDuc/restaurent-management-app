@@ -133,11 +133,25 @@ namespace GUI
                     txtPrice.Text = row.Cells[2].Value.ToString();
                     txtType.Text = row.Cells[3].Value.ToString();
                     string path = foodBUS.getImage(Convert.ToInt32(row.Cells[0].Value));
-                    pBFoodImage.Image = Image.FromFile(path);
+                    if (path != "")
+                    {
+                        pBFoodImage.Image = Image.FromFile(path);
+                        pBFoodImage.Text = path;
+                    }
+                    else
+                    {
+                        pBFoodImage.Image = null;
+                        pBFoodImage.Text = "";
+                    }
+                    
                 }
                 catch
                 {
-
+                    txtFoodName.Text = "";
+                    txtPrice.Text = "";
+                    txtType.Text = "";
+                    pBFoodImage.Image = null;
+                    pBFoodImage.Text = "";
                 }
 
             }

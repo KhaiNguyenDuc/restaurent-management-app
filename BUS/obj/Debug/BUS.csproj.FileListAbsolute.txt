@@ -27,4 +27,3 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.exe
 D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.pdb
 D:\Winform\RestaurantManagement\BUS\bin\Debug\Model.exe.config
-D:\Winform\RestaurantManagement\BUS\obj\Debug\BUS.csproj.CopyComplete

@@ -25,3 +25,4 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\Winform\RestaurantManagement\DAO\bin\Debug\Model.exe
 D:\Winform\RestaurantManagement\DAO\bin\Debug\Model.pdb
 D:\Winform\RestaurantManagement\DAO\bin\Debug\Model.exe.config
+D:\Winform\RestaurantManagement\DAO\obj\Debug\DAO.csproj.CopyComplete

@@ -135,6 +135,11 @@ namespace GUI
                     if (path != "")
                     {
                         pbStaffImage.Image = Image.FromFile(path);
+                        pbStaffImage.Text = path;
+                    }
+                    else
+                    {
+                        pbStaffImage.Image = null; 
                     }
                     
                     if (row.Cells[7].Value.ToString().Equals("0"))
@@ -150,7 +155,14 @@ namespace GUI
                 }
                 catch
                 {
-
+                    dtpBirthDate.Value = DateTime.Now;
+                    txtStaffName.Text = "";
+                    txtAddress.Text = "";
+                    txtPhoneNumber.Text = "";
+                    txtSalary.Text = "";
+                    rdoMale.Checked = true;
+                    pbStaffImage.Image = null;
+                    pbStaffImage.Image = null;
                 }
 
             }

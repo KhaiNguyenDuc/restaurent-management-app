@@ -30,7 +30,6 @@ namespace GUI
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmProfile));
-            this.lblImage = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
@@ -48,26 +47,18 @@ namespace GUI
             this.panel2 = new System.Windows.Forms.Panel();
             this.lblStaffName = new System.Windows.Forms.Label();
             this.txtStaffName = new System.Windows.Forms.TextBox();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.pbStaffImage = new System.Windows.Forms.PictureBox();
+            this.btnAddStaff = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStaffImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblImage
-            // 
-            this.lblImage.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImage.Location = new System.Drawing.Point(23, 22);
-            this.lblImage.Name = "lblImage";
-            this.lblImage.Size = new System.Drawing.Size(122, 107);
-            this.lblImage.TabIndex = 0;
-            this.lblImage.Text = "Ảnh 3x4";
-            this.lblImage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
             // 
@@ -234,16 +225,16 @@ namespace GUI
             this.txtStaffName.Size = new System.Drawing.Size(236, 34);
             this.txtStaffName.TabIndex = 1;
             // 
-            // btnLogin
+            // btnEdit
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.Location = new System.Drawing.Point(23, 481);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(162, 73);
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "Sửa thông tin";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.Location = new System.Drawing.Point(23, 481);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(162, 73);
+            this.btnEdit.TabIndex = 6;
+            this.btnEdit.Text = "Sửa thông tin";
+            this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnReturn
             // 
@@ -256,6 +247,26 @@ namespace GUI
             this.btnReturn.UseVisualStyleBackColor = true;
             this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
             // 
+            // pbStaffImage
+            // 
+            this.pbStaffImage.Location = new System.Drawing.Point(23, 12);
+            this.pbStaffImage.Name = "pbStaffImage";
+            this.pbStaffImage.Size = new System.Drawing.Size(146, 108);
+            this.pbStaffImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbStaffImage.TabIndex = 8;
+            this.pbStaffImage.TabStop = false;
+            // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.Location = new System.Drawing.Point(190, 79);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(150, 41);
+            this.btnAddStaff.TabIndex = 9;
+            this.btnAddStaff.Text = "Chọn hình";
+            this.btnAddStaff.UseVisualStyleBackColor = true;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
+            // 
             // frmProfile
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,10 +274,11 @@ namespace GUI
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(546, 566);
+            this.Controls.Add(this.btnAddStaff);
+            this.Controls.Add(this.pbStaffImage);
             this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.lblImage);
             this.Name = "frmProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfile";
@@ -284,13 +296,12 @@ namespace GUI
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbStaffImage)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblImage;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label lblPhoneNumber;
@@ -307,8 +318,10 @@ namespace GUI
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblStaffName;
         private System.Windows.Forms.TextBox txtStaffName;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnReturn;
         private System.Windows.Forms.DateTimePicker dtbStaffBirthDate;
+        private System.Windows.Forms.PictureBox pbStaffImage;
+        private System.Windows.Forms.Button btnAddStaff;
     }
 }
