@@ -66,7 +66,7 @@ namespace DAO
                 conn.Close();
                 return data;
             }
-            catch (Exception e)
+            catch
             {
                 MessageBox.Show("lalal");
                 return null;
@@ -215,7 +215,7 @@ namespace DAO
                 conn.Close();
                 return Convert.ToInt32(data.Rows[0]["id"]);
             }
-            catch (Exception e)
+            catch
             {
                 MessageBox.Show("oooo");
                 return -1;

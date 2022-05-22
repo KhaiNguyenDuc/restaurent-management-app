@@ -17,3 +17,4 @@ D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManageme
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\Model\obj\Debug\Model.exe
 D:\TongHopMonHoc-SPKT\Nam2\HK2\Lập trình windows ( Cô An)\RestaurantManagement\Model\obj\Debug\Model.pdb
+D:\Winform\RestaurantManagement\Model\obj\Debug\Model.csproj.SuggestedBindingRedirects.cache

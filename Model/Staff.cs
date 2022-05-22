@@ -15,7 +15,6 @@ namespace Model
         private double salary;
         private string path;
         private int accountID;
-
         public int ID { get => iD; set => iD = value; }
         public string Name { get => name; set => name = value; }
 

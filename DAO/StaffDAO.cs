@@ -192,5 +192,42 @@ namespace DAO
                 return null;
             }
         }
+        public DataTable getStaffById(int staffID)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT * FROM staffs WHERE id =  " + staffID, conn);
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return data;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return null;
+            }
+        }
+        public int getIdByName(string staffName)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand command = new SqlCommand("SELECT id FROM staffs WHERE staff_name =  N'" + staffName + "';", conn); ;
+                DataTable data = new DataTable();
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(data);
+                conn.Close();
+                return Convert.ToInt32(data.Rows[0]["id"]); ;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return -1;
+            }
+        }
+
     }
 }
