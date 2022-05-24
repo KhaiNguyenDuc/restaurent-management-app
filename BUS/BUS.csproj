@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="AccountBUS.cs" />
     <Compile Include="AdminBUS.cs" />
+    <Compile Include="AnalysisBUS.cs" />
     <Compile Include="CustomerBUS.cs" />
     <Compile Include="FoodBUS.cs" />
     <Compile Include="Form1.cs">

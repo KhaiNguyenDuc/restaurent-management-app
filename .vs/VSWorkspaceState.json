@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BUS",
+    "\\DAO",
+    "\\RestaurantManagement"
   ],
-  "SelectedNode": "\\RestaurantManagement.sln",
+  "SelectedNode": "\\DAO\\Config.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -16,7 +16,7 @@ namespace RestaurantManagement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmScheduler());
+            Application.Run(new frmAnalysis());
         }
     }
 }
