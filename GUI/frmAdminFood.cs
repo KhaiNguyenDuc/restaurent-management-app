@@ -257,5 +257,12 @@ namespace GUI
         {
 
         }
+
+        private void btnScheduler_Click(object sender, EventArgs e)
+        {
+            frmScheduler frmScheduler = new frmScheduler();
+            frmScheduler.ShowDialog();
+        }
+
     }
 }

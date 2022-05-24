@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
 using Model;
+using DevExpress.XtraScheduler.Drawing;
+
 namespace GUI
 {
     public partial class frmScheduler : DevExpress.XtraEditors.XtraForm
@@ -29,6 +31,8 @@ namespace GUI
             scTimeSheet.Views.MonthView.AppointmentDisplayOptions.StartTimeVisibility = DevExpress.XtraScheduler.AppointmentTimeVisibility.Never;
             scTimeSheet.Views.MonthView.AppointmentDisplayOptions.TimeDisplayType = DevExpress.XtraScheduler.AppointmentTimeDisplayType.Text;
             scTimeSheet.Views.MonthView.AppointmentDisplayOptions.ShowReminder = false;
+            scTimeSheet.OptionsCustomization.AllowAppointmentEdit = DevExpress.XtraScheduler.UsedAppointmentType.NonRecurring;
+            scTimeSheet.OptionsCustomization.AllowAppointmentCreate = DevExpress.XtraScheduler.UsedAppointmentType.NonRecurring;
             this.schedulerDataStorage1.AppointmentInserting += SchedulerDataStorage1_AppointmentInserting;
             this.schedulerDataStorage1.AppointmentDeleting += SchedulerDataStorage1_AppointmentDeleting;
             this.schedulerDataStorage1.AppointmentChanging += SchedulerDataStorage1_AppointmentChanging;
@@ -137,7 +141,26 @@ namespace GUI
 
         private void scTimeSheet_Click(object sender, EventArgs e)
         {
-
+            SchedulerHitInfo hitInfo = scTimeSheet.ActiveView.ViewInfo.CalcHitInfo(scTimeSheet.PointToClient(Form.MousePosition), false);
+            if (hitInfo.HitTest == SchedulerHitTest.AppointmentContent)
+            {
+                foreach (Appointment myAppt in scTimeSheet.SelectedAppointments)
+                {
+                    string staffName = myAppt.Subject;
+                    int staffID = staffBUS.getIdByName(staffName);
+                    string path = staffBUS.getImage(staffID);
+                    if (path != "")
+                    {
+                        this.pictureEdit1.LoadAsync(path);
+                        pictureEdit1.Text = path;
+                    }
+                    else
+                    {
+                        pictureEdit1.Image = null;
+                    }
+                    lblStaffName.Text = myAppt.Subject;
+                }
+            }
         }
     }
    

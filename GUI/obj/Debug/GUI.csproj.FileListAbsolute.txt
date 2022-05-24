@@ -319,3 +319,13 @@ C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\GUI\obj\Debug\GUI.exe.licenses
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\GUI\obj\Debug\GUI.exe
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\GUI\obj\Debug\GUI.pdb
+D:\Winform\RestaurantManagement\GUI\bin\Debug\ClosedXML.dll
+D:\Winform\RestaurantManagement\GUI\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Winform\RestaurantManagement\GUI\bin\Debug\ExcelNumberFormat.dll
+D:\Winform\RestaurantManagement\GUI\bin\Debug\System.IO.Packaging.dll
+D:\Winform\RestaurantManagement\GUI\bin\Debug\ClosedXML.pdb
+D:\Winform\RestaurantManagement\GUI\bin\Debug\ClosedXML.xml
+D:\Winform\RestaurantManagement\GUI\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Winform\RestaurantManagement\GUI\bin\Debug\ExcelNumberFormat.xml
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmReport.resources
+D:\Winform\RestaurantManagement\GUI\obj\Debug\GUI.frmSelect.resources

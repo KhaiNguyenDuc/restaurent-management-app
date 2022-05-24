@@ -60,6 +60,7 @@ namespace GUI
             this.pnlTop = new System.Windows.Forms.Panel();
             this.lblAdminNameData = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnScheduler = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvTable)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -368,6 +369,7 @@ namespace GUI
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Transparent;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlTop.Controls.Add(this.btnScheduler);
             this.pnlTop.Controls.Add(this.lblAdminNameData);
             this.pnlTop.Controls.Add(this.lblAdminName);
             this.pnlTop.Controls.Add(this.btnLogout);
@@ -397,6 +399,18 @@ namespace GUI
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(923, 536);
             this.panel3.TabIndex = 7;
+            // 
+            // btnScheduler
+            // 
+            this.btnScheduler.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnScheduler.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduler.Location = new System.Drawing.Point(691, 2);
+            this.btnScheduler.Name = "btnScheduler";
+            this.btnScheduler.Size = new System.Drawing.Size(184, 50);
+            this.btnScheduler.TabIndex = 14;
+            this.btnScheduler.Text = "Lịch";
+            this.btnScheduler.UseVisualStyleBackColor = false;
+            this.btnScheduler.Click += new System.EventHandler(this.btnScheduler_Click);
             // 
             // frmAdminTable
             // 
@@ -460,5 +474,6 @@ namespace GUI
         private System.Windows.Forms.Button btnIngredient;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Label lblAdminNameData;
+        private System.Windows.Forms.Button btnScheduler;
     }
 }

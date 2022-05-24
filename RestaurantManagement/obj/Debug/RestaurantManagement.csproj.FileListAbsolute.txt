@@ -270,3 +270,10 @@ C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\RestaurantManagement\obj\Debug\
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.exe
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.pdb
 C:\Users\ASUS\Desktop\a\abc\RestaurantManagement\RestaurantManagement\obj\Debug\RestaurantManagement.csproj.CopyComplete
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\ClosedXML.dll
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\DocumentFormat.OpenXml.dll
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\ExcelNumberFormat.dll
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\ClosedXML.pdb
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\ClosedXML.xml
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\DocumentFormat.OpenXml.xml
+D:\Winform\RestaurantManagement\RestaurantManagement\bin\Debug\ExcelNumberFormat.xml

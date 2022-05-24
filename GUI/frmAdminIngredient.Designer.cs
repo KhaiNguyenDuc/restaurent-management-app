@@ -60,6 +60,7 @@ namespace GUI
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtIngredientName = new System.Windows.Forms.TextBox();
             this.lblingredientsName = new System.Windows.Forms.Label();
+            this.btnScheduler = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             this.pnlCategory.SuspendLayout();
@@ -88,6 +89,7 @@ namespace GUI
             // 
             this.pnlTop.BackColor = System.Drawing.Color.Transparent;
             this.pnlTop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlTop.Controls.Add(this.btnScheduler);
             this.pnlTop.Controls.Add(this.lblAdminNameData);
             this.pnlTop.Controls.Add(this.lblAdminName);
             this.pnlTop.Controls.Add(this.btnLogout);
@@ -387,6 +389,18 @@ namespace GUI
             this.lblingredientsName.TabIndex = 0;
             this.lblingredientsName.Text = "Tên nguyên liệu:";
             // 
+            // btnScheduler
+            // 
+            this.btnScheduler.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnScheduler.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduler.Location = new System.Drawing.Point(649, 3);
+            this.btnScheduler.Name = "btnScheduler";
+            this.btnScheduler.Size = new System.Drawing.Size(184, 50);
+            this.btnScheduler.TabIndex = 13;
+            this.btnScheduler.Text = "Lịch";
+            this.btnScheduler.UseVisualStyleBackColor = false;
+            this.btnScheduler.Click += new System.EventHandler(this.btnScheduler_Click);
+            // 
             // frmAdminIngredient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -450,5 +464,6 @@ namespace GUI
         private System.Windows.Forms.NumericUpDown nudQuantity;
         private System.Windows.Forms.Button btnCustomer;
         private System.Windows.Forms.Label lblAdminNameData;
+        private System.Windows.Forms.Button btnScheduler;
     }
 }

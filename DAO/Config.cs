@@ -13,7 +13,7 @@ namespace DAO
         {
             try
             {
-                string connectionStr = @"Data Source=LAPTOP-BIITLP3C\TUANKIET;Initial Catalog=RestaurantManagement;Integrated Security=True";
+                string connectionStr = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=RestaurantManagement;Integrated Security=True";
                 SqlConnection conn = new SqlConnection(connectionStr);
                 return conn;
             }

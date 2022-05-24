@@ -33,6 +33,7 @@ namespace GUI
             DevExpress.XtraScheduler.TimeRuler timeRuler1 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler2 = new DevExpress.XtraScheduler.TimeRuler();
             DevExpress.XtraScheduler.TimeRuler timeRuler3 = new DevExpress.XtraScheduler.TimeRuler();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmScheduler));
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.scTimeSheet = new DevExpress.XtraScheduler.SchedulerControl();
             this.schedulerDataStorage1 = new DevExpress.XtraScheduler.SchedulerDataStorage(this.components);
@@ -43,6 +44,8 @@ namespace GUI
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.dockPanel1 = new DevExpress.XtraBars.Docking.DockPanel();
             this.dockPanel1_Container = new DevExpress.XtraBars.Docking.ControlContainer();
+            this.lblStaffName = new System.Windows.Forms.Label();
+            this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.dnCalendar = new DevExpress.XtraScheduler.DateNavigator();
             this.foodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodsTableAdapter = new GUI.RestaurantManagementDataSetTableAdapters.FoodsTableAdapter();
@@ -56,6 +59,7 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
             this.dockPanel1.SuspendLayout();
             this.dockPanel1_Container.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnCalendar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnCalendar.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).BeginInit();
@@ -78,7 +82,7 @@ namespace GUI
             this.scTimeSheet.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.scTimeSheet.Location = new System.Drawing.Point(323, 0);
             this.scTimeSheet.Name = "scTimeSheet";
-            this.scTimeSheet.Size = new System.Drawing.Size(764, 658);
+            this.scTimeSheet.Size = new System.Drawing.Size(786, 658);
             this.scTimeSheet.Start = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
             this.scTimeSheet.TabIndex = 1;
             this.scTimeSheet.Text = "scTimeSheet";
@@ -154,11 +158,40 @@ namespace GUI
             // 
             // dockPanel1_Container
             // 
+            this.dockPanel1_Container.Controls.Add(this.lblStaffName);
+            this.dockPanel1_Container.Controls.Add(this.pictureEdit1);
             this.dockPanel1_Container.Controls.Add(this.dnCalendar);
             this.dockPanel1_Container.Location = new System.Drawing.Point(4, 32);
             this.dockPanel1_Container.Name = "dockPanel1_Container";
             this.dockPanel1_Container.Size = new System.Drawing.Size(313, 622);
             this.dockPanel1_Container.TabIndex = 0;
+            // 
+            // lblStaffName
+            // 
+            this.lblStaffName.AutoSize = true;
+            this.lblStaffName.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStaffName.Location = new System.Drawing.Point(79, 177);
+            this.lblStaffName.Name = "lblStaffName";
+            this.lblStaffName.Size = new System.Drawing.Size(0, 26);
+            this.lblStaffName.TabIndex = 3;
+            // 
+            // pictureEdit1
+            // 
+            this.pictureEdit1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureEdit1.EditValue = ((object)(resources.GetObject("pictureEdit1.EditValue")));
+            this.pictureEdit1.Location = new System.Drawing.Point(84, 4);
+            this.pictureEdit1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureEdit1.Name = "pictureEdit1";
+            this.pictureEdit1.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.BackColor2 = System.Drawing.Color.Transparent;
+            this.pictureEdit1.Properties.Appearance.Options.UseBackColor = true;
+            this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pictureEdit1.Properties.InitialImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("pictureEdit1.Properties.InitialImageOptions.Image")));
+            this.pictureEdit1.Properties.OptionsMask.MaskType = DevExpress.XtraEditors.Controls.PictureEditMaskType.Circle;
+            this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
+            this.pictureEdit1.Size = new System.Drawing.Size(145, 158);
+            this.pictureEdit1.TabIndex = 5;
             // 
             // dnCalendar
             // 
@@ -166,8 +199,10 @@ namespace GUI
             this.dnCalendar.CalendarAppearance.DayCellSpecial.Options.UseFont = true;
             this.dnCalendar.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dnCalendar.DateTime = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
+            this.dnCalendar.EditValue = new System.DateTime(2022, 5, 19, 0, 0, 0, 0);
             this.dnCalendar.FirstDayOfWeek = System.DayOfWeek.Sunday;
-            this.dnCalendar.Location = new System.Drawing.Point(5, 3);
+            this.dnCalendar.Location = new System.Drawing.Point(3, 232);
             this.dnCalendar.Name = "dnCalendar";
             this.dnCalendar.SchedulerControl = this.scTimeSheet;
             this.dnCalendar.Size = new System.Drawing.Size(305, 298);
@@ -188,7 +223,7 @@ namespace GUI
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1087, 658);
+            this.ClientSize = new System.Drawing.Size(1109, 658);
             this.Controls.Add(this.scTimeSheet);
             this.Controls.Add(this.dockPanel1);
             this.Name = "frmScheduler";
@@ -206,6 +241,8 @@ namespace GUI
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
             this.dockPanel1.ResumeLayout(false);
             this.dockPanel1_Container.ResumeLayout(false);
+            this.dockPanel1_Container.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnCalendar.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dnCalendar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.foodsBindingSource)).EndInit();
@@ -228,5 +265,7 @@ namespace GUI
         private RestaurantManagementDataSet restaurantManagementDataSet;
         private System.Windows.Forms.BindingSource foodsBindingSource;
         private RestaurantManagementDataSetTableAdapters.FoodsTableAdapter foodsTableAdapter;
+        private System.Windows.Forms.Label lblStaffName;
+        private DevExpress.XtraEditors.PictureEdit pictureEdit1;
     }
 }
