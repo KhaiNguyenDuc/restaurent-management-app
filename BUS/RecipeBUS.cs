@@ -27,6 +27,9 @@ namespace BUS
         {
             recipeDAO.insertRecipes(recipe);
         }
-       
+        public void deleteRecipeByFoodID(int foodID)
+        {
+            recipeDAO.deleteRecipeByFoodID(foodID);
+        }
     }
 }

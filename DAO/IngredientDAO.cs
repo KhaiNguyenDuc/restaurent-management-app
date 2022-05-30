@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Model;
 namespace DAO
 {
@@ -68,8 +69,10 @@ namespace DAO
             }
             catch
             {
+                MessageBox.Show("Lỗi"+ingredientsID.ToString());
             }
         }
+        
         public void updateIngredients(Ingredient ingredient)
         {
             string query = "UPDATE ingredients SET ingredients_name = @Name, quantity = @Quantity, price = @Price WHERE id = " + ingredient.Id;

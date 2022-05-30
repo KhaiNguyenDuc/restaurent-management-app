@@ -49,6 +49,22 @@ namespace DAO
             {
             }
         }
-        
+        public void deleteRecipeByFoodID(int foodID)
+        {
+            string query = "DELETE FROM recipes WHERE food_id = " + foodID + ";";
+            try
+            {
+                using (SqlCommand command = new SqlCommand(query, conn))
+                {
+                    conn.Open();
+                    command.ExecuteNonQuery();
+                    conn.Close();
+                }
+            }
+            catch
+            {
+            }
+        }
+
     }
 }

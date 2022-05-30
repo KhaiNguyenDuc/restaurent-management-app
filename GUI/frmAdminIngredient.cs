@@ -148,6 +148,7 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+
             ingredientBUS.deleteIngredients(ingredient.Id);
 
             txtIngredientName.Text = "";

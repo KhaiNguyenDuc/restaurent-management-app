@@ -20,6 +20,7 @@ namespace GUI
         Food food = new Food();
         public static int LatestID;
         AccountBUS accountBUS = new AccountBUS();
+        RecipeBUS recipeBUS = new RecipeBUS();
         public frmAdminFood()
         {
             InitializeComponent();
@@ -209,6 +210,7 @@ namespace GUI
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            recipeBUS.deleteRecipeByFoodID(foodID);
             foodBUS.deleteFoods(foodID);
             txtFoodName.Text = "";
             txtPrice.Text = "";

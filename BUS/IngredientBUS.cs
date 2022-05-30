@@ -49,6 +49,7 @@ namespace BUS
 
             }
         }
+       
         public bool isAvailable(int quantity, int foodID)
         {
             return quantity <= ingredientDAO.getQuantityByFoodID(foodID);
