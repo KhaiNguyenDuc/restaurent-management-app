@@ -22,7 +22,7 @@ namespace GUI
         {
             InitializeComponent();
             staff.AccountID = accountBUS.getAccountID(Properties.Settings.Default.Username);
-            staff = staffBUS.getStaffByAccountID(staff.AccountID);
+            staff = staffBUS.getStaffByAccountNotSalary(staff.AccountID);
             loadStaff();
         }
         public void loadStaff()

@@ -66,7 +66,21 @@ namespace BUS
             DataTable data = staffDAO.getStaffByAccountID(accountID);
             staff.Name = data.Rows[0]["staff_name"].ToString();
             staff.PhoneNumber = data.Rows[0]["phone_number"].ToString();
-            staff.Salary = Convert.ToDouble(data.Rows[0]["salary"]);
+            //staff.Salary = Convert.ToDouble(data.Rows[0]["salary"]);
+            staff.Path = data.Rows[0]["image_url"].ToString();
+            staff.Gender = Convert.ToInt32(data.Rows[0]["gender"]);
+            staff.Birthday = Convert.ToDateTime(data.Rows[0]["birthdate"]);
+            staff.Address = data.Rows[0]["staff_address"].ToString();
+            staff.ID = Convert.ToInt32(data.Rows[0]["id"]);
+            return staff;
+
+        }
+        public Staff getStaffByAccountNotSalary(int accountID)
+        {
+            Staff staff = new Staff();
+            DataTable data = staffDAO.getStaffByAccountID(accountID);
+            staff.Name = data.Rows[0]["staff_name"].ToString();
+            staff.PhoneNumber = data.Rows[0]["phone_number"].ToString();
             staff.Path = data.Rows[0]["image_url"].ToString();
             staff.Gender = Convert.ToInt32(data.Rows[0]["gender"]);
             staff.Birthday = Convert.ToDateTime(data.Rows[0]["birthdate"]);

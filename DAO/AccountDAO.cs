@@ -34,6 +34,7 @@ namespace DAO
             }
             catch
             {
+
             }
         }
         public void insertAccounts(Account account)

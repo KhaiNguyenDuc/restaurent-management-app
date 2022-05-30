@@ -34,6 +34,7 @@ namespace GUI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminFood));
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.btnScheduler = new System.Windows.Forms.Button();
             this.lblAdminNameData = new System.Windows.Forms.Label();
             this.lblAdminName = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
@@ -66,7 +67,6 @@ namespace GUI
             this.restaurantManagementDataSet = new GUI.RestaurantManagementDataSet();
             this.foodsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.foodsTableAdapter = new GUI.RestaurantManagementDataSetTableAdapters.FoodsTableAdapter();
-            this.btnScheduler = new System.Windows.Forms.Button();
             this.pnlTop.SuspendLayout();
             this.pnlSetting.SuspendLayout();
             this.pnlCategory.SuspendLayout();
@@ -94,6 +94,18 @@ namespace GUI
             this.pnlTop.Name = "pnlTop";
             this.pnlTop.Size = new System.Drawing.Size(1163, 60);
             this.pnlTop.TabIndex = 0;
+            // 
+            // btnScheduler
+            // 
+            this.btnScheduler.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnScheduler.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnScheduler.Location = new System.Drawing.Point(699, 3);
+            this.btnScheduler.Name = "btnScheduler";
+            this.btnScheduler.Size = new System.Drawing.Size(184, 50);
+            this.btnScheduler.TabIndex = 12;
+            this.btnScheduler.Text = "Lịch";
+            this.btnScheduler.UseVisualStyleBackColor = false;
+            this.btnScheduler.Click += new System.EventHandler(this.btnScheduler_Click);
             // 
             // lblAdminNameData
             // 
@@ -437,18 +449,6 @@ namespace GUI
             // foodsTableAdapter
             // 
             this.foodsTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnScheduler
-            // 
-            this.btnScheduler.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnScheduler.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnScheduler.Location = new System.Drawing.Point(699, 3);
-            this.btnScheduler.Name = "btnScheduler";
-            this.btnScheduler.Size = new System.Drawing.Size(184, 50);
-            this.btnScheduler.TabIndex = 12;
-            this.btnScheduler.Text = "Lịch";
-            this.btnScheduler.UseVisualStyleBackColor = false;
-            this.btnScheduler.Click += new System.EventHandler(this.btnScheduler_Click);
             // 
             // frmAdminFood
             // 
